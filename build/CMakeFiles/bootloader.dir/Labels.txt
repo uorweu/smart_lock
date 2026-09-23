@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/norman/esp_projects/smart_lock/build/CMakeFiles/bootloader
+/home/norman/esp_projects/smart_lock/build/CMakeFiles/bootloader.rule
+/home/norman/esp_projects/smart_lock/build/CMakeFiles/bootloader-complete.rule
+/home/norman/esp_projects/smart_lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/norman/esp_projects/smart_lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/norman/esp_projects/smart_lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/norman/esp_projects/smart_lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/norman/esp_projects/smart_lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/norman/esp_projects/smart_lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/norman/esp_projects/smart_lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

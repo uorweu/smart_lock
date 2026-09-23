@@ -1,0 +1,2 @@
+source /home/norman/esp_projects/smart_lock/build/gdbinit/symbols
+source /home/norman/esp_projects/smart_lock/build/gdbinit/connect

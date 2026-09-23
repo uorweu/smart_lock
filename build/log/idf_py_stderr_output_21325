@@ -1,0 +1,5 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x420085c0: uart_ll_get_txfifo_len at /home/norman/esp-idf/components/hal/esp32c6/include/hal/uart_ll.h:592(inlined by) uart_tx_char at /home/norman/esp-idf/components/vfs/vfs_uart.c:185
+--- WARNING: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.
+

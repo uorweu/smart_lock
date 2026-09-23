@@ -1,0 +1,5 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x40022bc8: uart_serial_tx_one_char in ROM
+--- Multiple stop commands received, forcing quit monitor
+
