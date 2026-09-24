@@ -1,0 +1,7 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x400294a4: uart_hal_get_txfifo_count in ROM
+--- WARNING: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.
+--- Multiple stop commands received, forcing quit monitor
+--- Multiple stop commands received, forcing quit monitor
+

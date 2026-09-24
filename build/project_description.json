@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "smart_lock",
-    "project_version":    "1",
+    "project_version":    "a75ca2a-dirty",
     "project_path":       "/home/norman/esp_projects/smart_lock",
     "idf_path":           "/home/norman/esp-idf",
     "build_dir":          "/home/norman/esp_projects/smart_lock/build",
@@ -820,8 +820,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/norman/esp_projects/smart_lock/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/norman/esp_projects/smart_lock/main/main.c" ],
-            "include_dirs": [ "." ]
+            "sources": [ "/home/norman/esp_projects/smart_lock/main/src/keypad.c", "/home/norman/esp_projects/smart_lock/main/src/lcd.c", "/home/norman/esp_projects/smart_lock/main/src/main.c" ],
+            "include_dirs": [ "inc" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2128,7 +2128,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "." ]
+            "include_dirs": [ "inc" ]
         }
     },
     "debug_prefix_map_gdbinit": "",

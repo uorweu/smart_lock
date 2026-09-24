@@ -1,0 +1,60 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x400294ae: uart_hal_get_txfifo_count in ROM
+--- Stack dump detected
+--- 0x42009a5e: lcd_put_string at /home/norman/esp_projects/smart_lock/main/src/lcd.c:50
+--- 0x42009948: app_main at /home/norman/esp_projects/smart_lock/main/src/main.c:16
+--- 0x40807f70: prvInitialiseTaskLists at /home/norman/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4496
+--- 0x4200cae0: i2c_master_write_to_device at /home/norman/esp-idf/components/driver/i2c/i2c.c:1018
+--- 0x40800001: _vector_table at ??:?
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/__main__.py", line 7, in <module>
+    main()
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 674, in main
+    _cli_invoke(_run_monitor)
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/argument_parser.py", line 207, in invoke
+    cli.main(args=argv, obj=runner, standalone_mode=True)
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/rich_click/rich_command.py", line 215, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/argument_parser.py", line 197, in cli
+    runner(**kwargs)
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 642, in _run_monitor
+    monitor.main_loop()
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 294, in main_loop
+    self._main_loop()
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 439, in _main_loop
+    super()._main_loop()
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 347, in _main_loop
+    self.serial_handler.handle_serial_input(
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/serial_handler.py", line 251, in handle_serial_input
+    self.check_panic_decode_trigger(line_strip)
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/serial_handler.py", line 330, in check_panic_decode_trigger
+    out = self.panic_handler.process_panic_output(self._panic_buffer)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/norman/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_panic_decoder/panic_output_decoder.py", line 45, in process_panic_output
+    output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'riscv32-esp-elf-gdb'

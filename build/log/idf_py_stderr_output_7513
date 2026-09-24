@@ -1,0 +1,5 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x4200b2be: gpio_set_direction at /home/norman/esp-idf/components/driver/gpio/gpio.c:316
+--- Multiple stop commands received, forcing quit monitor
+
