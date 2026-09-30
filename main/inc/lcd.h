@@ -8,4 +8,5 @@ void lcd_put_character(char c);
 void lcd_put_string(const char *str);
 void lcd_send_cmd(uint8_t cmd);
 void lcd_send_nibble(uint8_t nibble, uint8_t is_data);
+void update_lcd_ui(int pin_length, int attempts_left, int status);
 #endif

@@ -1,24 +1,19 @@
-    #include <stdio.h>
-    #include "freertos/FreeRTOS.h"
-    #include "freertos/task.h"
-    #include "lcd.h"
-    #include <unistd.h>
+#include "freertos/FreeRTOS.h"
+#include <stdio.h>
+#include "freertos/task.h"
+#include "buzzer.h"
+#include "lcd.h"
+#include <string.h>
+#include "sha256.h"
 
-    void app_main(void) {
-      lcd_init();
-        // 1. Setup our pointer
+// password in hash code sha256
+    const uint8_t STORED_SECRET_HASH[32] = {
+        0x75, 0xf3, 0xa0, 0x99, 0xa9, 0xa0, 0x8e, 0x16,
+        0x9d, 0xaf, 0xa8, 0x8c, 0x02, 0x82, 0x4d, 0xf9,
+        0x82, 0x4b, 0xaf, 0xee, 0xf5, 0x32, 0xb2, 0x60,
+        0xf8, 0x52, 0xf8, 0xdb, 0xdf, 0x72, 0xf7, 0x83
+    };
 
-      while (1) {
-        lcd_clear();
-        lcd_set_cursor(4, 1);
-        // 2. Loop through the pointer one letter at a time
-        const char *str = "Interstella";
-        while (*str) {
-            lcd_put_character(*str);                        // Print ONE letter
-            vTaskDelay(200 / portTICK_PERIOD_MS);  // Wait 200ms before printing the next one!
-            str++;                                 // Move the pointer to the next letter
-        }
 
-        // 3. Keep the program alive forever
-        }
-    }
+void app_main(void) {
+}

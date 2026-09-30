@@ -80,4 +80,42 @@ void lcd_init(void) {
   lcd_send_cmd(0x0C);
 
 }
+#define UI_STATUS_TYPING   0
+#define UI_STATUS_ACCEPTED 1
+#define UI_STATUS_DENIED   2
+
+void update_lcd_ui(int pin_length, int attempts_left, int status) {
+  char buffer[21]; // Buffer to hold our formatted 20-character strings
+
+  // --- ROW 0: The Header ---
+  lcd_set_cursor(0, 0);
+  lcd_put_string("ENTER PIN TO UNLOCK!");
+
+  // --- ROW 1: The Stars ---
+  lcd_set_cursor(0, 1);
+  lcd_put_string("PIN: ");
+  for (int i = 0; i < 10; i++) { // Assuming max 10 digit pin
+    if (i < pin_length) {
+      lcd_put_character('*');
+    } else {
+      lcd_put_character(' '); // Clear old stars
+    }
+  }
+
+  // --- ROW 2: The Status ---
+  lcd_set_cursor(0, 2);
+  if (status == UI_STATUS_TYPING) {
+    lcd_put_string("STATUS: TYPING...   ");
+  } else if (status == UI_STATUS_ACCEPTED) {
+    lcd_put_string("STATUS: ACCEPTED!   ");
+  } else if (status == UI_STATUS_DENIED) {
+    lcd_put_string("STATUS: DENIED!     ");
+  }
+
+  // --- ROW 3: Attempts Left ---
+  lcd_set_cursor(0, 3);
+  // Use sprintf to inject the integer into the string
+  sprintf(buffer, "ATTEMPTS LEFT: %d   ", attempts_left);
+  lcd_put_string(buffer);
+}
 

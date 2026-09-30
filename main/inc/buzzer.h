@@ -26,8 +26,15 @@
 #define NOTE_C6  1047  
 
 void buzzer_init(void);
+void buzzer_stop(void);
 void buzzer_play_tone(int frequency, int duration_ms);
-void buzzer_stop(void);#endif
+void melody_success(void);
+void melody_alarm(void);
+void melody_locked_out(void);
+void melody_key_press(void);
+void melody_error(void);
+
+
 
 #endif
 
