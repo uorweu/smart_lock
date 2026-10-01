@@ -1,19 +1,42 @@
-#include "freertos/FreeRTOS.h"
 #include <stdio.h>
+#include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "buzzer.h"
+
+// 1. Include our hardware drivers
+#include "keypad.h"
 #include "lcd.h"
-#include <string.h>
-#include "sha256.h"
+#include "pir.h" // Added PIR sensor!
+#include "buzzer.h"
+#include "lock.h"
+#include "handle.h"
+#include "reed.h"
+#include "dev_button.h"
 
-// password in hash code sha256
-    const uint8_t STORED_SECRET_HASH[32] = {
-        0x75, 0xf3, 0xa0, 0x99, 0xa9, 0xa0, 0x8e, 0x16,
-        0x9d, 0xaf, 0xa8, 0x8c, 0x02, 0x82, 0x4d, 0xf9,
-        0x82, 0x4b, 0xaf, 0xee, 0xf5, 0x32, 0xb2, 0x60,
-        0xf8, 0x52, 0xf8, 0xdb, 0xdf, 0x72, 0xf7, 0x83
-    };
-
+// 2. Include our new State Machine!
+#include "state_machine.h"
 
 void app_main(void) {
+  printf("Starting Smart Lock...\n");
+
+  // Initialize the hardware peripherals
+  lcd_init();
+  keypad_init();
+  pir_init(); // Crucial step so the ESP32 listens to the PIR pin!
+  buzzer_init();
+  lock_init();
+  handle_init();
+  reed_init();
+  dev_button_init();
+
+  // Clear the screen when the ESP32 first boots up
+  lcd_clear();
+
+  // The infinite heartbeat loop
+  while (1) {
+    // The State Machine Engine handles everything now!
+    state_machine_run();
+
+    // Feed the FreeRTOS watchdog timer so the ESP32 doesn't crash (50ms delay)
+    vTaskDelay(pdMS_TO_TICKS(50));
+  }
 }

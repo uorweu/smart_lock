@@ -13,7 +13,8 @@ void keypad_init(void){
 
   gpio_config(&io_conf);
 
-  io_conf.pin_bit_mask = (1ULL << KEYPAD_C1) | (1ULL << KEYPAD_C2) | (1ULL << KEYPAD_C3) | (1ULL << KEYPAD_C4);
+  // ONLY initialize Column 3 and Column 4!
+  io_conf.pin_bit_mask = (1ULL << KEYPAD_C3) | (1ULL << KEYPAD_C4);
   io_conf.mode         = GPIO_MODE_INPUT;
   io_conf.pull_down_en = GPIO_PULLDOWN_ENABLE;
 
@@ -33,7 +34,9 @@ uint8_t keypad_get_key(void){
 
   for(int row = 0; row < 4; row++){
     gpio_set_level(row_pins[row], 1);
-    for(int col = 0; col < 4; col++){
+    
+    // Start scanning at column index 2 (which skips C1 and C2 completely!)
+    for(int col = 2; col < 4; col++){
       if(gpio_get_level(col_pins[col]) == 1){
         gpio_set_level(row_pins[row], 0);
         return keymap[row][col];

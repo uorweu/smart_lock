@@ -1,3 +1,4 @@
+#include <string.h>
 #include "sha256.h"
 
 #define ROTRIGHT(a,b) (((a) >> (b)) | ((a) << (32-(b))))

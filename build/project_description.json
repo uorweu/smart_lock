@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "smart_lock",
-    "project_version":    "e85342f-dirty",
+    "project_version":    "ba4ebb3-dirty",
     "project_path":       "/home/norman/esp_projects/smart_lock",
     "idf_path":           "/home/norman/esp-idf",
     "build_dir":          "/home/norman/esp_projects/smart_lock/build",
@@ -820,7 +820,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/norman/esp_projects/smart_lock/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/norman/esp_projects/smart_lock/main/src/buzzer.c", "/home/norman/esp_projects/smart_lock/main/src/keypad.c", "/home/norman/esp_projects/smart_lock/main/src/lcd.c", "/home/norman/esp_projects/smart_lock/main/src/main.c", "/home/norman/esp_projects/smart_lock/main/src/pir.c", "/home/norman/esp_projects/smart_lock/main/src/sha256.c" ],
+            "sources": [ "/home/norman/esp_projects/smart_lock/main/src/buzzer.c", "/home/norman/esp_projects/smart_lock/main/src/dev_button.c", "/home/norman/esp_projects/smart_lock/main/src/handle.c", "/home/norman/esp_projects/smart_lock/main/src/keypad.c", "/home/norman/esp_projects/smart_lock/main/src/lcd.c", "/home/norman/esp_projects/smart_lock/main/src/lock.c", "/home/norman/esp_projects/smart_lock/main/src/main.c", "/home/norman/esp_projects/smart_lock/main/src/pir.c", "/home/norman/esp_projects/smart_lock/main/src/reed.c", "/home/norman/esp_projects/smart_lock/main/src/sha256.c", "/home/norman/esp_projects/smart_lock/main/src/state_machine.c" ],
             "include_dirs": [ "inc" ]
         },
         "mbedtls": {

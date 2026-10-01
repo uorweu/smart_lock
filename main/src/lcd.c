@@ -7,9 +7,11 @@
 #define I2C_MASTER_NUM 0 
 #define I2C_MASTER_FREQ_HZ 100000
 
+uint8_t lcd_backlight_val = 0x08;
+
 void lcd_send_nibble(uint8_t nibble, uint8_t is_data){
   uint8_t data_shifted = (nibble << 4);
-  data_shifted = data_shifted | 0x08;
+  data_shifted = data_shifted | lcd_backlight_val;
   if (is_data == 1) {
     data_shifted = data_shifted | 0x01;
   }
@@ -119,3 +121,13 @@ void update_lcd_ui(int pin_length, int attempts_left, int status) {
   lcd_put_string(buffer);
 }
 
+
+void lcd_backlight_on(void) {
+    lcd_backlight_val = 0x08;
+    lcd_send_cmd(0);
+}
+
+void lcd_backlight_off(void) {
+    lcd_backlight_val = 0x00;
+    lcd_send_cmd(0); 
+}

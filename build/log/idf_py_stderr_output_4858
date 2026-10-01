@@ -1,0 +1,23 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x408000c4: _panic_handler at ??:?
+--- 0x408000d0: _panic_handler at ??:?
+--- 0x408000ca: _panic_handler at ??:?
+--- 0x408000c4: _panic_handler at ??:?
+--- 0x40800092: _panic_handler at ??:?
+--- 0x40800092: _panic_handler at ??:?
+--- 0x40800090: _panic_handler at ??:?
+--- 0x408000ce: _panic_handler at ??:?
+--- 0x408000ca: _panic_handler at ??:?
+--- 0x40800094: _panic_handler at ??:?
+--- 0x408000c8: _panic_handler at ??:?
+--- 0x40800096: _panic_handler at ??:?
+--- 0x408000c4: _panic_handler at ??:?
+--- 0x408000ca: _panic_handler at ??:?
+--- ERROR: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+--- Waiting for the device to reconnect................................................................................................
+--- 0x4080008e: _panic_handler at ??:?
+--- 0x408000b2: _panic_handler at ??:?
+--- 0x408000ca: _panic_handler at ??:?
+--- Multiple stop commands received, forcing quit monitor
+
