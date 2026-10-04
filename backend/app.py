@@ -4,25 +4,17 @@ import threading
 from flask import Flask, request, jsonify, render_template_string, session, redirect
 import paho.mqtt.client as mqtt
 
-# ==========================================
-# CONFIGURATION
-# ==========================================
-# Change this to your Windows Laptop's IP address (the same one the ESP32 uses)
 MQTT_BROKER = "192.168.1.8" 
 MQTT_PORT = 8883
 
-# The path to your CA certificate (use the exact path from your Windows machine if running on Windows!)
-# Example for Windows: "C:\\Program Files\\mosquitto\\certs\\ca.crt"
-# Example for WSL: "/home/norman/certs/ca.crt"
 CA_CERTS = "/home/norman/certs/ca.crt"
 
-ADMIN_PASSWORD = "admin" # The secret token required to login to the dashboard
+ADMIN_PASSWORD = "admin" 
 # ==========================================
 
 app = Flask(__name__)
 app.secret_key = "super_secure_academic_key"
 
-# --- 1. DATABASE SETUP ---
 def init_db():
     conn = sqlite3.connect('smart_lock.db')
     c = conn.cursor()
