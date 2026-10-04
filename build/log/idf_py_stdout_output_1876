@@ -1,0 +1,73 @@
+�2�893-dirty[0m
+[0;�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x7d (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=0a96ch ( 43372) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a994 vaddr=40800000 size=05684h ( 22148) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=15af4h ( 88820) map[0m
+[0;32mI (135) esp_image: segment 3: paddr=00035b1c vaddr=40805684 size=06f24h ( 28452) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=0003ca48 vaddr=4080c5b0 size=01818h (  6168) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (164) cpu_start: Unicore app[0m
+[0;33mW (178) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (184) cpu_start: Pro cpu start user code[0m
+[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) cpu_start: Application information:[0m
+[0;32mI (187) cpu_start: Project name:     smart_lock[0m
+[0;32mI (192) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (198) cpu_start: Compile time:     Oct  1 2026 16:37:23[0m
+[0;32mI (204) cpu_start: ELF file SHA256:  ba4dc97ca...[0m
+[0;32mI (209) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (216) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (221) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (226) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 4080ED20 len 0006D8F0 (438 KiB): RAM[0m
+[0;32mI (244) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (250) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (261) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (278) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (295) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (302) coexist: coex firmware version: 8561505[0m
+[0;32mI (308) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (313) main_task: Started on CPU0[0m
+[0;32mI (313) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (423) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (423) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (433) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (453) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (463) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (473) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (483) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (483) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (493) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (503) gpio: GPIO[10]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (513) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (523) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (533) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m

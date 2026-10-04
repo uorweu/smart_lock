@@ -525,6 +525,16 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# Smart Lock Configuration
+#
+CONFIG_WIFI_SSID="So 14"
+CONFIG_WIFI_PASSWORD="meDoM2025#8#18"
+CONFIG_MQTT_BROKER_URL="mqtt://broker.hivemq.com"
+CONFIG_MQTT_USERNAME=""
+CONFIG_MQTT_PASSWORD=""
+# end of Smart Lock Configuration
+
+#
 # Compiler options
 #
 CONFIG_COMPILER_OPTIMIZATION_DEBUG=y

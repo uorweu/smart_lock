@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "smart_lock",
-    "project_version":    "ba4ebb3-dirty",
+    "project_version":    "82f9893-dirty",
     "project_path":       "/home/norman/esp_projects/smart_lock",
     "idf_path":           "/home/norman/esp-idf",
     "build_dir":          "/home/norman/esp_projects/smart_lock/build",
@@ -22,7 +22,7 @@
     "c_compiler":         "/home/norman/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20250707/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
     "config_environment" : {
         "COMPONENT_KCONFIGS" : "/home/norman/esp-idf/components/app_trace/Kconfig;/home/norman/esp-idf/components/bt/Kconfig;/home/norman/esp-idf/components/driver/Kconfig;/home/norman/esp-idf/components/efuse/Kconfig;/home/norman/esp-idf/components/esp-tls/Kconfig;/home/norman/esp-idf/components/esp_adc/Kconfig;/home/norman/esp-idf/components/esp_coex/Kconfig;/home/norman/esp-idf/components/esp_common/Kconfig;/home/norman/esp-idf/components/esp_eth/Kconfig;/home/norman/esp-idf/components/esp_event/Kconfig;/home/norman/esp-idf/components/esp_gdbstub/Kconfig;/home/norman/esp-idf/components/esp_hid/Kconfig;/home/norman/esp-idf/components/esp_http_client/Kconfig;/home/norman/esp-idf/components/esp_http_server/Kconfig;/home/norman/esp-idf/components/esp_https_ota/Kconfig;/home/norman/esp-idf/components/esp_https_server/Kconfig;/home/norman/esp-idf/components/esp_hw_support/Kconfig;/home/norman/esp-idf/components/esp_lcd/Kconfig;/home/norman/esp-idf/components/esp_netif/Kconfig;/home/norman/esp-idf/components/esp_partition/Kconfig;/home/norman/esp-idf/components/esp_phy/Kconfig;/home/norman/esp-idf/components/esp_pm/Kconfig;/home/norman/esp-idf/components/esp_psram/Kconfig;/home/norman/esp-idf/components/esp_ringbuf/Kconfig;/home/norman/esp-idf/components/esp_system/Kconfig;/home/norman/esp-idf/components/esp_timer/Kconfig;/home/norman/esp-idf/components/esp_wifi/Kconfig;/home/norman/esp-idf/components/espcoredump/Kconfig;/home/norman/esp-idf/components/fatfs/Kconfig;/home/norman/esp-idf/components/freertos/Kconfig;/home/norman/esp-idf/components/hal/Kconfig;/home/norman/esp-idf/components/heap/Kconfig;/home/norman/esp-idf/components/ieee802154/Kconfig;/home/norman/esp-idf/components/log/Kconfig;/home/norman/esp-idf/components/lwip/Kconfig;/home/norman/esp-idf/components/mbedtls/Kconfig;/home/norman/esp-idf/components/mqtt/esp-mqtt/Kconfig;/home/norman/esp-idf/components/newlib/Kconfig;/home/norman/esp-idf/components/nvs_flash/Kconfig;/home/norman/esp-idf/components/nvs_sec_provider/Kconfig;/home/norman/esp-idf/components/openthread/Kconfig;/home/norman/esp-idf/components/protocomm/Kconfig;/home/norman/esp-idf/components/pthread/Kconfig;/home/norman/esp-idf/components/soc/Kconfig;/home/norman/esp-idf/components/spi_flash/Kconfig;/home/norman/esp-idf/components/spiffs/Kconfig;/home/norman/esp-idf/components/tcp_transport/Kconfig;/home/norman/esp-idf/components/ulp/Kconfig;/home/norman/esp-idf/components/unity/Kconfig;/home/norman/esp-idf/components/usb/Kconfig;/home/norman/esp-idf/components/vfs/Kconfig;/home/norman/esp-idf/components/wear_levelling/Kconfig;/home/norman/esp-idf/components/wifi_provisioning/Kconfig",
-        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/norman/esp-idf/components/bootloader/Kconfig.projbuild;/home/norman/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/norman/esp-idf/components/esp_rom/Kconfig.projbuild;/home/norman/esp-idf/components/esptool_py/Kconfig.projbuild;/home/norman/esp-idf/components/partition_table/Kconfig.projbuild"
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/norman/esp-idf/components/bootloader/Kconfig.projbuild;/home/norman/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/norman/esp-idf/components/esp_rom/Kconfig.projbuild;/home/norman/esp-idf/components/esptool_py/Kconfig.projbuild;/home/norman/esp-idf/components/partition_table/Kconfig.projbuild;/home/norman/esp_projects/smart_lock/main/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "riscv" ],
     "build_components" : [ "app_trace", "app_update", "bootloader", "bootloader_support", "bt", "cmock", "console", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_eth", "esp_event", "esp_gdbstub", "esp_hal_ieee802154", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espcoredump", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "mqtt", "newlib", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "protobuf-c", "protocomm", "pthread", "riscv", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "" ],
@@ -815,12 +815,12 @@
             "dir": "/home/norman/esp_projects/smart_lock/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "driver", "mqtt", "nvs_flash", "esp_netif", "esp_wifi" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/norman/esp_projects/smart_lock/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/norman/esp_projects/smart_lock/main/src/buzzer.c", "/home/norman/esp_projects/smart_lock/main/src/dev_button.c", "/home/norman/esp_projects/smart_lock/main/src/handle.c", "/home/norman/esp_projects/smart_lock/main/src/keypad.c", "/home/norman/esp_projects/smart_lock/main/src/lcd.c", "/home/norman/esp_projects/smart_lock/main/src/lock.c", "/home/norman/esp_projects/smart_lock/main/src/main.c", "/home/norman/esp_projects/smart_lock/main/src/pir.c", "/home/norman/esp_projects/smart_lock/main/src/reed.c", "/home/norman/esp_projects/smart_lock/main/src/sha256.c", "/home/norman/esp_projects/smart_lock/main/src/state_machine.c" ],
+            "sources": [ "/home/norman/esp_projects/smart_lock/main/src/buzzer.c", "/home/norman/esp_projects/smart_lock/main/src/dev_button.c", "/home/norman/esp_projects/smart_lock/main/src/handle.c", "/home/norman/esp_projects/smart_lock/main/src/keypad.c", "/home/norman/esp_projects/smart_lock/main/src/lcd.c", "/home/norman/esp_projects/smart_lock/main/src/lock.c", "/home/norman/esp_projects/smart_lock/main/src/main.c", "/home/norman/esp_projects/smart_lock/main/src/mqtt.c", "/home/norman/esp_projects/smart_lock/main/src/pir.c", "/home/norman/esp_projects/smart_lock/main/src/reed.c", "/home/norman/esp_projects/smart_lock/main/src/sha256.c", "/home/norman/esp_projects/smart_lock/main/src/state_machine.c", "/home/norman/esp_projects/smart_lock/main/src/wifi_connection.c" ],
             "include_dirs": [ "inc" ]
         },
         "mbedtls": {
@@ -2124,7 +2124,7 @@
             "prefix": "idf",
             "dir": "/home/norman/esp_projects/smart_lock/main",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "driver", "mqtt", "nvs_flash", "esp_netif", "esp_wifi" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],

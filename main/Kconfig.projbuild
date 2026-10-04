@@ -1,0 +1,33 @@
+menu "Smart Lock Configuration"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default "myssid"
+        help
+            SSID (network name) for the ESP32 to connect to.
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default "mypassword"
+        help
+            WiFi password (WPA2) for the ESP32 to connect to.
+
+    config MQTT_BROKER_URL
+        string "MQTT Broker URL"
+        default "mqtt://broker.hivemq.com"
+        help
+            URL of the MQTT broker (e.g. mqtt://broker.hivemq.com or mqtts://your-cluster.hivemq.cloud:8883)
+
+    config MQTT_USERNAME
+        string "MQTT Username"
+        default ""
+        help
+            Username for authenticated MQTT. Leave blank if using a public broker.
+
+    config MQTT_PASSWORD
+        string "MQTT Password"
+        default ""
+        help
+            Password for authenticated MQTT.
+
+endmenu

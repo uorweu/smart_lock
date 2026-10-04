@@ -8,28 +8,25 @@
 #define BUZZER_TIMER       LEDC_TIMER_0
 #define BUZZER_MODE        LEDC_LOW_SPEED_MODE
 #define BUZZER_CHANNEL     LEDC_CHANNEL_0
-#define BUZZER_DUTY_RES    LEDC_TIMER_13_BIT // 13-bit resolution (values from 0 to 8192)
-#define BUZZER_VOLUME      4096              // 50% duty cycle (4096 is half of 8192) = Max Volume!
+#define BUZZER_DUTY_RES    LEDC_TIMER_13_BIT 
+#define BUZZER_VOLUME      4096              
 
 void buzzer_init(void) {
-  // 1. Configure the internal timer
   ledc_timer_config_t ledc_timer = {
     .speed_mode       = BUZZER_MODE,
     .timer_num        = BUZZER_TIMER,
     .duty_resolution  = BUZZER_DUTY_RES,
-    .freq_hz          = 1000,  // Default frequency (we will change this when we play notes)
+    .freq_hz          = 1000,  
     .clk_cfg          = LEDC_AUTO_CLK
   };
   ledc_timer_config(&ledc_timer);
-
-  // 2. Configure the channel that routes the timer to the actual pin
   ledc_channel_config_t ledc_channel = {
     .speed_mode     = BUZZER_MODE,
     .channel        = BUZZER_CHANNEL,
     .timer_sel      = BUZZER_TIMER,
     .intr_type      = LEDC_INTR_DISABLE,
-    .gpio_num       = BUZZER_PIN, // Check your gpio.h to make sure you defined BUZZER_PIN!
-    .duty           = 0,          // Start with the volume at 0 (silent!)
+    .gpio_num       = BUZZER_PIN, 
+    .duty           = 0,          
     .hpoint         = 0
   };
   ledc_channel_config(&ledc_channel);
@@ -59,31 +56,22 @@ void buzzer_play_tone(int frequency, int duration_ms) {
   }
 
 
-// ==========================================
-// 5. SMART LOCK MELODY FUNCTIONS
-// ==========================================
-
 void melody_key_press(void) {
-    // A tiny, high-pitched "tick" so the user knows the keypad registered
     buzzer_play_tone(NOTE_C6, 30);
 }
 
 void melody_success(void) {
-    // Happy, rising tones for unlocking
     buzzer_play_tone(NOTE_C5, 150);
     buzzer_play_tone(NOTE_E5, 150);
     buzzer_play_tone(NOTE_G5, 150);
     buzzer_play_tone(NOTE_C6, 300);
 }
-
 void melody_error(void) {
-    // Quick, low double-beep for a wrong password
     buzzer_play_tone(NOTE_G4, 150);
     buzzer_play_tone(NOTE_G4, 150);
 }
 
 void melody_locked_out(void) {
-    // Sad, descending penalty sound for 5 wrong tries
     buzzer_play_tone(NOTE_C5, 250);
     buzzer_play_tone(NOTE_G4, 250);
     buzzer_play_tone(NOTE_E4, 250);
@@ -91,7 +79,6 @@ void melody_locked_out(void) {
 }
 
 void melody_alarm(void) {
-    // Blaring police siren for forced entry
     buzzer_play_tone(NOTE_A5, 400);
     buzzer_play_tone(NOTE_F5, 400);
 }

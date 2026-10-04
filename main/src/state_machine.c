@@ -2,7 +2,7 @@
     #include <stdbool.h>
     #include <string.h>
 
-    // Added for vTaskDelay!
+
     #include "freertos/FreeRTOS.h"
     #include "freertos/task.h"
 
@@ -19,23 +19,41 @@
     
     static TickType_t last_activity_time = 0;
 
-    // The SHA-256 hash for "999"
-    const uint8_t STORED_SECRET_HASH[32] = {
+    #include "nvs_flash.h"
+    #include "nvs.h"
+    uint8_t STORED_SECRET_HASH[32] = {
         0x83, 0xcf, 0x8b, 0x60, 0x9d, 0xe6, 0x00, 0x36,
         0xa8, 0x27, 0x7b, 0xd0, 0xe9, 0x61, 0x35, 0x75,
         0x1b, 0xbc, 0x07, 0xeb, 0x23, 0x42, 0x56, 0xd4,
         0xb6, 0x5b, 0x89, 0x33, 0x60, 0x65, 0x1b, 0xf2
     };
 
+    void load_secret_hash(void) {
+        nvs_handle_t my_handle;
+        if (nvs_open("storage", NVS_READWRITE, &my_handle) == ESP_OK) {
+            size_t required_size = 32;
+            nvs_get_blob(my_handle, "hash", STORED_SECRET_HASH, &required_size);
+            nvs_close(my_handle);
+        }
+    }
+
+    void update_secret_hash(const uint8_t new_hash[32]) {
+        memcpy(STORED_SECRET_HASH, new_hash, 32);
+        nvs_handle_t my_handle;
+        if (nvs_open("storage", NVS_READWRITE, &my_handle) == ESP_OK) {
+            nvs_set_blob(my_handle, "hash", STORED_SECRET_HASH, 32);
+            nvs_commit(my_handle);
+            nvs_close(my_handle);
+        }
+    }
+
     static LockState current_state = STATE_SLEEP;
 
-    // --- Tuned Global Variables ---
     static char passcode[11];
     static int passcode_index = 0;
-    static char last_key = '\0';
     static int attempts_left = 3;
-    static bool is_sleeping = false;     // Tracks if the screen is off
-    static bool show_plaintext = false;  // Toggle for the 'B' button
+    static bool is_sleeping = false;     
+    static bool show_plaintext = false;  
 
     static const struct state_transition state_transitions[] = {
         { STATE_SLEEP,        EVENT_PIR_MOTION,    STATE_ENTERING_PIN },
@@ -55,14 +73,23 @@
         { STATE_LOCKED_OUT,   EVENT_DOOR_FORCED_OPEN, STATE_ALARM },
         
         { STATE_ALARM,        EVENT_PIN_CORRECT,      STATE_UNLOCKED },
+        { STATE_ENTERING_PIN, EVENT_PIN_WRONG,     STATE_DENIED },
+        { STATE_DENIED,       EVENT_TIMEOUT,       STATE_ENTERING_PIN },
+
+        { STATE_UNLOCKED,     EVENT_DOOR_AUTHORIZED_OPEN, STATE_AUTHORIZED_OPENING },
+        { STATE_AUTHORIZED_OPENING, EVENT_DOOR_CLOSED,    STATE_SLEEP },
+
+        { STATE_ALARM,        EVENT_DEV_OVERRIDE,     STATE_RECOVERY },
+        { STATE_RECOVERY,     EVENT_TIMEOUT,          STATE_SLEEP },
         
-        { STATE_ALARM,        EVENT_DEV_OVERRIDE,     STATE_SLEEP },
         { STATE_UNLOCKED,     EVENT_DEV_OVERRIDE,     STATE_SLEEP },
         { STATE_ENTERING_PIN, EVENT_DEV_OVERRIDE,     STATE_SLEEP },
         { STATE_LOCKED_OUT,   EVENT_DEV_OVERRIDE,     STATE_SLEEP }
     };
 
     #define NUM_TRANSITIONS (sizeof(state_transitions) / sizeof(state_transitions[0]))
+
+    #include "mqtt.h"
 
     void state_machine_process_event(LockEvent event) {
         if (event == EVENT_NONE) return;
@@ -71,6 +98,10 @@
             if (state_transitions[i].from_state == current_state &&
                 state_transitions[i].event == event) {
                 current_state = state_transitions[i].to_state;
+                
+
+                mqtt_publish_state(current_state);
+                
                 return;
             }
         }
@@ -79,16 +110,15 @@
     void state_machine_run(void) {
         char key = keypad_get_key();
 
-        // Debounce
-        bool key_pressed = (key != '\0' && key != last_key);
-        last_key = key;
+
+        bool key_pressed = (key != '\0');
 
         if (dev_override_flag) {
-            dev_override_flag = false; // Reset the flag
+            dev_override_flag = false;
             state_machine_process_event(EVENT_DEV_OVERRIDE);
         }
 
-        // 1. Poll the Reed Switch to detect forced entry
+
         static bool first_run = true;
         static bool last_door_open = false;
         
@@ -100,11 +130,21 @@
         bool current_door_open = reed_is_door_open();
         
         if (current_door_open && !last_door_open) {
-            // The door was just opened!
-            if (current_state != STATE_UNLOCKED) {
+
+            if (current_state == STATE_UNLOCKED) {
+                state_machine_process_event(EVENT_DOOR_AUTHORIZED_OPEN);
+            } else if (current_state != STATE_AUTHORIZED_OPENING) {
                 state_machine_process_event(EVENT_DOOR_FORCED_OPEN);
             }
         }
+        
+        if (!current_door_open && last_door_open) {
+
+            if (current_state == STATE_AUTHORIZED_OPENING) {
+                state_machine_process_event(EVENT_DOOR_CLOSED);
+            }
+        }
+        
         last_door_open = current_door_open;
 
         if (handle_is_pressed()) {
@@ -119,13 +159,13 @@
                     is_sleeping = true;
                 }
 
-                // Wake up if someone presses a key OR walks in front of the PIR!
+
                 if (key_pressed || pir_is_motion_detected()) {
                     if (key_pressed) {
                         melody_key_press();
                     }
 
-                    // Start the 5-second stopwatch!
+
                     last_activity_time = xTaskGetTickCount();
 
                     is_sleeping = false;
@@ -146,12 +186,12 @@
                 break;
 
             case STATE_ENTERING_PIN:
-                // 1. Check the Stopwatch! Has it been 5 seconds (5000ms)?
+
                 if ((xTaskGetTickCount() - last_activity_time) > pdMS_TO_TICKS(5000)) {
-                    // Time is up! Go back to sleep.
-                    is_sleeping = false; // Force the screen to clear
+
+                    is_sleeping = false;
                     state_machine_process_event(EVENT_TIMEOUT);
-                    break; // Stop running the rest of this case
+                    break;
                 }
 
                 if (key_pressed || pir_is_motion_detected()) { last_activity_time = xTaskGetTickCount(); }
@@ -159,7 +199,7 @@
             if (key_pressed) {
                     melody_key_press();
 
-                    // 2. They pressed a key! Reset the stopwatch back to 0!
+
                     last_activity_time = xTaskGetTickCount();
 
                     if (key >= '0' && key <= '9') {
@@ -213,33 +253,35 @@
                             attempts_left = 3;
                             update_lcd_ui(passcode_index, attempts_left, 1);
                             
-                            melody_success(); // Happy tone!
-                            vTaskDelay(pdMS_TO_TICKS(700)); // Reduced since melody blocks
+
+                            lock_open(); 
+
+                            melody_success();
                             
                             state_machine_process_event(EVENT_PIN_CORRECT);
     			} else {
                             attempts_left--;
-                            update_lcd_ui(passcode_index, attempts_left, 2);
-                            
-                            if (attempts_left > 0) {
-                                melody_error(); // Quick double-beep
-                            }
-                            vTaskDelay(pdMS_TO_TICKS(1000)); // Reduced since melody blocks
-
-                            passcode_index = 0;
-                            memset(passcode, 0, sizeof(passcode));
-                            update_lcd_ui(passcode_index, attempts_left, 0);
-
-                            // Because this took 1.5s, we should reset the stopwatch again
-                            // so it doesn't instantly timeout while they are reading "DENIED!"
-                            last_activity_time = xTaskGetTickCount();
-
                             if (attempts_left <= 0) {
-    				state_machine_process_event(EVENT_MAX_ATTEMPTS);
+                                state_machine_process_event(EVENT_MAX_ATTEMPTS);
+                            } else {
+                                state_machine_process_event(EVENT_PIN_WRONG);
                             }
     			}
                     }
                 }
+                break;
+
+            case STATE_DENIED:
+                update_lcd_ui(passcode_index, attempts_left, 2);
+                melody_error();
+                vTaskDelay(pdMS_TO_TICKS(1000));
+
+                passcode_index = 0;
+                memset(passcode, 0, sizeof(passcode));
+                update_lcd_ui(passcode_index, attempts_left, 0);
+
+                last_activity_time = xTaskGetTickCount();
+                state_machine_process_event(EVENT_TIMEOUT);
                 break;
 
             case STATE_UNLOCKED:
@@ -247,24 +289,65 @@
                 lcd_set_cursor(0, 1);
                 lcd_put_string("   DOOR UNLOCKED!   ");
 
-                lock_open(); // Pop the solenoid open!
+                lock_open();
 
-                handle_wait_for_release(); // Wait for them to let go if they just pressed it!
 
-                // INFINITE LOOP: Hold the solenoid open FOREVER until the button is pressed!
+
+                bool entered_auth_opening = false;
+
+
                 while (1) {
                     if (dev_override_flag) {
                         break;
                     }
                     if (handle_is_pressed()) {
-                        handle_wait_for_release(); // Wait for them to let go
-                        break; // Break the infinite loop to lock the door!
+                        
+                        break;
                     }
-                    vTaskDelay(pdMS_TO_TICKS(100)); // Sleep briefly to save CPU
+                    if (reed_is_door_open()) {
+                        entered_auth_opening = true;
+                        break;
+                    }
+                    vTaskDelay(pdMS_TO_TICKS(100));
                 }
 
-                lock_close(); // Release the solenoid to lock!
+                if (entered_auth_opening) {
+                    state_machine_process_event(EVENT_DOOR_AUTHORIZED_OPEN);
+                } else {
+                    lock_close();
+                    is_sleeping = false;
+                    state_machine_process_event(EVENT_TIMEOUT);
+                }
+                break;
 
+            case STATE_AUTHORIZED_OPENING:
+                lcd_clear();
+                lcd_set_cursor(0, 1);
+                lcd_put_string(" DOOR IS OPEN... ");
+
+                while (1) {
+                    if (dev_override_flag) break;
+                    
+                    if (!reed_is_door_open()) {
+
+                        break;
+                    }
+                    vTaskDelay(pdMS_TO_TICKS(100));
+                }
+
+                lock_close(); 
+                is_sleeping = false;
+                state_machine_process_event(EVENT_DOOR_CLOSED); 
+                break;
+                
+            case STATE_RECOVERY:
+                lcd_clear();
+                lcd_set_cursor(0, 1);
+                lcd_put_string(" SYSTEM RECOVERY ");
+                
+
+                vTaskDelay(pdMS_TO_TICKS(3000));
+                
                 is_sleeping = false;
                 state_machine_process_event(EVENT_TIMEOUT);
                 break;
@@ -274,11 +357,17 @@
                 lcd_set_cursor(0, 1);
                 lcd_put_string(" SYSTEM LOCKED OUT! ");
 
-                melody_locked_out(); // Sad descending penalty sound
+                melody_locked_out();
 
-                // Wait for 8 seconds, but allow dev override!
                 for (int i = 0; i < 80; i++) {
                     if (dev_override_flag) break;
+                    
+
+                    if (reed_is_door_open()) {
+                        state_machine_process_event(EVENT_DOOR_FORCED_OPEN);
+                        return; 
+                    }
+                    
                     vTaskDelay(pdMS_TO_TICKS(100));
                 }
 
@@ -295,21 +384,19 @@
                 passcode_index = 0;
                 memset(passcode, 0, sizeof(passcode));
                 
-                // Infinite alarm loop until PIN is correct
                 while (1) {
                     if (dev_override_flag) {
-                        break; // The main loop will handle the state transition!
+                        break; 
                     }
                     
-                    melody_alarm(); // Siren sound
+                    melody_alarm(); 
                     
                     if (dev_override_flag) {
-                        break; // Check again in case it was pressed during the 800ms melody
+                        break; 
                     }
                     
                     char a_key = keypad_get_key();
-                    if (a_key != '\0' && a_key != last_key) {
-                        last_key = a_key;
+                    if (a_key != '\0') {
                         if (a_key >= '0' && a_key <= '9') {
                             if (passcode_index < 10) {
                                 passcode[passcode_index] = a_key;
@@ -328,9 +415,9 @@
                                 memset(passcode, 0, sizeof(passcode));
                                 melody_success();
                                 state_machine_process_event(EVENT_PIN_CORRECT);
-                                break; // Break out of alarm loop!
+                                break; 
                             }
-                            passcode_index = 0; // Wrong pin, reset without feedback
+                            passcode_index = 0; 
                             memset(passcode, 0, sizeof(passcode));
                         }
                     }

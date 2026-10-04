@@ -1,0 +1,78 @@
+[1/5] cd /home/norman/esp_projects/smart_lock/build/esp-idf/esptool_py && /home/norman/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/norman/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/norman/esp_projects/smart_lock/build/partition_table/partition-table.bin /home/norman/esp_projects/smart_lock/build/smart_lock.bin
+smart_lock.bin binary size 0xf3960 bytes. Smallest app partition is 0x100000 bytes. 0xc6a0 bytes (5%) free.
+Warning: The smallest app partition is nearly full (5% free space left)!
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/norman/esp_projects/smart_lock/build/bootloader/esp-idf/esptool_py && /home/norman/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/norman/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/norman/esp_projects/smart_lock/build/bootloader/bootloader.bin
+Bootloader binary size 0x56f0 bytes. 0x2910 bytes (32%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/norman/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/norman/esp-idf -D "SERIAL_TOOL=/home/norman/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/norman/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/norman/esp_projects/smart_lock/build -P /home/norman/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 smart_lock.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.0
+Serial port /dev/ttyACM0
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.2)
+Features: Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz, Unknown Embedded Flash
+Crystal is 40MHz
+MAC: e8:f6:0a:ff:fe:f8:bb:dc
+BASE MAC: e8:f6:0a:f8:bb:dc
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00103fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22256 bytes to 13348...
+Writing at 0x00000000... (100 %)
+Wrote 22256 bytes (13348 compressed) at 0x00000000 in 0.6 seconds (effective 303.1 kbit/s)...
+Hash of data verified.
+Compressed 997728 bytes to 571762...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d413... (5 %)
+Writing at 0x0002856f... (8 %)
+Writing at 0x0003199d... (11 %)
+Writing at 0x000388ff... (14 %)
+Writing at 0x0003fdff... (17 %)
+Writing at 0x0004710e... (20 %)
+Writing at 0x0004f180... (22 %)
+Writing at 0x000561e2... (25 %)
+Writing at 0x0005d44b... (28 %)
+Writing at 0x00063b12... (31 %)
+Writing at 0x0006a451... (34 %)
+Writing at 0x00070f6c... (37 %)
+Writing at 0x0007742e... (40 %)
+Writing at 0x0007da2d... (42 %)
+Writing at 0x00083cc6... (45 %)
+Writing at 0x0008978c... (48 %)
+Writing at 0x0008fad0... (51 %)
+Writing at 0x000960a3... (54 %)
+Writing at 0x0009c036... (57 %)
+Writing at 0x000a20b0... (60 %)
+Writing at 0x000a7f3c... (62 %)
+Writing at 0x000adfee... (65 %)
+Writing at 0x000b473d... (68 %)
+Writing at 0x000bb5cf... (71 %)
+Writing at 0x000c2b1f... (74 %)
+Writing at 0x000c9b83... (77 %)
+Writing at 0x000d0536... (80 %)
+Writing at 0x000d68d4... (82 %)
+Writing at 0x000dcdda... (85 %)
+Writing at 0x000e3068... (88 %)
+Writing at 0x000e925a... (91 %)
+Writing at 0x000f0268... (94 %)
+Writing at 0x000f6da3... (97 %)
+Writing at 0x000fc646... (100 %)
+Wrote 997728 bytes (571762 compressed) at 0x00010000 in 12.9 seconds (effective 617.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 501.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

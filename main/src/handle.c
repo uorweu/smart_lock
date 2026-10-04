@@ -15,13 +15,25 @@ void handle_init(void) {
 }
 
 bool handle_is_pressed(void) {
-    return (gpio_get_level(BTN_UNLOCK_PIN) == 0); 
-}
-
-void handle_wait_for_release(void) {
-    vTaskDelay(pdMS_TO_TICKS(200)); // Debounce the press
-    while (handle_is_pressed()) {
-        vTaskDelay(pdMS_TO_TICKS(10));
+    static bool last_state = false;
+    
+    // Read the current physical pin
+    bool current_state = (gpio_get_level(BTN_UNLOCK_PIN) == 0);
+    
+    if (current_state == true && current_state != last_state) {
+        vTaskDelay(pdMS_TO_TICKS(10)); // Debounce
+        
+        current_state = (gpio_get_level(BTN_UNLOCK_PIN) == 0);
+        
+        if (current_state == true && current_state != last_state) {
+            last_state = current_state;
+            return true; // Return TRUE only once per press!
+        }
     }
-    vTaskDelay(pdMS_TO_TICKS(200)); // Debounce the release
+    
+    if (current_state == false) {
+        last_state = false;
+    }
+    
+    return false;
 }

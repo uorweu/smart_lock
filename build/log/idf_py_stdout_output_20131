@@ -1,0 +1,2016 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=22ac8h (142024) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00032af0 vaddr=40800000 size=05528h ( 21800) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b3c5ch (736348) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ebc84 vaddr=40805528 size=1405ch ( 82012) load[0m
+[0;32mI (290) esp_image: segment 4: paddr=000ffce8 vaddr=40819590 size=03630h ( 13872) load[0m
+[0;32mI (300) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (300) boot: Disabling RNG early entropy source...[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;33mW (320) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (327) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (327) cpu_start: Application information:[0m
+[0;32mI (330) cpu_start: Project name:     smart_lock[0m
+[0;32mI (335) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (340) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (346) cpu_start: ELF file SHA256:  60b4e1d64...[0m
+[0;32mI (352) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (359) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (363) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (368) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (373) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (380) heap_init: At 40822480 len 0005A190 (360 KiB): RAM[0m
+[0;32mI (386) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (392) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (399) spi_flash: detected chip: generic[0m
+[0;32mI (403) spi_flash: flash io: dio[0m
+[0;33mW (407) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (420) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (431) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (438) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (445) coexist: coex firmware version: 8561505[0m
+[0;32mI (450) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (455) main_task: Started on CPU0[0m
+[0;32mI (455) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (565) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (565) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (575) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (585) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (595) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (605) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (615) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (625) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (625) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (635) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (645) gpio: GPIO[10]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (655) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (695) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (695) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (705) wifi:wifi driver task: 4082b818, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (715) wifi:config nano formating: disabled[0m
+[0;32mI (715) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (725) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (735) wifi:Init management short buffer num: 32[0m
+[0;32mI (735) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (735) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (745) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (745) wifi:Init static rx buffer num: 10[0m
+[0;32mI (755) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (755) wifi_init: rx ba win: 6[0m
+[0;32mI (755) wifi_init: tcpip mbox: 32[0m
+[0;32mI (765) wifi_init: udp mbox: 6[0m
+[0;32mI (765) wifi_init: tcp mbox: 6[0m
+[0;32mI (775) wifi_init: tcp tx win: 5760[0m
+[0;32mI (775) wifi_init: tcp rx win: 5760[0m
+[0;32mI (775) wifi_init: tcp mss: 1440[0m
+[0;32mI (785) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (785) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (795) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (875) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (875) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (885) wifi:(agc)0x600a7128:0xd20baa06, min.avgNF:0xce->0xd2(dB), RCalCount:0xba, min.RRssi:0xa06(-95.62)[0m
+[0;32mI (895) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (905) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (905) wifi:enable tsf[0m
+[0;32mI (905) WIFI_MOD: wifi_init finished.[0m
+[0;32mI (1755) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1755) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1755) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1765) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1775) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1785) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1785) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1795) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1805) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1805) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1825) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1835) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1835) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1845) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1855) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1[0m
+[0;32mI (1855) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1865) wifi:state: init -> auth (b0)[0m
+[0;32mI (1875) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1875) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1885) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1885) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1895) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1895) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1905) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1915) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1925) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1925) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1935) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1945) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1955) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1965) wifi:state: assoc -> run (10)[0m
+[0;32mI (1965) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1975) wifi:(trc)phytype:CBW20-LGI, snr:44, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1975) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:44, ampduState:wait operational[0m
+[0;32mI (1985) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1995) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (3285) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (4895) wifi:state: run -> init (2c0)[0m
+[0;32mI (4905) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (4905) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (4905) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (4915) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (5015) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (5015) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (5015) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (5015) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (5025) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (5035) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (5045) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (5055) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (5055) wifi:(opr)bss color disabled:1[0m
+[0;32mI (5065) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (5075) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (5085) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (5085) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (5095) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (7395) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (7395) wifi:state: init -> auth (b0)[0m
+[0;32mI (7405) wifi:state: auth -> assoc (0)[0m
+[0;32mI (7405) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (7405) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (7415) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (7415) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (7425) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (7435) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (7445) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (7455) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (7455) wifi:(opr)bss color disabled:1[0m
+[0;32mI (7465) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (7475) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (7485) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (7485) wifi:state: assoc -> run (10)[0m
+[0;32mI (7495) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (7495) wifi:(trc)phytype:CBW20-LGI, snr:39, maxRate:172, highestRateIdx:1[0m
+[0;32mI (7505) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:39, ampduState:wait operational[0m
+[0;32mI (7515) wifi:ifidx:0, rssi:-57, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (7525) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (11185) MQTT_MOD: Published state: DENIED[0m
+[0;32mI (13335) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (17535) wifi:state: run -> init (cc00)[0m
+[0;32mI (17545) wifi:ifidx:0, rssi:-57, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (17545) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (17545) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (17555) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (17605) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (17605) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (17605) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (17615) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (17625) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (17635) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (17635) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (17645) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (17655) wifi:(opr)bss color disabled:1[0m
+[0;32mI (17655) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (17675) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (17675) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (17685) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (17695) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (19985) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (19985) wifi:state: init -> auth (b0)[0m
+[0;32mI (19995) wifi:state: auth -> assoc (0)[0m
+[0;32mI (19995) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (19995) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (20005) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (20005) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (20015) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (20025) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (20035) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (20045) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (20045) wifi:(opr)bss color disabled:1[0m
+[0;32mI (20055) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (20065) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (20075) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (20085) wifi:state: assoc -> run (10)[0m
+[0;32mI (20085) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (20095) wifi:(trc)phytype:CBW20-LGI, snr:42, maxRate:172, highestRateIdx:1[0m
+[0;32mI (20095) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:42, ampduState:wait operational[0m
+[0;32mI (20105) wifi:ifidx:0, rssi:-54, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (20115) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (22475) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (23015) wifi:state: run -> init (2c0)[0m
+[0;32mI (23025) wifi:ifidx:0, rssi:-54, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (23025) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (23025) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (23035) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (23135) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (23135) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (23135) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (23145) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (23155) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (23165) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (23165) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (23175) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (23185) wifi:(opr)bss color disabled:1[0m
+[0;32mI (23185) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (23195) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (23205) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (23215) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (23225) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (25515) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (25515) wifi:state: init -> auth (b0)[0m
+[0;32mI (25525) wifi:state: auth -> assoc (0)[0m
+[0;32mI (25525) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (25535) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (25535) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (25535) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (25545) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (25555) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (25565) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (25575) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (25575) wifi:(opr)bss color disabled:1[0m
+[0;32mI (25585) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (25595) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (25605) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (25615) wifi:state: assoc -> run (10)[0m
+[0;32mI (25615) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (25625) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (25625) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (25635) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (25645) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (26435) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (28545) wifi:state: run -> init (2c0)[0m
+[0;32mI (28555) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (28555) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (28555) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (28565) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (28575) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (28575) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (28585) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (28585) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (28595) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (28605) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (28615) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (28625) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (28625) wifi:(opr)bss color disabled:1[0m
+[0;32mI (28635) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (28645) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (28655) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (28655) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (28665) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (30965) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (30965) wifi:state: init -> auth (b0)[0m
+[0;32mI (30975) wifi:state: auth -> assoc (0)[0m
+[0;32mI (30985) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (30985) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (30995) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (30995) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (31005) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (31015) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (31025) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (31025) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (31035) wifi:(opr)bss color disabled:1[0m
+[0;32mI (31035) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (31055) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (31065) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (31065) wifi:state: assoc -> run (10)[0m
+[0;32mI (31075) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (31075) wifi:(trc)phytype:CBW20-LGI, snr:48, maxRate:172, highestRateIdx:1[0m
+[0;32mI (31085) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:48, ampduState:wait operational[0m
+[0;32mI (31095) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (31105) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (34005) wifi:state: run -> init (2c0)[0m
+[0;32mI (34015) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (34015) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (34015) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (34025) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (34095) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (34095) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (34095) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (34105) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (34105) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (34115) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (34125) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (34135) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (34135) wifi:(opr)bss color disabled:1[0m
+[0;32mI (34145) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (34155) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (34165) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (34175) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (34175) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (36135) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (36475) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (36475) wifi:state: init -> auth (b0)[0m
+[0;32mI (36485) wifi:state: auth -> assoc (0)[0m
+[0;32mI (36495) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (36495) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (36495) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (36495) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (36505) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (36515) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (36525) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (36535) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (36535) wifi:(opr)bss color disabled:1[0m
+[0;32mI (36545) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (36555) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (36565) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (36575) wifi:state: assoc -> run (10)[0m
+[0;32mI (36575) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (36585) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (36585) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (36595) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (36605) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (37395) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (39505) wifi:state: run -> init (2c0)[0m
+[0;32mI (39515) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (39515) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (39515) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (39525) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (39625) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (39625) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (39625) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (39625) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (39635) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (39645) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (39655) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (39665) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (39665) wifi:(opr)bss color disabled:1[0m
+[0;32mI (39675) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (39685) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (39695) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (39705) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (39705) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (42005) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (42005) wifi:state: init -> auth (b0)[0m
+[0;32mI (42015) wifi:state: auth -> assoc (0)[0m
+[0;32mI (42025) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (42025) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (42025) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (42025) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (42035) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (42045) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (42055) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (42065) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (42065) wifi:(opr)bss color disabled:1[0m
+[0;32mI (42075) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (42085) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (42095) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (42105) wifi:state: assoc -> run (10)[0m
+[0;32mI (42105) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (42115) wifi:(trc)phytype:CBW20-LGI, snr:40, maxRate:172, highestRateIdx:1[0m
+[0;32mI (42115) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:40, ampduState:wait operational[0m
+[0;32mI (42125) wifi:ifidx:0, rssi:-56, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (42135) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (45035) wifi:state: run -> init (2c0)[0m
+[0;32mI (45045) wifi:ifidx:0, rssi:-56, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (45045) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (45045) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (45055) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (45155) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (45155) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (45155) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (45155) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (45165) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (45175) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (45185) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (45195) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (45195) wifi:(opr)bss color disabled:1[0m
+[0;32mI (45205) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (45215) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (45225) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (45235) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (45235) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (47535) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (47535) wifi:state: init -> auth (b0)[0m
+[0;32mI (47545) wifi:state: auth -> assoc (0)[0m
+[0;32mI (47555) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (47555) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (47555) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (47565) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (47565) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (47575) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (47585) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (47595) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (47605) wifi:(opr)bss color disabled:1[0m
+[0;32mI (47605) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (47615) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (47625) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (47635) wifi:state: assoc -> run (10)[0m
+[0;32mI (47635) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (47645) wifi:(trc)phytype:CBW20-LGI, snr:43, maxRate:172, highestRateIdx:1[0m
+[0;32mI (47645) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:43, ampduState:wait operational[0m
+[0;32mI (47665) wifi:ifidx:0, rssi:-53, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (47665) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (57675) wifi:state: run -> init (cc00)[0m
+[0;32mI (57685) wifi:ifidx:0, rssi:-53, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (57685) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (57685) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (57695) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (57705) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (57705) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (57715) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (57715) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (57725) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (57735) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (57745) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (57755) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (57755) wifi:(opr)bss color disabled:1[0m
+[0;32mI (57765) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (57775) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (57785) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (57785) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (57795) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (60095) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (60095) wifi:state: init -> auth (b0)[0m
+[0;32mI (60105) wifi:state: auth -> assoc (0)[0m
+[0;32mI (60105) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (60115) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (60115) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (60115) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (60125) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (60135) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (60145) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (60155) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (60155) wifi:(opr)bss color disabled:1[0m
+[0;32mI (60165) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (60175) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (60185) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (60185) wifi:state: assoc -> run (10)[0m
+[0;32mI (60195) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (60205) wifi:(trc)phytype:CBW20-LGI, snr:49, maxRate:172, highestRateIdx:1[0m
+[0;32mI (60205) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (60215) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (60225) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (70235) wifi:state: run -> init (cc00)[0m
+[0;32mI (70245) wifi:ifidx:0, rssi:-47, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (70245) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (70245) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (70255) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (70265) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (70265) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (70275) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (70275) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (70285) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (70295) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (70305) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (70315) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (70315) wifi:(opr)bss color disabled:1[0m
+[0;32mI (70325) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (70335) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (70345) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (70345) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (70355) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (72655) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (72655) wifi:state: init -> auth (b0)[0m
+[0;32mI (72665) wifi:state: auth -> assoc (0)[0m
+[0;32mI (72665) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (72665) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (72675) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (72675) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (72685) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (72695) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (72705) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (72715) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (72715) wifi:(opr)bss color disabled:1[0m
+[0;32mI (72725) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (72735) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (72745) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (72745) wifi:state: assoc -> run (10)[0m
+[0;32mI (72755) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (72765) wifi:(trc)phytype:CBW20-LGI, snr:44, maxRate:172, highestRateIdx:1[0m
+[0;32mI (72765) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:44, ampduState:wait operational[0m
+[0;32mI (72775) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (72785) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (75685) wifi:state: run -> init (2c0)[0m
+[0;32mI (75695) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (75695) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (75695) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (75705) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (75715) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (75715) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (75725) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (75725) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (75735) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (75745) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (75755) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (75755) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (75765) wifi:(opr)bss color disabled:1[0m
+[0;32mI (75765) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (75785) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (75795) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (75795) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (75805) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (78095) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (78095) wifi:state: init -> auth (b0)[0m
+[0;32mI (78115) wifi:state: auth -> assoc (0)[0m
+[0;32mI (78125) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (78125) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (78125) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (78135) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (78145) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (78155) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (78155) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (78165) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (78175) wifi:(opr)bss color disabled:1[0m
+[0;32mI (78175) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (78195) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (78195) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (78205) wifi:state: assoc -> run (10)[0m
+[0;32mI (78205) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (78215) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (78225) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (78235) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (78245) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (81145) wifi:state: run -> init (2c0)[0m
+[0;32mI (81155) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (81155) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (81155) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (81165) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (81175) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (81175) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (81185) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (81185) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (81195) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (81205) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (81215) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (81215) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (81225) wifi:(opr)bss color disabled:1[0m
+[0;32mI (81225) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (81245) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (81255) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (81255) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (81265) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (83555) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (83555) wifi:state: init -> auth (b0)[0m
+[0;32mI (83575) wifi:state: auth -> assoc (0)[0m
+[0;32mI (83575) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (83575) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (83585) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (83585) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (83595) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (83605) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (83615) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (83625) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (83625) wifi:(opr)bss color disabled:1[0m
+[0;32mI (83635) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (83645) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (83655) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (83655) wifi:state: assoc -> run (10)[0m
+[0;32mI (83665) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (83675) wifi:(trc)phytype:CBW20-LGI, snr:44, maxRate:172, highestRateIdx:1[0m
+[0;32mI (83675) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:44, ampduState:wait operational[0m
+[0;32mI (83685) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (83695) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (84305) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (85235) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (86595) wifi:state: run -> init (2c0)[0m
+[0;32mI (86605) wifi:ifidx:0, rssi:-52, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (86605) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (86605) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (86615) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (86625) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (86625) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (86635) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (86635) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (86645) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (86655) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (86665) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (86665) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (86675) wifi:(opr)bss color disabled:1[0m
+[0;32mI (86675) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (86695) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (86705) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (86705) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (86715) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (89005) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (89005) wifi:state: init -> auth (b0)[0m
+[0;32mI (89025) wifi:state: auth -> assoc (0)[0m
+[0;32mI (89025) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (89025) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (89035) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (89035) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (89045) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (89055) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (89065) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (89075) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (89075) wifi:(opr)bss color disabled:1[0m
+[0;32mI (89085) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (89095) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (89105) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (89105) wifi:state: assoc -> run (10)[0m
+[0;32mI (89115) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (89125) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (89125) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (89135) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (89145) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (93855) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (99155) wifi:state: run -> init (cc00)[0m
+[0;32mI (99165) wifi:ifidx:0, rssi:-50, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (99165) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (99165) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (99175) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (99185) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (99185) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (99195) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (99195) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (99205) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (99215) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (99225) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (99235) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (99235) wifi:(opr)bss color disabled:1[0m
+[0;32mI (99245) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (99255) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (99265) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (99265) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (99275) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (101115) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (101575) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (101575) wifi:state: init -> auth (b0)[0m
+[0;32mI (101585) wifi:state: auth -> assoc (0)[0m
+[0;32mI (101595) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (101595) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (101595) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (101605) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (101605) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (101615) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (101625) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (101635) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (101645) wifi:(opr)bss color disabled:1[0m
+[0;32mI (101645) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (101655) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (101665) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (101675) wifi:state: assoc -> run (10)[0m
+[0;32mI (101675) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (101685) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (101695) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (101705) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (101715) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (104615) wifi:state: run -> init (2c0)[0m
+[0;32mI (104625) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (104625) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (104625) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (104635) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (104645) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (104645) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (104655) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (104655) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (104665) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (104675) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (104685) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (104695) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (104695) wifi:(opr)bss color disabled:1[0m
+[0;32mI (104705) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (104715) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (104725) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (104725) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (104735) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (107035) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (107035) wifi:state: init -> auth (b0)[0m
+[0;32mI (107045) wifi:state: auth -> assoc (0)[0m
+[0;32mI (107055) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (107055) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (107055) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (107065) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (107065) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (107075) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (107085) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (107095) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (107105) wifi:(opr)bss color disabled:1[0m
+[0;32mI (107105) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (107115) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (107125) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (107135) wifi:state: assoc -> run (10)[0m
+[0;32mI (107135) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (107145) wifi:(trc)phytype:CBW20-LGI, snr:43, maxRate:172, highestRateIdx:1[0m
+[0;32mI (107155) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:43, ampduState:wait operational[0m
+[0;32mI (107165) wifi:ifidx:0, rssi:-53, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (107175) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (110085) wifi:state: run -> init (2c0)[0m
+[0;32mI (110095) wifi:ifidx:0, rssi:-53, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (110095) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (110095) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (110105) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (110115) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (110115) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (110125) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (110125) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (110135) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (110145) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (110155) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (110165) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (110165) wifi:(opr)bss color disabled:1[0m
+[0;32mI (110175) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (110185) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (110195) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (110195) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (110205) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (112505) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (112505) wifi:state: init -> auth (b0)[0m
+[0;32mI (112515) wifi:state: auth -> assoc (0)[0m
+[0;32mI (112525) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (112525) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (112525) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (112525) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (112535) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (112545) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (112555) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (112565) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (112565) wifi:(opr)bss color disabled:1[0m
+[0;32mI (112575) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (112585) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (112595) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (112605) wifi:state: assoc -> run (10)[0m
+[0;32mI (112605) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (112615) wifi:(trc)phytype:CBW20-LGI, snr:44, maxRate:172, highestRateIdx:1[0m
+[0;32mI (112615) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:44, ampduState:wait operational[0m
+[0;32mI (112635) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (112635) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (115535) wifi:state: run -> init (2c0)[0m
+[0;32mI (115545) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (115545) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (115545) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (115555) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (115565) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (115565) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (115575) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (115575) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (115585) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (115595) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (115605) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (115615) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (115615) wifi:(opr)bss color disabled:1[0m
+[0;32mI (115625) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (115635) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (115645) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (115645) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (115655) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (116615) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (117955) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (117955) wifi:state: init -> auth (b0)[0m
+[0;32mI (117965) wifi:state: auth -> assoc (0)[0m
+[0;32mI (117965) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (117975) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (117975) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (117975) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (117985) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (117995) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (118005) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (118015) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (118015) wifi:(opr)bss color disabled:1[0m
+[0;32mI (118025) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (118035) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (118045) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (118055) wifi:state: assoc -> run (10)[0m
+[0;32mI (118055) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (118065) wifi:(trc)phytype:CBW20-LGI, snr:43, maxRate:172, highestRateIdx:1[0m
+[0;32mI (118065) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:43, ampduState:wait operational[0m
+[0;32mI (118075) wifi:ifidx:0, rssi:-53, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (118085) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (127025) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (128095) wifi:state: run -> init (cc00)[0m
+[0;32mI (128105) wifi:ifidx:0, rssi:-53, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (128105) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (128105) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (128115) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (128125) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (128125) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (128135) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (128135) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (128145) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (128155) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (128165) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (128175) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (128175) wifi:(opr)bss color disabled:1[0m
+[0;32mI (128185) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (128195) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (128205) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (128205) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (128215) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (130515) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (130515) wifi:state: init -> auth (b0)[0m
+[0;32mI (130525) wifi:state: auth -> assoc (0)[0m
+[0;32mI (130525) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (130525) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (130535) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (130535) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (130545) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (130555) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (130565) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (130575) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (130575) wifi:(opr)bss color disabled:1[0m
+[0;32mI (130585) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (130595) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (130605) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (130615) wifi:state: assoc -> run (10)[0m
+[0;32mI (130615) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (130625) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (130625) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (130635) wifi:ifidx:0, rssi:-50, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (130645) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (133555) wifi:state: run -> init (2c0)[0m
+[0;32mI (133565) wifi:ifidx:0, rssi:-50, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (133565) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (133565) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (133575) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (133585) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (133585) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (133595) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (133595) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (133605) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (133615) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (133625) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (133635) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (133635) wifi:(opr)bss color disabled:1[0m
+[0;32mI (133645) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (133655) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (133665) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (133665) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (133675) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (135975) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (135975) wifi:state: init -> auth (b0)[0m
+[0;32mI (135985) wifi:state: auth -> assoc (0)[0m
+[0;32mI (135995) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (135995) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (135995) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (136005) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (136005) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (136015) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (136025) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (136035) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (136045) wifi:(opr)bss color disabled:1[0m
+[0;32mI (136045) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (136055) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (136065) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (136075) wifi:state: assoc -> run (10)[0m
+[0;32mI (136075) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (136085) wifi:(trc)phytype:CBW20-LGI, snr:42, maxRate:172, highestRateIdx:1[0m
+[0;32mI (136085) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:42, ampduState:wait operational[0m
+[0;32mI (136105) wifi:ifidx:0, rssi:-54, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (136115) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (139015) wifi:state: run -> init (2c0)[0m
+[0;32mI (139025) wifi:ifidx:0, rssi:-54, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (139025) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (139025) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (139035) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (139045) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (139045) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (139055) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (139055) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (139065) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (139075) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (139085) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (139095) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (139095) wifi:(opr)bss color disabled:1[0m
+[0;32mI (139105) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (139115) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (139125) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (139125) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (139135) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (141435) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (141435) wifi:state: init -> auth (b0)[0m
+[0;32mI (141445) wifi:state: auth -> assoc (0)[0m
+[0;32mI (141445) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (141445) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (141455) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (141455) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (141465) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (141475) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (141485) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (141495) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (141495) wifi:(opr)bss color disabled:1[0m
+[0;32mI (141505) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (141515) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (141525) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (141535) wifi:state: assoc -> run (10)[0m
+[0;32mI (141535) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (141545) wifi:(trc)phytype:CBW20-LGI, snr:42, maxRate:172, highestRateIdx:1[0m
+[0;32mI (141545) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:42, ampduState:wait operational[0m
+[0;32mI (141555) wifi:ifidx:0, rssi:-54, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (141565) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (146775) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (151575) wifi:state: run -> init (cc00)[0m
+[0;32mI (151585) wifi:ifidx:0, rssi:-54, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (151585) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (151585) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (151595) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (151605) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (151605) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (151615) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (151615) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (151625) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (151635) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (151645) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (151655) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (151655) wifi:(opr)bss color disabled:1[0m
+[0;32mI (151665) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (151675) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (151685) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (151685) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (151695) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (153995) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (153995) wifi:state: init -> auth (b0)[0m
+[0;32mI (154005) wifi:state: auth -> assoc (0)[0m
+[0;32mI (154005) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (154005) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (154015) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (154015) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (154025) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (154035) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (154045) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (154055) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (154055) wifi:(opr)bss color disabled:1[0m
+[0;32mI (154065) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (154075) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (154085) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (154095) wifi:state: assoc -> run (10)[0m
+[0;32mI (154095) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (154105) wifi:(trc)phytype:CBW20-LGI, snr:42, maxRate:172, highestRateIdx:1[0m
+[0;32mI (154105) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:42, ampduState:wait operational[0m
+[0;32mI (154115) wifi:ifidx:0, rssi:-53, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (154125) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (159065) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (164135) wifi:state: run -> init (cc00)[0m
+[0;32mI (164145) wifi:ifidx:0, rssi:-53, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (164145) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (164145) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (164155) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (164165) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (164165) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (164175) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (164175) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (164185) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (164195) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (164205) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (164215) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (164215) wifi:(opr)bss color disabled:1[0m
+[0;32mI (164225) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (164235) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (164245) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (164245) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (164255) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (166555) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (166555) wifi:state: init -> auth (b0)[0m
+[0;32mI (166565) wifi:state: auth -> assoc (0)[0m
+[0;32mI (166575) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (166575) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (166575) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (166585) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (166585) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (166595) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (166605) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (166615) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (166625) wifi:(opr)bss color disabled:1[0m
+[0;32mI (166625) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (166635) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (166645) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (166655) wifi:state: assoc -> run (10)[0m
+[0;32mI (166655) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (166665) wifi:(trc)phytype:CBW20-LGI, snr:39, maxRate:172, highestRateIdx:1[0m
+[0;32mI (166675) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:39, ampduState:wait operational[0m
+[0;32mI (166685) wifi:ifidx:0, rssi:-57, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (166695) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (167555) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (168135) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (169585) wifi:state: run -> init (2c0)[0m
+[0;32mI (169595) wifi:ifidx:0, rssi:-57, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (169595) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (169595) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (169605) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (169665) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (169665) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (169675) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (169675) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (169685) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (169695) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (169705) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (169715) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (169715) wifi:(opr)bss color disabled:1[0m
+[0;32mI (169725) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (169735) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (169745) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (169745) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (169755) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (172055) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (172055) wifi:state: init -> auth (b0)[0m
+[0;32mI (172065) wifi:state: auth -> assoc (0)[0m
+[0;32mI (172075) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (172075) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (172075) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (172075) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (172085) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (172095) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (172105) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (172115) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (172115) wifi:(opr)bss color disabled:1[0m
+[0;32mI (172125) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (172135) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (172145) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (172155) wifi:state: assoc -> run (10)[0m
+[0;32mI (172155) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (172165) wifi:(trc)phytype:CBW20-LGI, snr:44, maxRate:172, highestRateIdx:1[0m
+[0;32mI (172165) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:44, ampduState:wait operational[0m
+[0;32mI (172185) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (172185) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (175095) wifi:state: run -> init (2c0)[0m
+[0;32mI (175105) wifi:ifidx:0, rssi:-52, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (175105) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (175105) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (175115) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (175125) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (175125) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (175135) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (175135) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (175145) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (175155) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (175165) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (175175) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (175175) wifi:(opr)bss color disabled:1[0m
+[0;32mI (175185) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (175195) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (175205) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (175205) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (175215) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (177515) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (177515) wifi:state: init -> auth (b0)[0m
+[0;32mI (177525) wifi:state: auth -> assoc (0)[0m
+[0;32mI (177535) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (177535) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (177535) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (177535) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (177545) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (177555) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (177565) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (177575) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (177575) wifi:(opr)bss color disabled:1[0m
+[0;32mI (177585) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (177595) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (177605) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (177615) wifi:state: assoc -> run (10)[0m
+[0;32mI (177615) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (177625) wifi:(trc)phytype:CBW20-LGI, snr:47, maxRate:172, highestRateIdx:1[0m
+[0;32mI (177625) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:47, ampduState:wait operational[0m
+[0;32mI (177645) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (177645) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (180555) wifi:state: run -> init (2c0)[0m
+[0;32mI (180565) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (180565) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (180565) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (180575) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (180585) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (180585) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (180595) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (180595) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (180605) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (180615) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (180625) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (180635) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (180635) wifi:(opr)bss color disabled:1[0m
+[0;32mI (180645) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (180655) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (180665) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (180665) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (180675) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (182835) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (182975) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (182975) wifi:state: init -> auth (b0)[0m
+[0;32mI (182985) wifi:state: auth -> assoc (0)[0m
+[0;32mI (182995) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (182995) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (182995) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (183005) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (183005) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (183015) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (183025) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (183035) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (183045) wifi:(opr)bss color disabled:1[0m
+[0;32mI (183045) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (183055) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (183065) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (183075) wifi:state: assoc -> run (10)[0m
+[0;32mI (183075) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (183085) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (183085) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (183105) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (183115) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (186015) wifi:state: run -> init (2c0)[0m
+[0;32mI (186025) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (186025) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (186025) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (186035) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (186045) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (186045) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (186055) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (186055) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (186065) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (186075) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (186085) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (186095) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (186095) wifi:(opr)bss color disabled:1[0m
+[0;32mI (186105) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (186115) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (186125) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (186125) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (186135) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (188435) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (188435) wifi:state: init -> auth (b0)[0m
+[0;32mI (188445) wifi:state: auth -> assoc (0)[0m
+[0;32mI (188455) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (188455) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (188455) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (188465) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (188465) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (188475) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (188485) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (188495) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (188505) wifi:(opr)bss color disabled:1[0m
+[0;32mI (188505) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (188515) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (188525) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (188535) wifi:state: assoc -> run (10)[0m
+[0;32mI (188535) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (188545) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (188545) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (188565) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (188575) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (191475) wifi:state: run -> init (2c0)[0m
+[0;32mI (191485) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (191485) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (191485) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (191495) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (191585) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (191585) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (191585) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (191595) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (191595) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (191605) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (191615) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (191625) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (191635) wifi:(opr)bss color disabled:1[0m
+[0;32mI (191635) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (191645) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (191655) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (191665) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (191675) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (193965) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (193965) wifi:state: init -> auth (b0)[0m
+[0;32mI (193975) wifi:state: auth -> assoc (0)[0m
+[0;32mI (193985) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (193985) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (193985) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (193995) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (193995) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (194005) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (194015) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (194025) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (194035) wifi:(opr)bss color disabled:1[0m
+[0;32mI (194035) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (194045) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (194055) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (194065) wifi:state: assoc -> run (10)[0m
+[0;32mI (194065) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (194075) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (194085) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (194095) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (194105) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (197005) wifi:state: run -> init (2c0)[0m
+[0;32mI (197015) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (197015) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (197015) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (197025) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (197115) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (197115) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (197115) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (197125) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (197125) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (197135) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (197145) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (197155) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (197165) wifi:(opr)bss color disabled:1[0m
+[0;32mI (197165) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (197175) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (197185) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (197195) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (197205) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (199495) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (199495) wifi:state: init -> auth (b0)[0m
+[0;32mI (199505) wifi:state: auth -> assoc (0)[0m
+[0;32mI (199505) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (199505) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (199515) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (199515) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (199525) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (199535) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (199545) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (199555) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (199555) wifi:(opr)bss color disabled:1[0m
+[0;32mI (199565) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (199575) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (199585) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (199595) wifi:state: assoc -> run (10)[0m
+[0;32mI (199595) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (199605) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (199605) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (199615) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (199625) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (201865) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (202525) wifi:state: run -> init (2c0)[0m
+[0;32mI (202535) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (202535) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (202535) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (202545) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (202555) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (202555) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (202565) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (202565) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (202575) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (202585) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (202595) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (202605) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (202605) wifi:(opr)bss color disabled:1[0m
+[0;32mI (202615) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (202625) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (202635) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (202635) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (202645) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (204945) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (204945) wifi:state: init -> auth (b0)[0m
+[0;32mI (204985) wifi:state: auth -> assoc (0)[0m
+[0;32mI (204995) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (204995) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (205005) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (205005) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (205015) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (205025) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (205035) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (205045) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (205045) wifi:(opr)bss color disabled:1[0m
+[0;32mI (205055) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (205065) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (205075) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (205085) wifi:state: assoc -> run (10)[0m
+[0;32mI (205085) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (205095) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (205095) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (205105) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (205115) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (208005) wifi:state: run -> init (2c0)[0m
+[0;32mI (208015) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (208015) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (208015) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (208025) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (208065) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (208065) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (208075) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (208075) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (208085) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (208095) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (208105) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (208115) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (208115) wifi:(opr)bss color disabled:1[0m
+[0;32mI (208125) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (208135) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (208145) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (208145) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (208155) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (210455) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (210455) wifi:state: init -> auth (b0)[0m
+[0;32mI (210465) wifi:state: auth -> assoc (0)[0m
+[0;32mI (210475) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (210475) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (210475) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (210475) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (210485) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (210495) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (210505) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (210515) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (210515) wifi:(opr)bss color disabled:1[0m
+[0;32mI (210525) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (210535) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (210545) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (210555) wifi:state: assoc -> run (10)[0m
+[0;32mI (210555) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (210565) wifi:(trc)phytype:CBW20-LGI, snr:41, maxRate:172, highestRateIdx:1[0m
+[0;32mI (210565) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:41, ampduState:wait operational[0m
+[0;32mI (210575) wifi:ifidx:0, rssi:-55, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (210585) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (220595) wifi:state: run -> init (cc00)[0m
+[0;32mI (220605) wifi:ifidx:0, rssi:-55, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (220605) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (220605) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (220615) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (220625) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (220625) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (220635) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (220635) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (220645) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (220655) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (220665) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (220675) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (220675) wifi:(opr)bss color disabled:1[0m
+[0;32mI (220685) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (220695) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (220705) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (220705) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (220715) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (223015) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (223015) wifi:state: init -> auth (b0)[0m
+[0;32mI (223025) wifi:state: auth -> assoc (0)[0m
+[0;32mI (223025) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (223025) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (223035) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (223035) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (223045) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (223055) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (223065) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (223075) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (223075) wifi:(opr)bss color disabled:1[0m
+[0;32mI (223085) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (223095) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (223105) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (223115) wifi:state: assoc -> run (10)[0m
+[0;32mI (223115) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (223125) wifi:(trc)phytype:CBW20-LGI, snr:48, maxRate:172, highestRateIdx:1[0m
+[0;32mI (223125) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:48, ampduState:wait operational[0m
+[0;32mI (223135) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (223145) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (226055) wifi:state: run -> init (2c0)[0m
+[0;32mI (226065) wifi:ifidx:0, rssi:-48, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (226065) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (226065) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (226075) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (226085) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (226085) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (226095) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (226095) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (226105) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (226115) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (226125) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (226135) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (226135) wifi:(opr)bss color disabled:1[0m
+[0;32mI (226145) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (226155) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (226165) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (226165) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (226175) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (228475) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (228475) wifi:state: init -> auth (b0)[0m
+[0;32mI (228485) wifi:state: auth -> assoc (0)[0m
+[0;32mI (228495) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (228495) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (228495) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (228495) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (228505) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (228515) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (228525) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (228535) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (228535) wifi:(opr)bss color disabled:1[0m
+[0;32mI (228545) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (228555) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (228565) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (228575) wifi:state: assoc -> run (10)[0m
+[0;32mI (228575) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (228585) wifi:(trc)phytype:CBW20-LGI, snr:47, maxRate:172, highestRateIdx:1[0m
+[0;32mI (228585) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:47, ampduState:wait operational[0m
+[0;32mI (228595) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (228605) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (229165) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (230495) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (238615) wifi:state: run -> init (cc00)[0m
+[0;32mI (238625) wifi:ifidx:0, rssi:-49, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (238625) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (238625) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (238635) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (238685) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (238685) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (238685) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (238695) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (238705) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (238715) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (238715) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (238725) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (238735) wifi:(opr)bss color disabled:1[0m
+[0;32mI (238735) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (238755) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (238765) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (238765) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (238775) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (241065) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (241065) wifi:state: init -> auth (b0)[0m
+[0;32mI (241075) wifi:state: auth -> assoc (0)[0m
+[0;32mI (241075) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (241085) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (241085) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (241095) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (241095) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (241105) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (241115) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (241125) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (241135) wifi:(opr)bss color disabled:1[0m
+[0;32mI (241135) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (241145) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (241155) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (241165) wifi:state: assoc -> run (10)[0m
+[0;32mI (241165) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (241175) wifi:(trc)phytype:CBW20-LGI, snr:46, maxRate:172, highestRateIdx:1[0m
+[0;32mI (241185) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (241195) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (241205) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (244105) wifi:state: run -> init (2c0)[0m
+[0;32mI (244115) wifi:ifidx:0, rssi:-50, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (244115) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (244115) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (244125) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (244135) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (244135) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (244145) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (244145) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (244155) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (244165) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (244175) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (244185) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (244185) wifi:(opr)bss color disabled:1[0m
+[0;32mI (244195) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (244205) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (244215) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (244215) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (244225) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (245085) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (246525) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (246525) wifi:state: init -> auth (b0)[0m
+[0;32mI (246535) wifi:state: auth -> assoc (0)[0m
+[0;32mI (246545) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (246545) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (246545) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (246545) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (246555) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (246565) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (246575) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (246585) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (246585) wifi:(opr)bss color disabled:1[0m
+[0;32mI (246595) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (246605) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (246615) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (246625) wifi:state: assoc -> run (10)[0m
+[0;32mI (246625) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (246635) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (246635) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (246645) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (246655) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (247595) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (249565) wifi:state: run -> init (2c0)[0m
+[0;32mI (249575) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (249575) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (249575) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (249585) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (249595) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (249595) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (249605) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (249605) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (249615) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (249625) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (249635) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (249645) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (249645) wifi:(opr)bss color disabled:1[0m
+[0;32mI (249655) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (249665) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (249675) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (249675) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (249685) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (251985) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (251985) wifi:state: init -> auth (b0)[0m
+[0;32mI (251995) wifi:state: auth -> assoc (0)[0m
+[0;32mI (251995) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (252005) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (252005) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (252005) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (252015) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (252025) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (252035) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (252045) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (252045) wifi:(opr)bss color disabled:1[0m
+[0;32mI (252055) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (252065) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (252075) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (252085) wifi:state: assoc -> run (10)[0m
+[0;32mI (252085) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (252095) wifi:(trc)phytype:CBW20-LGI, snr:48, maxRate:172, highestRateIdx:1[0m
+[0;32mI (252095) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:48, ampduState:wait operational[0m
+[0;32mI (252105) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (252115) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (255025) wifi:state: run -> init (2c0)[0m
+[0;32mI (255035) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (255035) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (255035) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (255045) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (255055) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (255055) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (255065) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (255065) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (255075) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (255085) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (255095) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (255105) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (255105) wifi:(opr)bss color disabled:1[0m
+[0;32mI (255115) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (255125) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (255135) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (255135) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (255145) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (257445) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (257445) wifi:state: init -> auth (b0)[0m
+[0;32mI (257455) wifi:state: auth -> assoc (0)[0m
+[0;32mI (257455) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (257455) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (257465) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (257465) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (257475) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (257485) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (257495) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (257505) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (257505) wifi:(opr)bss color disabled:1[0m
+[0;32mI (257515) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (257525) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (257535) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (257545) wifi:state: assoc -> run (10)[0m
+[0;32mI (257545) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (257555) wifi:(trc)phytype:CBW20-LGI, snr:49, maxRate:172, highestRateIdx:1[0m
+[0;32mI (257555) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (257565) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (257575) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (267585) wifi:state: run -> init (cc00)[0m
+[0;32mI (267595) wifi:ifidx:0, rssi:-47, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (267595) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (267595) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (267605) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (267615) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (267615) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (267625) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (267625) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (267635) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (267645) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (267655) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (267665) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (267665) wifi:(opr)bss color disabled:1[0m
+[0;32mI (267675) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (267685) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (267695) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (267695) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (267705) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (270005) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (270005) wifi:state: init -> auth (b0)[0m
+[0;32mI (270015) wifi:state: auth -> assoc (0)[0m
+[0;32mI (270025) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (270025) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (270025) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (270035) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (270035) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (270045) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (270055) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (270065) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (270075) wifi:(opr)bss color disabled:1[0m
+[0;32mI (270075) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (270085) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (270095) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (270105) wifi:state: assoc -> run (10)[0m
+[0;32mI (270105) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (270115) wifi:(trc)phytype:CBW20-LGI, snr:50, maxRate:172, highestRateIdx:1[0m
+[0;32mI (270125) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:50, ampduState:wait operational[0m
+[0;32mI (270135) wifi:ifidx:0, rssi:-46, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (270145) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (275455) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (276685) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (280145) wifi:state: run -> init (cc00)[0m
+[0;32mI (280155) wifi:ifidx:0, rssi:-46, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (280155) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (280155) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (280165) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (280175) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (280175) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (280185) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (280185) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (280195) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (280205) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (280215) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (280225) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (280225) wifi:(opr)bss color disabled:1[0m
+[0;32mI (280235) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (280245) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (280255) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (280265) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (280265) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (282325) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (282565) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (282565) wifi:state: init -> auth (b0)[0m
+[0;32mI (282575) wifi:state: auth -> assoc (0)[0m
+[0;32mI (282585) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (282585) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (282585) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (282595) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (282595) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (282605) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (282615) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (282625) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (282635) wifi:(opr)bss color disabled:1[0m
+[0;32mI (282635) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (282645) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (282655) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (282665) wifi:state: assoc -> run (10)[0m
+[0;32mI (282665) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (282675) wifi:(trc)phytype:CBW20-LGI, snr:50, maxRate:172, highestRateIdx:1[0m
+[0;32mI (282675) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:50, ampduState:wait operational[0m
+[0;32mI (282695) wifi:ifidx:0, rssi:-46, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (282705) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (285605) wifi:state: run -> init (2c0)[0m
+[0;32mI (285615) wifi:ifidx:0, rssi:-46, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (285615) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (285615) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (285625) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (285635) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (285635) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (285645) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (285645) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (285655) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (285665) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (285675) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (285685) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (285685) wifi:(opr)bss color disabled:1[0m
+[0;32mI (285695) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (285705) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (285715) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (285715) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (285725) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (286055) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (288025) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (288025) wifi:state: init -> auth (b0)[0m
+[0;32mI (288035) wifi:state: auth -> assoc (0)[0m
+[0;32mI (288045) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (288045) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (288045) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (288055) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (288065) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (288075) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (288075) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (288085) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (288095) wifi:(opr)bss color disabled:1[0m
+[0;32mI (288095) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (288115) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (288125) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (288125) wifi:state: assoc -> run (10)[0m
+[0;32mI (288135) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (288135) wifi:(trc)phytype:CBW20-LGI, snr:49, maxRate:172, highestRateIdx:1[0m
+[0;32mI (288145) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (288155) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (288165) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (291065) wifi:state: run -> init (2c0)[0m
+[0;32mI (291075) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (291075) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (291075) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (291085) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (291095) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (291095) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (291105) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (291105) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (291115) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (291125) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (291135) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (291145) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (291145) wifi:(opr)bss color disabled:1[0m
+[0;32mI (291155) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (291165) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (291175) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (291175) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (291185) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (293485) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (293485) wifi:state: init -> auth (b0)[0m
+[0;32mI (293495) wifi:state: auth -> assoc (0)[0m
+[0;32mI (293495) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (293495) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (293505) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (293505) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (293515) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (293525) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (293535) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (293545) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (293545) wifi:(opr)bss color disabled:1[0m
+[0;32mI (293555) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (293565) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (293575) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (293585) wifi:state: assoc -> run (10)[0m
+[0;32mI (293585) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (293595) wifi:(trc)phytype:CBW20-LGI, snr:49, maxRate:172, highestRateIdx:1[0m
+[0;32mI (293595) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (293605) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (293615) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (296525) wifi:state: run -> init (2c0)[0m
+[0;32mI (296535) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (296535) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (296535) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (296545) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (296555) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (296555) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (296565) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (296565) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (296575) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (296585) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (296595) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (296605) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (296605) wifi:(opr)bss color disabled:1[0m
+[0;32mI (296615) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (296625) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (296635) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (296635) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (296645) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (298945) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (298945) wifi:state: init -> auth (b0)[0m
+[0;32mI (298955) wifi:state: auth -> assoc (0)[0m
+[0;32mI (298965) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (298965) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (298965) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (298975) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (298975) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (298985) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (298995) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (299005) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (299015) wifi:(opr)bss color disabled:1[0m
+[0;32mI (299015) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (299025) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (299035) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (299045) wifi:state: assoc -> run (10)[0m
+[0;32mI (299045) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (299055) wifi:(trc)phytype:CBW20-LGI, snr:47, maxRate:172, highestRateIdx:1[0m
+[0;32mI (299065) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:47, ampduState:wait operational[0m
+[0;32mI (299075) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (299085) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (301985) wifi:state: run -> init (2c0)[0m
+[0;32mI (301995) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (301995) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (301995) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (302005) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (302015) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (302015) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (302025) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (302025) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (302035) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (302045) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (302055) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (302065) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (302065) wifi:(opr)bss color disabled:1[0m
+[0;32mI (302075) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (302085) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (302095) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (302095) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (302105) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (304405) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (304405) wifi:state: init -> auth (b0)[0m
+[0;32mI (304415) wifi:state: auth -> assoc (0)[0m
+[0;32mI (304415) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (304415) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (304425) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (304425) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (304435) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (304445) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (304455) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (304465) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (304465) wifi:(opr)bss color disabled:1[0m
+[0;32mI (304475) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (304485) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (304495) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (304505) wifi:state: assoc -> run (10)[0m
+[0;32mI (304505) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (304515) wifi:(trc)phytype:CBW20-LGI, snr:47, maxRate:172, highestRateIdx:1[0m
+[0;32mI (304515) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:47, ampduState:wait operational[0m
+[0;32mI (304525) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (304535) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (305845) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (306875) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (307445) wifi:state: run -> init (2c0)[0m
+[0;32mI (307455) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (307455) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (307455) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (307465) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (307475) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (307475) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (307485) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (307485) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (307495) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (307505) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (307515) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (307525) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (307525) wifi:(opr)bss color disabled:1[0m
+[0;32mI (307535) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (307545) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (307555) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (307555) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (307565) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (309865) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (309865) wifi:state: init -> auth (b0)[0m
+[0;32mI (309875) wifi:state: auth -> assoc (0)[0m
+[0;32mI (309875) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (309875) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (309885) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (309885) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (309895) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (309905) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (309915) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (309925) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (309925) wifi:(opr)bss color disabled:1[0m
+[0;32mI (309935) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (309945) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (309955) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (309965) wifi:state: assoc -> run (10)[0m
+[0;32mI (309965) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (309975) wifi:(trc)phytype:CBW20-LGI, snr:48, maxRate:172, highestRateIdx:1[0m
+[0;32mI (309975) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:48, ampduState:wait operational[0m
+[0;32mI (309985) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (309995) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (312455) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (317785) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (320005) wifi:state: run -> init (cc00)[0m
+[0;32mI (320015) wifi:ifidx:0, rssi:-48, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (320015) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (320015) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (320025) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (320095) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (320095) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (320095) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (320105) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (320115) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (320125) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (320125) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (320135) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (320145) wifi:(opr)bss color disabled:1[0m
+[0;32mI (320145) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (320165) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (320165) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (320175) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (320185) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (322475) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (322475) wifi:state: init -> auth (b0)[0m
+[0;32mI (322485) wifi:state: auth -> assoc (0)[0m
+[0;32mI (322485) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (322495) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (322495) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (322505) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (322505) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (322515) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (322525) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (322535) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (322545) wifi:(opr)bss color disabled:1[0m
+[0;32mI (322545) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (322555) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (322565) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (322575) wifi:state: assoc -> run (10)[0m
+[0;32mI (322575) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (322585) wifi:(trc)phytype:CBW20-LGI, snr:49, maxRate:172, highestRateIdx:1[0m
+[0;32mI (322595) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (322605) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (322615) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (325515) wifi:state: run -> init (2c0)[0m
+[0;32mI (325525) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (325525) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (325525) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (325535) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (325545) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (325545) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (325555) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (325555) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (325565) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (325575) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (325585) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (325595) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (325595) wifi:(opr)bss color disabled:1[0m
+[0;32mI (325605) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (325615) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (325625) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (325625) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (325635) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (327935) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (327935) wifi:state: init -> auth (b0)[0m
+[0;32mI (327945) wifi:state: auth -> assoc (0)[0m
+[0;32mI (327955) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (327955) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (327955) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (327965) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (327965) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (327975) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (327985) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (327995) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (328005) wifi:(opr)bss color disabled:1[0m
+[0;32mI (328005) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (328015) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (328025) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (328035) wifi:state: assoc -> run (10)[0m
+[0;32mI (328035) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (328045) wifi:(trc)phytype:CBW20-LGI, snr:47, maxRate:172, highestRateIdx:1[0m
+[0;32mI (328045) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:47, ampduState:wait operational[0m
+[0;32mI (328065) wifi:ifidx:0, rssi:-49, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (328075) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (330875) MQTT_MOD: Published state: LOCKED[0m
+[0;32mI (335255) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (338075) wifi:state: run -> init (cc00)[0m
+[0;32mI (338085) wifi:ifidx:0, rssi:-49, nf:-95, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (338085) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (338085) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (338095) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (338105) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (338105) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (338115) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (338115) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (338125) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (338135) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (338145) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (338155) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (338155) wifi:(opr)bss color disabled:1[0m
+[0;32mI (338165) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (338175) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (338185) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (338185) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (338195) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (340495) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (340495) wifi:state: init -> auth (b0)[0m
+[0;32mI (340505) wifi:state: auth -> assoc (0)[0m
+[0;32mI (340505) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (340505) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (340515) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (340515) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (340525) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (340535) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (340545) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (340555) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (340555) wifi:(opr)bss color disabled:1[0m
+[0;32mI (340565) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (340575) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (340585) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (340595) wifi:state: assoc -> run (10)[0m
+[0;32mI (340595) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (340605) wifi:(trc)phytype:CBW20-LGI, snr:48, maxRate:172, highestRateIdx:1[0m
+[0;32mI (340605) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:48, ampduState:wait operational[0m
+[0;32mI (340615) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (340625) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (343535) wifi:state: run -> init (2c0)[0m
+[0;32mI (343545) wifi:ifidx:0, rssi:-48, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (343545) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (343545) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (343555) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (343565) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (343565) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (343575) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (343575) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (343585) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (343595) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (343605) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (343615) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (343615) wifi:(opr)bss color disabled:1[0m
+[0;32mI (343625) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (343635) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (343645) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (343645) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (343655) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (7415) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (7415) wifi:state: init -> auth (b0)[0m
+[0;32mI (7425) wifi:state: auth -> assoc (0)[0m
+[0;32mI (7435) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (7435) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (7435) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (7445) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (7445) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (7455) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (7465) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (7475) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (7475) wifi:(opr)bss color disabled:1[0m
+[0;32mI (7485) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (7495) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (7505) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (7515) wifi:state: assoc -> run (10)[0m
+[0;32mI (7515) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (7525) wifi:(trc)phytype:CBW20-LGI, snr:43, maxRate:172, highestRateIdx:1[0m
+[0;32mI (7525) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:43, ampduState:wait operational[0m
+[0;32mI (7535) wifi:ifidx:0, rssi:-54, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (7545) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (8055) MQTT_MOD: Published state: LOCKED[0m

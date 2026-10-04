@@ -11,6 +11,8 @@
 #include "handle.h"
 #include "reed.h"
 #include "dev_button.h"
+#include "wifi_connection.h"
+#include "mqtt.h"
 
 // 2. Include our new State Machine!
 #include "state_machine.h"
@@ -21,22 +23,21 @@ void app_main(void) {
   // Initialize the hardware peripherals
   lcd_init();
   keypad_init();
-  pir_init(); // Crucial step so the ESP32 listens to the PIR pin!
+  pir_init(); 
   buzzer_init();
   lock_init();
   handle_init();
   reed_init();
   dev_button_init();
+  wifi_init_hotspot();
+  mqtt_init();
 
-  // Clear the screen when the ESP32 first boots up
   lcd_clear();
 
-  // The infinite heartbeat loop
   while (1) {
-    // The State Machine Engine handles everything now!
+        static bool first = true; if(first) { load_secret_hash(); first = false; }
     state_machine_run();
 
-    // Feed the FreeRTOS watchdog timer so the ESP32 doesn't crash (50ms delay)
     vTaskDelay(pdMS_TO_TICKS(50));
   }
 }

@@ -1,8 +1,6 @@
 #ifndef BUZZER_H
 #define BUZZER_H
 
-// --- MUSICAL NOTES (Frequencies in Hz) ---
-// The 4th Octave (Standard Middle Range)
 #define NOTE_C4  262
 #define NOTE_CS4 277
 #define NOTE_D4  294

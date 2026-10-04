@@ -13,7 +13,6 @@ void keypad_init(void){
 
   gpio_config(&io_conf);
 
-  // ONLY initialize Column 3 and Column 4!
   io_conf.pin_bit_mask = (1ULL << KEYPAD_C3) | (1ULL << KEYPAD_C4);
   io_conf.mode         = GPIO_MODE_INPUT;
   io_conf.pull_down_en = GPIO_PULLDOWN_ENABLE;
@@ -21,7 +20,7 @@ void keypad_init(void){
   gpio_config(&io_conf);
 }
 
-uint8_t keypad_get_key(void){
+static char keypad_scan(void){
   uint8_t keymap[4][4] = { 
     {'1', '2','3', 'A'},
     {'4', '5','6', 'B'},
@@ -35,7 +34,6 @@ uint8_t keypad_get_key(void){
   for(int row = 0; row < 4; row++){
     gpio_set_level(row_pins[row], 1);
     
-    // Start scanning at column index 2 (which skips C1 and C2 completely!)
     for(int col = 2; col < 4; col++){
       if(gpio_get_level(col_pins[col]) == 1){
         gpio_set_level(row_pins[row], 0);
@@ -45,5 +43,31 @@ uint8_t keypad_get_key(void){
     gpio_set_level(row_pins[row],0);
   }
   return '\0';
+}
+
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+
+uint8_t keypad_get_key(void){
+  static char last_state = '\0';
+  
+  char current_state = keypad_scan();
+
+  if (current_state != '\0' && current_state != last_state) {
+    vTaskDelay(pdMS_TO_TICKS(10)); 
+
+    current_state = keypad_scan(); 
+
+    if (current_state != '\0' && current_state != last_state) {
+      last_state = current_state; 
+      return current_state; 
+    }
+  }
+
+  if (current_state == '\0') {
+    last_state = '\0';
+  }
+
+  return '\0'; 
 }
 

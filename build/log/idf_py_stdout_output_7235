@@ -1,0 +1,1419 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6d (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=233b0h (144304) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000333d8 vaddr=40800000 size=04c40h ( 19520) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b4170h (737648) map[0m
+[0;32mI (277) esp_image: segment 3: paddr=000ec198 vaddr=40804c40 size=14944h ( 84292) load[0m
+[0;32mI (298) esp_image: segment 4: paddr=00100ae4 vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (312) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (312) boot: Disabling RNG early entropy source...[0m
+[0;32mI (323) cpu_start: Unicore app[0m
+[0;33mW (332) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (349) cpu_start: Application information:[0m
+[0;32mI (350) cpu_start: Project name:     smart_lock[0m
+[0;32mI (353) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  4768b2928...[0m
+[0;32mI (370) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (376) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (381) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (386) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (391) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (398) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (404) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (410) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (417) spi_flash: detected chip: generic[0m
+[0;32mI (421) spi_flash: flash io: dio[0m
+[0;33mW (426) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (438) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (449) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (456) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (463) coexist: coex firmware version: 8561505[0m
+[0;32mI (468) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (473) main_task: Started on CPU0[0m
+[0;32mI (473) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (553) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (553) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (563) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (573) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (583) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (593) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (603) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (603) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (613) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (683) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (683) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (693) wifi:wifi driver task: 4082b848, prio:23, stack:6656, core=0[0m
+[0;32mI (693) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (693) wifi:wifi certification version: v7.0[0m
+[0;32mI (693) wifi:config NVS flash: enabled[0m
+[0;32mI (703) wifi:config nano formating: disabled[0m
+[0;32mI (703) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (713) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (713) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (723) wifi:Init management short buffer num: 32[0m
+[0;32mI (723) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (723) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (733) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (733) wifi:Init static rx buffer num: 10[0m
+[0;32mI (743) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (743) wifi_init: rx ba win: 6[0m
+[0;32mI (743) wifi_init: tcpip mbox: 32[0m
+[0;32mI (753) wifi_init: udp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp mbox: 6[0m
+[0;32mI (763) wifi_init: tcp tx win: 5760[0m
+[0;32mI (763) wifi_init: tcp rx win: 5760[0m
+[0;32mI (763) wifi_init: tcp mss: 1440[0m
+[0;32mI (773) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (783) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (863) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (863) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (873) wifi:(agc)0x600a7128:0xd20f5a02, min.avgNF:0xce->0xd2(dB), RCalCount:0xf5, min.RRssi:0xa02(-95.88)[0m
+[0;32mI (883) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (893) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (893) wifi:enable tsf[0m
+[0;32mI (893) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (903) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (913) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (913) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (923) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (923) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (933) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (943) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (953) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (963) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (963) wifi:(opr)bss color disabled:1[0m
+[0;32mI (973) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (983) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (993) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (993) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1003) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1013) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1023) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1023) wifi:state: init -> auth (b0)[0m
+[0;32mI (1033) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1043) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1043) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1043) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1053) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1063) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1073) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1073) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1083) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1093) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1093) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1113) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1123) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1123) wifi:state: assoc -> run (10)[0m
+[0;32mI (1133) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1133) wifi:(trc)phytype:CBW20-LGI, snr:50, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1143) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:50, ampduState:wait operational[0m
+[0;32mI (1153) wifi:ifidx:0, rssi:-47, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1163) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1173) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1173) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1183) wifi:security: WPA2-PSK, phy: ax, rssi: -47, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1193) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1193) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1213) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1213) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1223) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1233) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1243) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1253) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1263) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1273) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1283) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1293) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (3343) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4303) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4303) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4303) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.9[0m
+[0;32mI (4313) WIFI_CONNECT: ===============================================[0m
+[0;31mE (14333) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (14333) esp-tls: Failed to open new connection[0m
+[0;31mE (14333) transport_base: Failed to open a new connection[0m
+[0;31mE (14333) mqtt_client: Error transport connect[0m
+[0;32mI (14343) MQTT_MOD: A network error occurred[0m
+[0;32mI (14343) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (14353) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (15823) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (34363) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (34363) esp-tls: Failed to open new connection[0m
+[0;31mE (34363) transport_base: Failed to open a new connection[0m
+[0;31mE (34363) mqtt_client: Error transport connect[0m
+[0;32mI (34373) MQTT_MOD: A network error occurred[0m
+[0;32mI (34373) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (37663) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (39133) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (39693) MQTT_MOD: Published state to cloud: LOCKED_OUT[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=233b0h (144304) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000333d8 vaddr=40800000 size=04c40h ( 19520) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b4170h (737648) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ec198 vaddr=40804c40 size=14944h ( 84292) load[0m
+[0;32mI (291) esp_image: segment 4: paddr=00100ae4 vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (300) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (301) boot: Disabling RNG early entropy source...[0m
+[0;32mI (312) cpu_start: Unicore app[0m
+[0;33mW (321) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) cpu_start: Application information:[0m
+[0;32mI (331) cpu_start: Project name:     smart_lock[0m
+[0;32mI (336) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (341) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  4768b2928...[0m
+[0;32mI (353) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (359) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (364) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (369) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (374) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (381) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (387) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (393) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (400) spi_flash: detected chip: generic[0m
+[0;32mI (404) spi_flash: flash io: dio[0m
+[0;33mW (408) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (421) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (432) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (439) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (446) coexist: coex firmware version: 8561505[0m
+[0;32mI (451) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (456) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (536) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (536) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (546) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (556) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (566) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (576) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (606) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (616) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (646) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (666) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (666) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (676) wifi:wifi driver task: 4082b868, prio:23, stack:6656, core=0[0m
+[0;32mI (676) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (676) wifi:wifi certification version: v7.0[0m
+[0;32mI (676) wifi:config NVS flash: enabled[0m
+[0;32mI (686) wifi:config nano formating: disabled[0m
+[0;32mI (686) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (696) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (696) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (706) wifi:Init management short buffer num: 32[0m
+[0;32mI (706) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (706) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (716) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (716) wifi:Init static rx buffer num: 10[0m
+[0;32mI (726) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (726) wifi_init: rx ba win: 6[0m
+[0;32mI (726) wifi_init: tcpip mbox: 32[0m
+[0;32mI (736) wifi_init: udp mbox: 6[0m
+[0;32mI (736) wifi_init: tcp mbox: 6[0m
+[0;32mI (746) wifi_init: tcp tx win: 5760[0m
+[0;32mI (746) wifi_init: tcp rx win: 5760[0m
+[0;32mI (746) wifi_init: tcp mss: 1440[0m
+[0;32mI (756) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (756) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (766) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (846) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (856) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (856) wifi:(agc)0x600a7128:0xd20d5a04, min.avgNF:0xce->0xd2(dB), RCalCount:0xd5, min.RRssi:0xa04(-95.75)[0m
+[0;32mI (866) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (876) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (876) wifi:enable tsf[0m
+[0;32mI (876) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (886) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (896) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (906) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (906) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (916) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (916) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (926) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (936) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (946) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (946) wifi:(opr)bss color disabled:1[0m
+[0;32mI (956) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (966) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (976) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (986) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (986) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (996) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1006) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1006) wifi:state: init -> auth (b0)[0m
+[0;32mI (1016) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1026) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1026) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1026) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1036) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1046) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1056) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1056) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1066) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1076) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1076) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1086) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1096) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1106) wifi:state: assoc -> run (10)[0m
+[0;32mI (1106) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1116) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1126) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (1136) wifi:ifidx:0, rssi:-52, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1146) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1156) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1156) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1166) wifi:security: WPA2-PSK, phy: ax, rssi: -52, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1176) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1176) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1186) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1196) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1206) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1216) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1226) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1236) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1246) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1256) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1266) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1276) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4046) MQTT_MOD: Published state to cloud: UNLOCKED[0m
+[0;32mI (4286) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4286) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4286) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.9[0m
+[0;32mI (4296) WIFI_CONNECT: ===============================================[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x7c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=233b0h (144304) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000333d8 vaddr=40800000 size=04c40h ( 19520) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b4170h (737648) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ec198 vaddr=40804c40 size=14944h ( 84292) load[0m
+[0;32mI (296) esp_image: segment 4: paddr=00100ae4 vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (305) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (306) boot: Disabling RNG early entropy source...[0m
+[0;32mI (317) cpu_start: Unicore app[0m
+[0;33mW (326) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (337) cpu_start: Pro cpu start user code[0m
+[0;32mI (338) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (338) cpu_start: Application information:[0m
+[0;32mI (341) cpu_start: Project name:     smart_lock[0m
+[0;32mI (346) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (351) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (357) cpu_start: ELF file SHA256:  4768b2928...[0m
+[0;32mI (363) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (369) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (375) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (379) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (384) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (391) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (397) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (403) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (410) spi_flash: detected chip: generic[0m
+[0;32mI (414) spi_flash: flash io: dio[0m
+[0;33mW (418) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (431) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (442) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (449) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (456) coexist: coex firmware version: 8561505[0m
+[0;32mI (461) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (466) main_task: Started on CPU0[0m
+[0;32mI (466) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (546) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (546) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (556) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (566) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (576) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (606) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (616) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (646) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (656) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (676) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (676) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (686) wifi:wifi driver task: 4082b868, prio:23, stack:6656, core=0[0m
+[0;32mI (686) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (686) wifi:wifi certification version: v7.0[0m
+[0;32mI (686) wifi:config NVS flash: enabled[0m
+[0;32mI (696) wifi:config nano formating: disabled[0m
+[0;32mI (696) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (706) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (706) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (716) wifi:Init management short buffer num: 32[0m
+[0;32mI (716) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (716) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (726) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (726) wifi:Init static rx buffer num: 10[0m
+[0;32mI (736) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (736) wifi_init: rx ba win: 6[0m
+[0;32mI (736) wifi_init: tcpip mbox: 32[0m
+[0;32mI (746) wifi_init: udp mbox: 6[0m
+[0;32mI (746) wifi_init: tcp mbox: 6[0m
+[0;32mI (756) wifi_init: tcp tx win: 5760[0m
+[0;32mI (756) wifi_init: tcp rx win: 5760[0m
+[0;32mI (756) wifi_init: tcp mss: 1440[0m
+[0;32mI (766) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (766) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (776) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (856) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (856) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (866) wifi:(agc)0x600a7128:0xd20c8800, min.avgNF:0xce->0xd2(dB), RCalCount:0xc8, min.RRssi:0x800(-128.00)[0m
+[0;32mI (876) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (886) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (886) wifi:enable tsf[0m
+[0;32mI (886) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (896) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (906) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (906) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (916) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (916) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (926) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (936) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (946) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (956) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (956) wifi:(opr)bss color disabled:1[0m
+[0;32mI (966) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (976) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (986) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (986) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (996) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1006) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1016) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1016) wifi:state: init -> auth (b0)[0m
+[0;32mI (1026) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1036) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1036) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1036) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1046) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1056) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1066) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1066) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1076) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1086) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1086) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1106) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1106) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1116) wifi:state: assoc -> run (10)[0m
+[0;32mI (1116) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1126) wifi:(trc)phytype:CBW20-LGI, snr:49, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1136) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (1146) wifi:ifidx:0, rssi:-48, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1156) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1166) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1166) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1176) wifi:security: WPA2-PSK, phy: ax, rssi: -48, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1186) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1186) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1196) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1206) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1216) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1226) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1236) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1246) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1256) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1266) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1276) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1286) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (2546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4296) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4296) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4296) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.9[0m
+[0;32mI (4306) WIFI_CONNECT: ===============================================[0m
+[0;31mE (14326) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (14326) esp-tls: Failed to open new connection[0m
+[0;31mE (14326) transport_base: Failed to open a new connection[0m
+[0;31mE (14326) mqtt_client: Error transport connect[0m
+[0;32mI (14336) MQTT_MOD: A network error occurred[0m
+[0;32mI (14336) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (14346) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (15816) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (17276) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (18746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (20976) MQTT_MOD: Published state to cloud: UNLOCKED[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6e (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=233b0h (144304) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000333d8 vaddr=40800000 size=04c40h ( 19520) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b4170h (737648) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ec198 vaddr=40804c40 size=14944h ( 84292) load[0m
+[0;32mI (291) esp_image: segment 4: paddr=00100ae4 vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (300) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (301) boot: Disabling RNG early entropy source...[0m
+[0;32mI (312) cpu_start: Unicore app[0m
+[0;33mW (321) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) cpu_start: Application information:[0m
+[0;32mI (331) cpu_start: Project name:     smart_lock[0m
+[0;32mI (336) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (341) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  4768b2928...[0m
+[0;32mI (353) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (359) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (364) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (369) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (374) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (381) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (387) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (393) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (400) spi_flash: detected chip: generic[0m
+[0;32mI (404) spi_flash: flash io: dio[0m
+[0;33mW (408) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (421) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (432) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (439) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (446) coexist: coex firmware version: 8561505[0m
+[0;32mI (451) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (456) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (536) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (536) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (546) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (556) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (566) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (576) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (606) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (616) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (646) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (666) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (666) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (676) wifi:wifi driver task: 4082b868, prio:23, stack:6656, core=0[0m
+[0;32mI (676) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (676) wifi:wifi certification version: v7.0[0m
+[0;32mI (676) wifi:config NVS flash: enabled[0m
+[0;32mI (686) wifi:config nano formating: disabled[0m
+[0;32mI (686) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (696) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (696) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (706) wifi:Init management short buffer num: 32[0m
+[0;32mI (706) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (706) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (716) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (716) wifi:Init static rx buffer num: 10[0m
+[0;32mI (726) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (726) wifi_init: rx ba win: 6[0m
+[0;32mI (726) wifi_init: tcpip mbox: 32[0m
+[0;32mI (736) wifi_init: udp mbox: 6[0m
+[0;32mI (736) wifi_init: tcp mbox: 6[0m
+[0;32mI (746) wifi_init: tcp tx win: 5760[0m
+[0;32mI (746) wifi_init: tcp rx win: 5760[0m
+[0;32mI (746) wifi_init: tcp mss: 1440[0m
+[0;32mI (756) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (756) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (766) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (856) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (856) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (856) wifi:(agc)0x600a7128:0xd21dda00, min.avgNF:0xce->0xd2(dB), RCalCount:0x1dd, min.RRssi:0xa00(-96.00)[0m
+[0;32mI (866) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (876) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (876) wifi:enable tsf[0m
+[0;32mI (886) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (886) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (956) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (956) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (956) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (956) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (966) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (976) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (986) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (996) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (996) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1006) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1016) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1026) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1026) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1036) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1046) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1056) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1056) wifi:state: init -> auth (b0)[0m
+[0;32mI (1066) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1076) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1076) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1076) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1086) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1096) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1106) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1106) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1116) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1126) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1126) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1136) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1146) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1156) wifi:state: assoc -> run (10)[0m
+[0;32mI (1156) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1166) wifi:(trc)phytype:CBW20-LGI, snr:40, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1176) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:40, ampduState:wait operational[0m
+[0;32mI (1186) wifi:ifidx:0, rssi:-57, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1196) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1206) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1206) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1216) wifi:security: WPA2-PSK, phy: ax, rssi: -57, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1226) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1226) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1236) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1246) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1256) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1266) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1276) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1286) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1296) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1306) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1316) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1326) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4066) MQTT_MOD: Published state to cloud: UNLOCKED[0m
+[0;32mI (4336) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4336) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4336) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.9[0m
+[0;32mI (4346) WIFI_CONNECT: ===============================================[0m
+I BOD: Brownout detector was triggered
+
+�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x3 (LP_SW_HPSYS),boot:0x6e (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001974a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (24) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=233b0h (144304) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000333d8 vaddr=40800000 size=04c40h ( 19520) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b4170h (737648) map[0m
+[0;32mI (273) esp_image: segment 3: paddr=000ec198 vaddr=40804c40 size=14944h ( 84292) load[0m
+[0;32mI (292) esp_image: segment 4: paddr=00100ae4 vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (301) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (301) boot: Disabling RNG early entropy source...[0m
+[0;32mI (312) cpu_start: Unicore app[0m
+[0;33mW (321) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) cpu_start: Application information:[0m
+[0;32mI (331) cpu_start: Project name:     smart_lock[0m
+[0;32mI (336) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (342) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (348) cpu_start: ELF file SHA256:  4768b2928...[0m
+[0;32mI (353) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (360) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (365) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (369) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (374) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (381) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (387) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (394) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (401) spi_flash: detected chip: generic[0m
+[0;32mI (405) spi_flash: flash io: dio[0m
+[0;33mW (408) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (422) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (433) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (439) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (446) coexist: coex firmware version: 8561505[0m
+[0;32mI (452) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (457) main_task: Started on CPU0[0m
+[0;32mI (457) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (537) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (537) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (547) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (557) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (567) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (577) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (587) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (587) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (597) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (607) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (617) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (627) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (637) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (647) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (667) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (667) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (677) wifi:wifi driver task: 4082b868, prio:23, stack:6656, core=0[0m
+[0;32mI (677) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (677) wifi:wifi certification version: v7.0[0m
+[0;32mI (677) wifi:config NVS flash: enabled[0m
+[0;32mI (687) wifi:config nano formating: disabled[0m
+[0;32mI (687) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (697) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (697) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (707) wifi:Init management short buffer num: 32[0m
+[0;32mI (707) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (707) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (717) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (717) wifi:Init static rx buffer num: 10[0m
+[0;32mI (727) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (727) wifi_init: rx ba win: 6[0m
+[0;32mI (727) wifi_init: tcpip mbox: 32[0m
+[0;32mI (737) wifi_init: udp mbox: 6[0m
+[0;32mI (737) wifi_init: tcp mbox: 6[0m
+[0;32mI (747) wifi_init: tcp tx win: 5760[0m
+[0;32mI (747) wifi_init: tcp rx win: 5760[0m
+[0;32mI (747) wifi_init: tcp mss: 1440[0m
+[0;32mI (757) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (757) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (767) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (847) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (847) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (857) wifi:(agc)0x600a7128:0xd216bbd4, min.avgNF:0xce->0xd2(dB), RCalCount:0x16b, min.RRssi:0xbd4(-66.75)[0m
+[0;32mI (867) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (877) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (877) wifi:enable tsf[0m
+[0;32mI (877) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (887) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (947) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (957) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (957) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (967) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (967) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (977) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (987) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (997) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (997) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1007) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1007) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1027) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1037) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1037) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1047) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1057) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1057) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1067) wifi:state: init -> auth (b0)[0m
+[0;32mI (1077) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1087) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1087) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1087) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1097) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1097) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1107) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1117) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1127) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1137) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1137) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1147) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1157) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1167) wifi:state: assoc -> run (10)[0m
+[0;32mI (1167) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1177) wifi:(trc)phytype:CBW20-LGI, snr:42, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1177) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:42, ampduState:wait operational[0m
+[0;32mI (1197) wifi:ifidx:0, rssi:-56, nf:-98, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1197) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1217) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1217) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1227) wifi:security: WPA2-PSK, phy: ax, rssi: -56, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1237) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1237) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1247) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1257) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1267) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1277) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1287) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1297) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1307) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1317) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1327) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1337) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (4347) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4347) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4347) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.9[0m
+[0;32mI (4357) WIFI_CONNECT: ===============================================[0m
+[0;31mE (14377) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (14377) esp-tls: Failed to open new connection[0m
+[0;31mE (14377) transport_base: Failed to open a new connection[0m
+[0;31mE (14377) mqtt_client: Error transport connect[0m
+[0;32mI (14387) MQTT_MOD: A network error occurred[0m
+[0;32mI (14387) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (34407) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (34407) esp-tls: Failed to open new connection[0m
+[0;31mE (34407) transport_base: Failed to open a new connection[0m
+[0;31mE (34407) mqtt_client: Error transport connect[0m
+[0;32mI (34417) MQTT_MOD: A network error occurred[0m
+[0;32mI (34417) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (54437) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (54437) esp-tls: Failed to open new connection[0m
+[0;31mE (54437) transport_base: Failed to open a new connection[0m
+[0;31mE (54437) mqtt_client: Error transport connect[0m
+[0;32mI (54447) MQTT_MOD: A network error occurred[0m
+[0;32mI (54447) MQTT_MOD: We disconnected from the BROKER[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6e (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=233b0h (144304) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000333d8 vaddr=40800000 size=04c40h ( 19520) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b4170h (737648) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ec198 vaddr=40804c40 size=14944h ( 84292) load[0m
+[0;32mI (293) esp_image: segment 4: paddr=00100ae4 vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (307) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (308) boot: Disabling RNG early entropy source...[0m
+[0;32mI (319) cpu_start: Unicore app[0m
+[0;33mW (328) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (339) cpu_start: Pro cpu start user code[0m
+[0;32mI (339) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (345) cpu_start: Application information:[0m
+[0;32mI (345) cpu_start: Project name:     smart_lock[0m
+[0;32mI (348) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (353) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  4768b2928...[0m
+[0;32mI (365) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (371) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (376) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (381) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (386) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (393) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (404) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (405) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (412) spi_flash: detected chip: generic[0m
+[0;32mI (416) spi_flash: flash io: dio[0m
+[0;33mW (421) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (433) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (444) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (451) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (458) coexist: coex firmware version: 8561505[0m
+[0;32mI (463) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (468) main_task: Started on CPU0[0m
+[0;32mI (468) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (548) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (588) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (598) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (598) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (608) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (618) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (628) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (638) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (648) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (678) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (678) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (688) wifi:wifi driver task: 4082b868, prio:23, stack:6656, core=0[0m
+[0;32mI (688) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (688) wifi:wifi certification version: v7.0[0m
+[0;32mI (688) wifi:config NVS flash: enabled[0m
+[0;32mI (698) wifi:config nano formating: disabled[0m
+[0;32mI (698) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (708) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (708) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (718) wifi:Init management short buffer num: 32[0m
+[0;32mI (718) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (718) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (728) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (728) wifi:Init static rx buffer num: 10[0m
+[0;32mI (738) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (738) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (748) wifi_init: udp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (758) wifi_init: tcp tx win: 5760[0m
+[0;32mI (758) wifi_init: tcp rx win: 5760[0m
+[0;32mI (758) wifi_init: tcp mss: 1440[0m
+[0;32mI (768) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (768) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (778) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (858) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (858) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (868) wifi:(agc)0x600a7128:0xd21289fe, min.avgNF:0xce->0xd2(dB), RCalCount:0x128, min.RRssi:0x9fe(-96.12)[0m
+[0;32mI (878) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (888) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (888) wifi:enable tsf[0m
+[0;32mI (888) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (898) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (908) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (918) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (918) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (928) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (928) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (938) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (948) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (958) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (958) wifi:(opr)bss color disabled:1[0m
+[0;32mI (968) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (978) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (988) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (988) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (998) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1008) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1018) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1018) wifi:state: init -> auth (b0)[0m
+[0;32mI (1028) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1038) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1038) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1048) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1048) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1058) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1068) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1078) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1088) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1088) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1098) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1108) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1118) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1118) wifi:state: assoc -> run (10)[0m
+[0;32mI (1128) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1128) wifi:(trc)phytype:CBW20-LGI, snr:40, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1138) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:40, ampduState:wait operational[0m
+[0;32mI (1148) wifi:ifidx:0, rssi:-57, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1158) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1168) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1178) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1178) wifi:security: WPA2-PSK, phy: ax, rssi: -57, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1188) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1198) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1208) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1218) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1218) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1228) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1248) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1258) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1268) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1268) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1278) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1288) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (4298) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4298) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4298) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.9[0m
+[0;32mI (4308) WIFI_CONNECT: ===============================================[0m
+[0;31mE (14328) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (14328) esp-tls: Failed to open new connection[0m
+[0;31mE (14328) transport_base: Failed to open a new connection[0m
+[0;31mE (14328) mqtt_client: Error transport connect[0m
+[0;32mI (14338) MQTT_MOD: A network error occurred[0m
+[0;32mI (14338) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (14348) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (14408) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (15968) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (18288) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (19758) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (21638) MQTT_MOD: Published state to cloud: UNLOCKED[0m
+[0;31mE (34358) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (34358) esp-tls: Failed to open new connection[0m
+[0;31mE (34358) transport_base: Failed to open a new connection[0m
+[0;31mE (34358) mqtt_client: Error transport connect[0m
+[0;32mI (34368) MQTT_MOD: A network error occurred[0m
+[0;32mI (34368) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (54388) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (54388) esp-tls: Failed to open new connection[0m
+[0;31mE (54388) transport_base: Failed to open a new connection[0m
+[0;31mE (54388) mqtt_client: Error transport connect[0m
+[0;32mI (54398) MQTT_MOD: A network error occurred[0m
+[0;32mI (54398) MQTT_MOD: We disconnected from the BROKER[0m
+I �ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x3 (LP_SW_HPSYS),boot:0x6e (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001974a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (24) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=233b0h (144304) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000333d8 vaddr=40800000 size=04c40h ( 19520) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b4170h (737648) map[0m
+[0;32mI (273) esp_image: segment 3: paddr=000ec198 vaddr=40804c40 size=14944h ( 84292) load[0m
+[0;32mI (292) esp_image: segment 4: paddr=00100ae4 vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (301) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (301) boot: Disabling RNG early entropy source...[0m
+[0;32mI (312) cpu_start: Unicore app[0m
+[0;33mW (321) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) cpu_start: Application information:[0m
+[0;32mI (331) cpu_start: Project name:     smart_lock[0m
+[0;32mI (336) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (342) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (348) cpu_start: ELF file SHA256:  4768b2928...[0m
+[0;32mI (353) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (360) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (365) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (369) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (374) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (381) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (387) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (394) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (401) spi_flash: detected chip: generic[0m
+[0;32mI (405) spi_flash: flash io: dio[0m
+[0;33mW (408) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (422) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (433) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (439) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (446) coexist: coex firmware version: 8561505[0m
+[0;32mI (452) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (457) main_task: Started on CPU0[0m
+[0;32mI (457) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (537) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (537) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (547) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (557) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (567) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (577) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (587) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (587) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (597) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (607) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (617) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (627) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (637) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (647) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (667) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (667) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (677) wifi:wifi driver task: 4082b868, prio:23, stack:6656, core=0[0m
+[0;32mI (677) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (677) wifi:wifi certification version: v7.0[0m
+[0;32mI (677) wifi:config NVS flash: enabled[0m
+[0;32mI (687) wifi:config nano formating: disabled[0m
+[0;32mI (687) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (697) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (697) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (707) wifi:Init management short buffer num: 32[0m
+[0;32mI (707) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (707) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (717) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (717) wifi:Init static rx buffer num: 10[0m
+[0;32mI (727) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (727) wifi_init: rx ba win: 6[0m
+[0;32mI (727) wifi_init: tcpip mbox: 32[0m
+[0;32mI (737) wifi_init: udp mbox: 6[0m
+[0;32mI (737) wifi_init: tcp mbox: 6[0m
+[0;32mI (747) wifi_init: tcp tx win: 5760[0m
+[0;32mI (747) wifi_init: tcp rx win: 5760[0m
+[0;32mI (747) wifi_init: tcp mss: 1440[0m
+[0;32mI (757) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (757) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (767) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (847) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (847) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (857) wifi:(agc)0x600a7128:0xd200f9fe, min.avgNF:0xce->0xd2(dB), RCalCount:0xf, min.RRssi:0x9fe(-96.12)[0m
+[0;32mI (867) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (877) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (877) wifi:enable tsf[0m
+[0;32mI (877) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (887) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (897) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (897) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (907) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (907) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (917) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (927) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (937) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (947) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (947) wifi:(opr)bss color disabled:1[0m
+[0;32mI (957) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (967) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (977) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (977) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (987) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (997) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (997) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1007) wifi:state: init -> auth (b0)[0m
+[0;32mI (1017) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1037) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1037) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1037) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1047) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1057) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1067) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1067) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1077) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1087) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1087) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1107) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1107) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1117) wifi:state: assoc -> run (10)[0m
+[0;32mI (1117) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1127) wifi:(trc)phytype:CBW20-LGI, snr:43, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1137) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:43, ampduState:wait operational[0m
+[0;32mI (1147) wifi:ifidx:0, rssi:-54, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1157) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1167) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1167) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1177) wifi:security: WPA2-PSK, phy: ax, rssi: -54, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1187) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1187) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1197) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1207) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1217) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1227) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1237) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1247) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1257) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1267) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1277) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1287) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1517) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4277) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4277) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4277) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.9[0m
+[0;32mI (4287) WIFI_CONNECT: ===============================================[0m
+[0;31mE (14307) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (14307) esp-tls: Failed to open new connection[0m
+[0;31mE (14307) transport_base: Failed to open a new connection[0m
+[0;31mE (14307) mqtt_client: Error transport connect[0m
+[0;32mI (14317) MQTT_MOD: A network error occurred[0m
+[0;32mI (14317) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (14327) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (20317) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (34337) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (34337) esp-tls: Failed to open new connection[0m
+[0;31mE (34337) transport_base: Failed to open a new connection[0m
+[0;31mE (34337) mqtt_client: Error transport connect[0m
+[0;32mI (34347) MQTT_MOD: A network error occurred[0m
+[0;32mI (34347) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (34357) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (42097) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (54367) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (54367) esp-tls: Failed to open new connection[0m
+[0;31mE (54367) transport_base: Failed to open a new connection[0m
+[0;31mE (54367) mqtt_client: Error transport connect[0m
+[0;32mI (54377) MQTT_MOD: A network error occurred[0m
+[0;32mI (54377) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (54387) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;31mE (74397) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (74397) esp-tls: Failed to open new connection[0m
+[0;31mE (74397) transport_base: Failed to open a new connection[0m
+[0;31mE (74397) mqtt_client: Error transport connect[0m
+[0;32mI (74407) MQTT_MOD: A network error occurred[0m
+[0;32mI (74407) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (94427) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (94427) esp-tls: Failed to open new connection[0m
+[0;31mE (94427) transport_base: Failed to open a new connection[0m
+[0;31mE (94427) mqtt_client: Error transport connect[0m
+[0;32mI (94437) MQTT_MOD: A network error occurred[0m
+[0;32mI (94437) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (114457) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (114457) esp-tls: Failed to open new connection[0m
+[0;31mE (114457) transport_base: Failed to open a new connection[0m
+[0;31mE (114457) mqtt_client: Error transport connect[0m
+[0;32mI (114467) MQTT_MOD: A network error occurred[0m
+[0;32mI (114467) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (116637) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (134487) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (134487) esp-tls: Failed to open new connection[0m
+[0;31mE (134487) transport_base: Failed to open a new connection[0m
+[0;31mE (134487) mqtt_client: Error transport connect[0m
+[0;32mI (134497) MQTT_MOD: A network error occurred[0m
+[0;32mI (134497) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (141657) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;31mE (154517) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (154517) esp-tls: Failed to open new connection[0m
+[0;31mE (154517) transport_base: Failed to open a new connection[0m
+[0;31mE (154517) mqtt_client: Error transport connect[0m
+[0;32mI (154527) MQTT_MOD: A network error occurred[0m
+[0;32mI (154527) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (174547) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (174547) esp-tls: Failed to open new connection[0m
+[0;31mE (174547) transport_base: Failed to open a new connection[0m
+[0;31mE (174547) mqtt_client: Error transport connect[0m
+[0;32mI (174557) MQTT_MOD: A network error occurred[0m
+[0;32mI (174557) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (174567) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (177317) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (177807) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (194577) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (194577) esp-tls: Failed to open new connection[0m
+[0;31mE (194577) transport_base: Failed to open a new connection[0m
+[0;31mE (194577) mqtt_client: Error transport connect[0m
+[0;32mI (194587) MQTT_MOD: A network error occurred[0m
+[0;32mI (194587) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (201657) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (203897) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (214607) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (214607) esp-tls: Failed to open new connection[0m
+[0;31mE (214607) transport_base: Failed to open a new connection[0m
+[0;31mE (214607) mqtt_client: Error transport connect[0m
+[0;32mI (214617) MQTT_MOD: A network error occurred[0m
+[0;32mI (214617) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (214627) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (224067) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (234637) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (234637) esp-tls: Failed to open new connection[0m
+[0;31mE (234637) transport_base: Failed to open a new connection[0m
+[0;31mE (234637) mqtt_client: Error transport connect[0m
+[0;32mI (234647) MQTT_MOD: A network error occurred[0m
+[0;32mI (234647) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (234657) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (235347) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (237107) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (238577) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (254667) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (254667) esp-tls: Failed to open new connection[0m
+[0;31mE (254667) transport_base: Failed to open a new connection[0m
+[0;31mE (254667) mqtt_client: Error transport connect[0m
+[0;32mI (254677) MQTT_MOD: A network error occurred[0m
+[0;32mI (254677) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (256987) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (261227) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (274697) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (274697) esp-tls: Failed to open new connection[0m
+[0;31mE (274697) transport_base: Failed to open a new connection[0m
+[0;31mE (274697) mqtt_client: Error transport connect[0m
+[0;32mI (274707) MQTT_MOD: A network error occurred[0m
+[0;32mI (274707) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (274717) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (280407) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (294727) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (294727) esp-tls: Failed to open new connection[0m
+[0;31mE (294727) transport_base: Failed to open a new connection[0m
+[0;31mE (294727) mqtt_client: Error transport connect[0m
+[0;32mI (294737) MQTT_MOD: A network error occurred[0m
+[0;32mI (294737) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (294747) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (298887) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (314757) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (314757) esp-tls: Failed to open new connection[0m
+[0;31mE (314757) transport_base: Failed to open a new connection[0m
+[0;31mE (314757) mqtt_client: Error transport connect[0m
+[0;32mI (314767) MQTT_MOD: A network error occurred[0m
+[0;32mI (314767) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (314777) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (316767) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (322717) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;31mE (334787) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (334787) esp-tls: Failed to open new connection[0m
+[0;31mE (334787) transport_base: Failed to open a new connection[0m
+[0;31mE (334787) mqtt_client: Error transport connect[0m
+[0;32mI (334797) MQTT_MOD: A network error occurred[0m
+[0;32mI (334797) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (334807) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (334857) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (338547) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (354817) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (354817) esp-tls: Failed to open new connection[0m
+[0;31mE (354817) transport_base: Failed to open a new connection[0m
+[0;31mE (354817) mqtt_client: Error transport connect[0m
+[0;32mI (354827) MQTT_MOD: A network error occurred[0m
+[0;32mI (354827) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (354837) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (364377) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (374847) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (374847) esp-tls: Failed to open new connection[0m
+[0;31mE (374847) transport_base: Failed to open a new connection[0m
+[0;31mE (374847) mqtt_client: Error transport connect[0m
+[0;32mI (374857) MQTT_MOD: A network error occurred[0m
+[0;32mI (374857) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (374867) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (377957) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (383907) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;31mE (394877) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (394877) esp-tls: Failed to open new connection[0m
+[0;31mE (394877) transport_base: Failed to open a new connection[0m
+[0;31mE (394877) mqtt_client: Error transport connect[0m
+[0;32mI (394887) MQTT_MOD: A network error occurred[0m
+[0;32mI (394887) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (395847) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (401797) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (404137) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (414907) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (414907) esp-tls: Failed to open new connection[0m
+[0;31mE (414907) transport_base: Failed to open a new connection[0m
+[0;31mE (414907) mqtt_client: Error transport connect[0m
+[0;32mI (414917) MQTT_MOD: A network error occurred[0m
+[0;32mI (414917) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (414927) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;31mE (434937) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (434937) esp-tls: Failed to open new connection[0m
+[0;31mE (434937) transport_base: Failed to open a new connection[0m
+[0;31mE (434937) mqtt_client: Error transport connect[0m
+[0;32mI (434947) MQTT_MOD: A network error occurred[0m
+[0;32mI (434947) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (434957) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (435007) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (435097) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;31mE (454967) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (454967) esp-tls: Failed to open new connection[0m
+[0;31mE (454967) transport_base: Failed to open a new connection[0m
+[0;31mE (454967) mqtt_client: Error transport connect[0m
+[0;32mI (454977) MQTT_MOD: A network error occurred[0m
+[0;32mI (454977) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (454987) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;31mE (474997) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (474997) esp-tls: Failed to open new connection[0m
+[0;31mE (474997) transport_base: Failed to open a new connection[0m
+[0;31mE (474997) mqtt_client: Error transport connect[0m
+[0;32mI (475007) MQTT_MOD: A network error occurred[0m
+[0;32mI (475007) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (475017) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (476217) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;31mE (495027) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (495027) esp-tls: Failed to open new connection[0m
+[0;31mE (495027) transport_base: Failed to open a new connection[0m
+[0;31mE (495027) mqtt_client: Error transport connect[0m
+[0;32mI (495037) MQTT_MOD: A network error occurred[0m
+[0;32mI (495037) MQTT_MOD: We disconnected from the BROKER[0m
+[0;32mI (496557) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m

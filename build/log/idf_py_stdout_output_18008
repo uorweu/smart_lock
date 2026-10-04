@@ -1,0 +1,7 @@
+[1/4] cd /home/norman/esp_projects/smart_lock/build/esp-idf/esptool_py && /home/norman/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/norman/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/norman/esp_projects/smart_lock/build/partition_table/partition-table.bin /home/norman/esp_projects/smart_lock/build/smart_lock.bin
+smart_lock.bin binary size 0xf32a0 bytes. Smallest app partition is 0x100000 bytes. 0xcd60 bytes (5%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/norman/esp_projects/smart_lock/build/bootloader/esp-idf/esptool_py && /home/norman/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/norman/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/norman/esp_projects/smart_lock/build/bootloader/bootloader.bin
+Bootloader binary size 0x56f0 bytes. 0x2910 bytes (32%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'

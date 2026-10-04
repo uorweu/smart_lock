@@ -1,0 +1,53 @@
+@startuml
+!theme plain
+skinparam state {
+  BackgroundColor White
+    BorderColor Black
+    ArrowColor Black
+}
+
+title Smart Lock Finite State Machine (FSM)
+
+  [*] --> Sleep : Boot
+
+  state "<b>SLEEP</b>\n<i>Default / Door Locked</i>" as Sleep
+  state "<b>ENTERING PIN</b>\n<i>Keypad Active</i>" as Entering
+  state "<b>UNLOCKED</b>\n<i>Solenoid Released</i>" as Unlocked
+  state "<b>AUTHORIZED OPENING</b>\n<i>Door Physically Open</i>" as Opened
+  state "<b>DENIED</b>\n<i>Incorrect PIN</i>" as Denied
+  state "<b>LOCKED OUT</b>\n<i>3 Failed Attempts</i>" as LockedOut
+  state "<b>ALARM</b>\n<i>Siren Blaring</i>" as Alarm
+  state "<b>RECOVERY</b>\n<i>Remote Override</i>" as Recovery
+
+  ' Normal Operation
+  Sleep --> Entering : PIR Motion / Key Press
+  Entering --> Unlocked : Correct PIN
+  Entering --> Sleep : 5s Inactivity Timeout
+
+  ' Inside Egress
+  Sleep --> Unlocked : Inside Handle
+  Entering --> Unlocked : Inside Handle
+  LockedOut --> Unlocked : Inside Handle
+
+  ' Access Denied & Lockout
+  Entering --> Denied : Wrong PIN
+  Denied --> Entering : 1s Timeout
+  Entering --> LockedOut : 3 Wrong PINs
+  LockedOut --> Sleep : 8s Penalty Timeout
+
+  ' Physical Door State
+  Unlocked --> Opened : Door Opened
+  Opened --> Sleep : Door Closed
+  Unlocked --> Sleep : 5s Timeout
+
+  ' Intrusion & Alarm
+  Sleep --> Alarm : Forced Door Open
+  Entering --> Alarm : Forced Door Open
+  LockedOut --> Alarm : Forced Door Open
+
+  ' Alarm Recovery
+  Alarm --> Unlocked : Correct PIN
+  Alarm --> Recovery : Remote Reset
+  Recovery --> Sleep : 3s Timeout
+
+  @enduml

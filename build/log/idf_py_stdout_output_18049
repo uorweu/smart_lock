@@ -1,0 +1,162 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6d (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=22ac8h (142024) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00032af0 vaddr=40800000 size=05528h ( 21800) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b3bb8h (736184) map[0m
+[0;32mI (282) esp_image: segment 3: paddr=000ebbe0 vaddr=40805528 size=1405ch ( 82012) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000ffc44 vaddr=40819590 size=03630h ( 13872) load[0m
+[0;32mI (310) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (310) boot: Disabling RNG early entropy source...[0m
+[0;32mI (321) cpu_start: Unicore app[0m
+[0;33mW (330) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (342) cpu_start: Pro cpu start user code[0m
+[0;32mI (342) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (342) cpu_start: Application information:[0m
+[0;32mI (345) cpu_start: Project name:     smart_lock[0m
+[0;32mI (350) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (355) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (362) cpu_start: ELF file SHA256:  5be7e0578...[0m
+[0;32mI (367) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (378) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (388) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (395) heap_init: At 40822480 len 0005A190 (360 KiB): RAM[0m
+[0;32mI (406) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (407) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (414) spi_flash: detected chip: generic[0m
+[0;32mI (418) spi_flash: flash io: dio[0m
+[0;33mW (424) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (435) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (446) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (453) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (460) coexist: coex firmware version: 8561505[0m
+[0;32mI (465) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (470) main_task: Started on CPU0[0m
+[0;32mI (470) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (580) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (580) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (590) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (600) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (610) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (620) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (630) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (640) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (640) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (650) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (660) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (670) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (680) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (690) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (710) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (710) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (720) wifi:wifi driver task: 4082b794, prio:23, stack:6656, core=0[0m
+[0;32mI (720) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (720) wifi:wifi certification version: v7.0[0m
+[0;32mI (730) wifi:config NVS flash: enabled[0m
+[0;32mI (730) wifi:config nano formating: disabled[0m
+[0;32mI (730) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (740) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (740) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (750) wifi:Init management short buffer num: 32[0m
+[0;32mI (750) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (760) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (760) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (760) wifi:Init static rx buffer num: 10[0m
+[0;32mI (770) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (770) wifi_init: rx ba win: 6[0m
+[0;32mI (770) wifi_init: tcpip mbox: 32[0m
+[0;32mI (780) wifi_init: udp mbox: 6[0m
+[0;32mI (780) wifi_init: tcp mbox: 6[0m
+[0;32mI (790) wifi_init: tcp tx win: 5760[0m
+[0;32mI (790) wifi_init: tcp rx win: 5760[0m
+[0;32mI (790) wifi_init: tcp mss: 1440[0m
+[0;32mI (800) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (800) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (810) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (890) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (900) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (900) wifi:(agc)0x600a7128:0xd2038800, min.avgNF:0xce->0xd2(dB), RCalCount:0x38, min.RRssi:0x800(-128.00)[0m
+[0;32mI (910) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (920) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (920) wifi:enable tsf[0m
+[0;32mI (930) WIFI_MOD: wifi_init finished.[0m
+[0;32mI (1770) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1770) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1780) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1780) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1790) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1800) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1810) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1810) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1820) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1820) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1840) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1850) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1850) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1860) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1870) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1[0m
+[0;32mI (1870) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1880) wifi:state: init -> auth (b0)[0m
+[0;32mI (1890) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1900) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1900) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1900) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1910) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1910) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1920) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1930) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1940) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1950) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1950) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1960) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1970) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1980) wifi:state: assoc -> run (10)[0m
+[0;32mI (1980) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1990) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1990) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (2000) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (2010) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (2400) MQTT_MOD: Published state: ENTERING_PIN[0m
+[0;32mI (4920) wifi:state: run -> init (2c0)[0m
+[0;32mI (4930) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (4930) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (4930) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (4940) WIFI_MOD: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (4950) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (4950) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (4950) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (4960) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (4970) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (4980) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (4980) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (4990) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (5000) wifi:(opr)bss color disabled:1[0m
+[0;32mI (5000) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (5020) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (5030) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (5030) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (5040) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m

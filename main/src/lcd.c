@@ -5,7 +5,7 @@
 
 #define LCD_ADDR 0x27
 #define I2C_MASTER_NUM 0 
-#define I2C_MASTER_FREQ_HZ 100000
+#define I2C_MASTER_FREQ_HZ 400000 // Boosted I2C to 400kHz Fast Mode!
 
 uint8_t lcd_backlight_val = 0x08;
 
@@ -17,12 +17,15 @@ void lcd_send_nibble(uint8_t nibble, uint8_t is_data){
   }
   uint8_t pulse_high = data_shifted | 0x04;
   i2c_master_write_to_device(I2C_MASTER_NUM, LCD_ADDR, &pulse_high, 1, 1000/portTICK_PERIOD_MS);
-  usleep(1000); 
+  
+  // LCD enable pulse only needs to be >450ns. 10 microseconds is plenty!
+  usleep(10); 
 
   uint8_t pulse_low = data_shifted & ~0x04;
   i2c_master_write_to_device(I2C_MASTER_NUM, LCD_ADDR, &pulse_low, 1, 1000/portTICK_PERIOD_MS);
 
-  usleep(1000);
+  // Typical LCD command execution time is ~37 microseconds. 100us is perfectly safe!
+  usleep(100);
 }
 
 void lcd_send_cmd(uint8_t cmd){

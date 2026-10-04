@@ -65,3 +65,12 @@ A matrix keypad is a physical grid of wires. You cannot bypass the internal memb
 
 **The Fix:**
 We properly mapped 6 healthy pins (Rows: `21, 20, 19, 18` and Columns: `23, 22`) and physically plugged the keypad ribbon cable into those exact pins.
+
+### Wi-Fi Brownout Bootloop
+**Symptoms:** 
+When powering the ESP32 via the 12V adapter (and buck converter), the system enters an infinite bootloop where it crashes repeatedly right after booting. However, when powered via the computer's USB port, it boots perfectly. A multimeter on the 5V line shows a stable voltage.
+**Root Cause:**
+When the ESP32 initializes its Wi-Fi radio (`esp_wifi_start`), the internal RF amplifier creates an instantaneous, massive current spike (up to 800mA). This spike lasts for barely a millisecond—too fast for a multimeter to catch, but fast enough to cause the buck converter's voltage to dip below 3.3V. The ESP32's internal Brownout Detector (BOD) senses the voltage drop and instantly resets the chip.
+**The Fix:**
+1. **Hardware:** Placed a large electrolytic capacitor (e.g., 470uF or 1000uF) directly across the 5V and GND pins of the ESP32. The capacitor acts as a tiny battery, absorbing the massive instantaneous Wi-Fi power spike without choking the buck converter.
+2. **Software (Mitigation):** Added `esp_wifi_set_max_tx_power(40);` before starting the Wi-Fi to reduce the transmit power to 10dBm, which significantly lowers the peak current draw during connection.

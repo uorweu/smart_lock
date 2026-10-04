@@ -1,0 +1,1746 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6e (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=23100h (143616) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00033128 vaddr=40800000 size=04ef0h ( 20208) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b3c3ch (736316) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ebc64 vaddr=40804ef0 size=14694h ( 83604) load[0m
+[0;32mI (291) esp_image: segment 4: paddr=00100300 vaddr=40819590 size=03630h ( 13872) load[0m
+[0;32mI (300) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (300) boot: Disabling RNG early entropy source...[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;33mW (320) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (327) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (327) cpu_start: Application information:[0m
+[0;32mI (330) cpu_start: Project name:     smart_lock[0m
+[0;32mI (335) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (341) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  9de0d58d4...[0m
+[0;32mI (352) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (359) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (364) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (368) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (373) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (380) heap_init: At 40822480 len 0005A190 (360 KiB): RAM[0m
+[0;32mI (386) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (393) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (400) spi_flash: detected chip: generic[0m
+[0;32mI (404) spi_flash: flash io: dio[0m
+[0;33mW (407) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (421) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (431) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (438) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (445) coexist: coex firmware version: 8561505[0m
+[0;32mI (450) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (456) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (566) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (566) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (576) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (606) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (616) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (646) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (656) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (666) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (676) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (696) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (696) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (706) wifi:wifi driver task: 4082b818, prio:23, stack:6656, core=0[0m
+[0;32mI (706) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (706) wifi:wifi certification version: v7.0[0m
+[0;32mI (706) wifi:config NVS flash: enabled[0m
+[0;32mI (716) wifi:config nano formating: disabled[0m
+[0;32mI (716) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (726) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (726) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (736) wifi:Init management short buffer num: 32[0m
+[0;32mI (736) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (736) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (746) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (746) wifi:Init static rx buffer num: 10[0m
+[0;32mI (756) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (756) wifi_init: rx ba win: 6[0m
+[0;32mI (756) wifi_init: tcpip mbox: 32[0m
+[0;32mI (766) wifi_init: udp mbox: 6[0m
+[0;32mI (766) wifi_init: tcp mbox: 6[0m
+[0;32mI (776) wifi_init: tcp tx win: 5760[0m
+[0;32mI (776) wifi_init: tcp rx win: 5760[0m
+[0;32mI (776) wifi_init: tcp mss: 1440[0m
+[0;32mI (786) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (786) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (796) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (876) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (876) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:(agc)0x600a7128:0xd2139a3a, min.avgNF:0xce->0xd2(dB), RCalCount:0x139, min.RRssi:0xa3a(-92.38)[0m
+[0;32mI (896) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (896) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (906) wifi:enable tsf[0m
+[0;32mI (906) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (916) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (916) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (926) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (936) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (936) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (946) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (956) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (956) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (966) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (976) wifi:(opr)bss color disabled:1[0m
+[0;32mI (976) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (996) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (996) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1006) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1016) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1026) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1026) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1036) wifi:state: init -> auth (b0)[0m
+[0;32mI (1046) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1056) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1056) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1056) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1056) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1066) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1076) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1086) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1096) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1096) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1106) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1116) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1126) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1136) wifi:state: assoc -> run (10)[0m
+[0;32mI (1136) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1146) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1146) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (1156) wifi:ifidx:0, rssi:-52, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1166) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1186) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1186) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1196) wifi:security: WPA2-PSK, phy: ax, rssi: -52, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1206) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1206) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1216) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1226) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1236) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1246) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1256) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1266) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1276) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1286) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1286) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1296) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (3186) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4306) esp_netif_handlers: sta ip: 192.168.1.6, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4306) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4306) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.6[0m
+[0;32mI (4316) WIFI_CONNECT: ===============================================[0m
+[0;33mW (4336) esp-tls-mbedtls: skip_common_name=true: hostname matching and SNI disabled. This disables ALL server-name authentication (CN/SAN/SNI), not just CN. Only intended for loopback / debug clients.[0m
+[0;32mI (4716) MQTT_MOD: SUCCESS! ESP32 is connected to the BROKER[0m
+[0;32mI (12466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (26096) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (34996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (44776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (50376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (51106) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (56706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (59536) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (73136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (77116) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (92106) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (94256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (106506) MQTT_MOD: Published state to cloud: UNLOCKED[0m
+[0;32mI (114266) MQTT_MOD: Published state to cloud: AUTHORIZED_OPENING[0m
+[0;32mI (116206) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (116646) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (123446) MQTT_MOD: Published state to cloud: UNLOCKED[0m
+[0;32mI (133956) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (134396) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (136546) MQTT_MOD: Published state to cloud: UNLOCKED[0m
+[0;32mI (138056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (138496) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (144496) MQTT_MOD: Published state to cloud: ALARM_FORCED_OPENING[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6e (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=23100h (143616) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00033128 vaddr=40800000 size=04ef0h ( 20208) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b3c3ch (736316) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ebc64 vaddr=40804ef0 size=14694h ( 83604) load[0m
+[0;32mI (291) esp_image: segment 4: paddr=00100300 vaddr=40819590 size=03630h ( 13872) load[0m
+[0;32mI (300) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (300) boot: Disabling RNG early entropy source...[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;33mW (320) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (327) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (327) cpu_start: Application information:[0m
+[0;32mI (330) cpu_start: Project name:     smart_lock[0m
+[0;32mI (335) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (341) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  9de0d58d4...[0m
+[0;32mI (352) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (359) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (364) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (368) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (373) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (380) heap_init: At 40822480 len 0005A190 (360 KiB): RAM[0m
+[0;32mI (386) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (393) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (400) spi_flash: detected chip: generic[0m
+[0;32mI (404) spi_flash: flash io: dio[0m
+[0;33mW (407) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (421) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (431) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (438) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (445) coexist: coex firmware version: 8561505[0m
+[0;32mI (451) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (456) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (566) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (566) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (576) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (606) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (616) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (646) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (656) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (666) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (676) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (696) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (696) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (706) wifi:wifi driver task: 4082b818, prio:23, stack:6656, core=0[0m
+[0;32mI (706) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (706) wifi:wifi certification version: v7.0[0m
+[0;32mI (706) wifi:config NVS flash: enabled[0m
+[0;32mI (716) wifi:config nano formating: disabled[0m
+[0;32mI (716) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (726) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (726) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (736) wifi:Init management short buffer num: 32[0m
+[0;32mI (736) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (736) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (746) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (746) wifi:Init static rx buffer num: 10[0m
+[0;32mI (756) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (756) wifi_init: rx ba win: 6[0m
+[0;32mI (756) wifi_init: tcpip mbox: 32[0m
+[0;32mI (766) wifi_init: udp mbox: 6[0m
+[0;32mI (766) wifi_init: tcp mbox: 6[0m
+[0;32mI (776) wifi_init: tcp tx win: 5760[0m
+[0;32mI (776) wifi_init: tcp rx win: 5760[0m
+[0;32mI (776) wifi_init: tcp mss: 1440[0m
+[0;32mI (786) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (786) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (796) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (876) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (876) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:(agc)0x600a7128:0xd2143a16, min.avgNF:0xce->0xd2(dB), RCalCount:0x143, min.RRssi:0xa16(-94.62)[0m
+[0;32mI (896) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (896) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (906) wifi:enable tsf[0m
+[0;32mI (906) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (916) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (916) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (926) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (926) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (936) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (946) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (956) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (956) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (966) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (976) wifi:(opr)bss color disabled:1[0m
+[0;32mI (976) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (996) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (996) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1006) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1016) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1026) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1026) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1036) wifi:state: init -> auth (b0)[0m
+[0;32mI (1046) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1056) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1056) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1056) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1066) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1066) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1076) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1086) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1096) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1106) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1106) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1116) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1126) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1136) wifi:state: assoc -> run (10)[0m
+[0;32mI (1136) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1146) wifi:(trc)phytype:CBW20-LGI, snr:45, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1146) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (1156) wifi:ifidx:0, rssi:-52, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1166) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1186) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1186) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1196) wifi:security: WPA2-PSK, phy: ax, rssi: -52, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1206) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1206) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1216) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1226) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1236) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1246) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1256) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1266) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1276) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1286) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1286) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1296) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1696) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4306) esp_netif_handlers: sta ip: 192.168.1.6, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4306) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4306) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.6[0m
+[0;32mI (4316) WIFI_CONNECT: ===============================================[0m
+[0;33mW (4336) esp-tls-mbedtls: skip_common_name=true: hostname matching and SNI disabled. This disables ALL server-name authentication (CN/SAN/SNI), not just CN. Only intended for loopback / debug clients.[0m
+[0;32mI (4716) MQTT_MOD: SUCCESS! ESP32 is connected to the BROKER[0m
+[0;32mI (10966) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (11496) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (20946) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (32876) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (38526) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (39056) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (58306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (60536) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (66086) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (76316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (81916) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (83196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (122346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (136576) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (142226) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (143956) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (149556) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (168586) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (174236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (194866) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (205466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (212846) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (218446) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (223076) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (228676) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (240256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (245806) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (285336) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (307686) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (312016) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (325766) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (333496) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (339146) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (340026) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (442376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (445456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (484506) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (484946) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (490546) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (502176) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (510726) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (511916) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (517516) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (524096) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (529696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (540076) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (545726) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (547456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (557156) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (558436) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (564036) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (578716) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (584316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (595046) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (600696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (606626) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (629576) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (641806) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (652806) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (655536) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (665186) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (665766) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (681466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (718746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (724346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (727126) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (732676) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (742556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (758406) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (760236) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (765836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (769766) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (791866) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (807296) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (821596) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (823326) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (837476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (847256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (852856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (855196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (860796) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (868976) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (888326) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (889056) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (894656) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (956536) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (966396) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (968426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (990776) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1031756) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1046306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1048686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1054286) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1059566) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1065166) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1070296) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1091296) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1093776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1103476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1105306) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1115456) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1129636) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1135236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1149526) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1162976) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1163856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1173856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1176986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1182586) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1183026) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1188626) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1189556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1198706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1199886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1220636) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1227616) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1248516) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1249196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1273996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1275186) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1280786) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1281616) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1320716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1327396) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1333046) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1335276) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1348326) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1350556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1363806) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1364786) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1370386) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1383816) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1396766) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1397296) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1402896) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1407376) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1426626) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1429006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1450606) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1452436) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1476536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1482016) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1487616) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1496896) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1509346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1519976) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1525576) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1534956) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1544106) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1545286) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1569486) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1570366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1579716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1580246) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1607046) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1607826) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1613426) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1615706) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1634356) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1636536) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1642136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1647466) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1653076) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1656056) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1670506) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1671286) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1676886) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1713216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1718816) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1735996) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1741596) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1744776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1753476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1764906) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1770556) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1804036) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1809636) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1815216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1820816) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1822446) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1848296) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1859776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1865426) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1869456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1875006) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1882186) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1898236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1899316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1914116) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1916746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1926696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1946926) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1952576) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1955856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1971706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (1980136) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (1998186) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2007666) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2019216) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2027796) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2033396) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2034476) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2040076) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2040556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2046156) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2062396) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2072546) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2077626) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2083226) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2087906) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2098306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2099086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2136086) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2142966) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2148566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2150996) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2156596) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2157776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2185176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2188056) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2201556) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2205986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2219936) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2223866) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2229466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2231446) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2240696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2252426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2258026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2259316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2269516) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2270596) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2276206) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2282086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2293136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2303916) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2309516) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2319496) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2325096) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2331026) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2340176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2342156) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2347806) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2354686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2368536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2370116) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2375716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2376446) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2393246) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2394676) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2400276) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2406256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2411856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2429486) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2435136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2438416) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2444026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2454956) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2481156) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2483886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2489486) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2490116) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2499816) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2500456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2506056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2512386) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2530486) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2531116) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2536716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2572496) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2578096) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2584526) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2608126) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2613006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2636656) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2638886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2644486) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2661916) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2667516) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2668196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2673846) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2684776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2690376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2707856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2713406) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2715586) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2725536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2730416) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2736016) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2763246) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2768896) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2776976) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2801376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2820506) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2826106) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2827136) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2836286) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2865166) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2870766) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2881346) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2891396) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2895326) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2917026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2920606) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2934906) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2935586) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2944186) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2945116) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2955116) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2957696) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2967296) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2982576) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2988176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2990706) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (2996256) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (2996986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3006836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3012166) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3017716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3024346) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3043846) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3044476) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3054276) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3056506) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3062056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3064636) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3070236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3073166) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3085716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3086156) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3099606) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3100236) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3105836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3108716) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3123316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3123756) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3145706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3146336) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3175186) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3180566) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3192016) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3196796) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3217346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3228476) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3239026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3239656) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3259206) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3259686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3265286) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3270266) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3275916) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3276546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3286696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3298926) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3304476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3320556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3326106) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3326636) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3337236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3348866) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3360416) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3374196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3379846) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3388226) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3399126) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3403556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3412656) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3414086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3428236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3428676) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3434226) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3435256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3445256) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3448786) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3454436) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3458116) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3463716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3469096) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3474746) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3478426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3504476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3506206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3511806) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3515836) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3537736) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3538966) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3544566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3575696) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3581346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3583776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3630176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3658156) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3663756) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3667236) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3676986) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3684916) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3694466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3701546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3715446) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3727426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3775226) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3776556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3793856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3796236) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3806886) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3807326) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3812926) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3817506) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3823056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3829036) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3838986) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3842866) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3862166) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3863146) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3868746) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3869776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3886276) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3887606) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3893206) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3902886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3908536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3909216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3924666) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3927946) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3943396) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3943976) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3961076) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3961706) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (3971856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (3977986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4009786) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4013916) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4019566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4020796) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4026396) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4026836) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4032436) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4033216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4043466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4065046) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4070646) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4072326) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4077926) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4084306) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4099856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4104186) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4109786) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4110226) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4115726) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4129256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4134856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4139086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4149636) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4158066) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4163616) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4182746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4188346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4192176) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4216076) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4219506) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4225106) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4225596) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4250696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4270176) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4280326) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4282906) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4339056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4340186) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4345836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4349516) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4361366) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4384796) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4390446) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4434676) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4440276) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4447656) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4453256) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4472986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4478636) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4484616) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4490266) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4496796) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4502396) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4509576) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4515176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4520906) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4531656) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4548436) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4559236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4567666) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4573266) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4578146) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4583746) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4593076) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4598676) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4603306) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4608856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4614636) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4690536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4694466) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4700066) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4706946) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4712546) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4726676) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4744926) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4754656) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4760306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4779986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4785586) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4787716) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4793316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4798796) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4807546) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4813426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4833526) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4835856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4841456) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4843546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4859746) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4870376) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4879076) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4881006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4886606) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4889936) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4895536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4915316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4943966) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4948096) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4953646) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4968426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4974026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4978206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4983856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (4998086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5008136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5025016) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5030666) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5038146) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5048196) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5063126) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5071776) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5073956) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5082856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5086786) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5092386) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5101216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5106816) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5109246) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5114846) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5119426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5125026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5160756) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5169756) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5201986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5207586) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5233816) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5239416) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5254346) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5259946) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5287926) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5306926) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5313106) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5318756) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5320986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5330536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5331166) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5336716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5339046) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5374496) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5375026) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5380626) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5387866) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5393466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5393956) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5399556) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5400136) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5405736) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5407366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5425116) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5436246) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5441846) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5442426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5451976) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5490006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5495556) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5506486) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5519236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5520516) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5538566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5569596) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5575196) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5576326) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5596376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5598706) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5604306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5628886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5634486) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5642616) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5648266) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5670196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5692996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5698026) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5703626) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5711206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5726156) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5729636) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5752836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5754666) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5760266) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5767546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5781946) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5790376) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5800026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5804856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5810456) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5819386) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5857136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5860666) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5883316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5887546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5902896) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5903926) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5923526) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5927156) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5954406) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5956686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5967036) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5971516) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5977166) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (5983046) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (5988696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6001276) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6006876) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6025256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6030856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6032686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6046786) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6047366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6060666) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6063346) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6068946) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6080076) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6096776) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6100006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6113656) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6114096) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6142696) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6143526) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6149176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6154506) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6164506) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6178236) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6189136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6189966) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6195566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6200146) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6205746) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6208476) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6225176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6227006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6232606) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6237736) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6249136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6252616) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6270666) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6271106) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6294256) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6304136) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6314036) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6330366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6346916) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6351296) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6370346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6380526) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6391326) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6403456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6412706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6413436) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6422636) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6438216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6447266) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6449496) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6455096) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6455776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6497326) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6504106) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6509706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6511886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6517486) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6520366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6533266) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6555546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6580046) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6581476) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6587126) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6593256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6598856) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6608136) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6616986) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6618916) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6627916) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6629946) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6635546) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6644776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6653826) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6658256) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6676606) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6684086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6689736) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6691366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6709566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6713396) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6718996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6721226) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6730826) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6732856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6765006) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6773586) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6782836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6783366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6796366) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6801196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6813796) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6816426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6825726) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6830906) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6847956) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6850486) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6861436) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6871216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6876816) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6885996) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6904946) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6906426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6912026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6933006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6946356) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6959836) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6965436) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6972366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (6985366) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (6991596) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7000746) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7003726) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7019676) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7021456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7027106) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7052986) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7063186) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7071566) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7080816) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7082246) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7101496) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7106526) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7112126) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7127456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7133066) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7139046) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7144646) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7162976) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7168576) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7220706) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7226306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7230886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7236486) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7242316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7247966) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7252296) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7257896) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7273426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7279026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7287406) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7293006) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7304136) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7309736) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7355966) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7361566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7391296) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7405046) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7425176) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7434776) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7436956) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7442556) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7444086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7454986) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7457766) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7463316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7465896) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7490046) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7495426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7503876) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7521606) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7527206) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7538786) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7544386) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7575816) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7581416) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7619446) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7625096) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7631226) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7636826) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7638206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7643756) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7661386) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7666986) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7699816) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7709266) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7713546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7719146) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7742926) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7753626) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7766756) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7772406) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7780886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7799836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7807276) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7816126) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7860556) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7887056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7940086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7945686) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (7947616) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (7957316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8004396) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8015546) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8018326) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8023926) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8027306) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8032906) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8046786) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8059536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8090016) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8095616) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8120696) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8126346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8129626) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8142976) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8143756) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8153156) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8153886) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8163286) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8196216) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8201866) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8204446) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8209996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8227776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8233376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8265656) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8280106) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8280546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8291146) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8308676) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8314276) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8317106) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8327306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8342186) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8347836) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8355316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8364966) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8372246) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8395646) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8397026) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8425376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8427856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8433456) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8485186) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8516736) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8520666) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8539616) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8544646) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8579996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8581026) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8614226) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8627906) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8633556) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8637936) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8643536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8647016) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8657466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8658246) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8676596) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8677426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8702226) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8703056) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8714056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8718736) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8728886) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8731966) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8760616) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8765546) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8771196) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8771826) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8792326) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8795006) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8818706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8821836) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8877846) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8889876) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8895476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8898306) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8903906) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8905086) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8914636) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8915866) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8921466) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8930896) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8936496) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8946926) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8952526) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8954506) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8976706) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8979336) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (8989636) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8997466) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9014716) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9021346) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9026946) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9029276) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9051726) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9052306) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9065606) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9066286) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9071936) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9080666) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9100316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9103846) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9117646) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9128226) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9133876) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9134316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9145066) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9146696) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9152346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9157676) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9169236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9176716) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9190016) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9195696) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9201296) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9213426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9219026) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9220156) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9225756) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9230286) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9240536) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9247316) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9252916) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9254946) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9265496) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9271976) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9281426) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9283206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9294406) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9309286) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9314886) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9325366) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9356016) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9364396) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9369996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9371226) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9376826) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9401056) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9412306) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9428286) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9433886) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9434416) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9440016) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9443646) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9449246) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9466876) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9472476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9502206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9518356) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9521746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9535946) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9538526) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9553726) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9567856) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (9584506) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (9590736) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=23100h (143616) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00033128 vaddr=40800000 size=04ef0h ( 20208) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b3c3ch (736316) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ebc64 vaddr=40804ef0 size=14694h ( 83604) load[0m
+[0;32mI (291) esp_image: segment 4: paddr=00100300 vaddr=40819590 size=03630h ( 13872) load[0m
+[0;32mI (300) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (300) boot: Disabling RNG early entropy source...[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;33mW (320) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (327) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (327) cpu_start: Application information:[0m
+[0;32mI (330) cpu_start: Project name:     smart_lock[0m
+[0;32mI (335) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (341) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  9de0d58d4...[0m
+[0;32mI (352) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (359) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (364) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (368) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (373) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (380) heap_init: At 40822480 len 0005A190 (360 KiB): RAM[0m
+[0;32mI (386) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (393) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (400) spi_flash: detected chip: generic[0m
+[0;32mI (404) spi_flash: flash io: dio[0m
+[0;33mW (407) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (421) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (431) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (438) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (445) coexist: coex firmware version: 8561505[0m
+[0;32mI (451) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (456) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (566) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (566) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (576) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (606) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (616) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (646) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (656) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (666) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (676) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (696) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (696) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (706) wifi:wifi driver task: 4082b818, prio:23, stack:6656, core=0[0m
+[0;32mI (706) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (706) wifi:wifi certification version: v7.0[0m
+[0;32mI (706) wifi:config NVS flash: enabled[0m
+[0;32mI (716) wifi:config nano formating: disabled[0m
+[0;32mI (716) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (726) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (726) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (736) wifi:Init management short buffer num: 32[0m
+[0;32mI (736) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (736) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (746) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (746) wifi:Init static rx buffer num: 10[0m
+[0;32mI (756) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (756) wifi_init: rx ba win: 6[0m
+[0;32mI (756) wifi_init: tcpip mbox: 32[0m
+[0;32mI (766) wifi_init: udp mbox: 6[0m
+[0;32mI (766) wifi_init: tcp mbox: 6[0m
+[0;32mI (776) wifi_init: tcp tx win: 5760[0m
+[0;32mI (776) wifi_init: tcp rx win: 5760[0m
+[0;32mI (776) wifi_init: tcp mss: 1440[0m
+[0;32mI (786) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (786) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (796) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (876) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (876) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:(agc)0x600a7128:0xd2155a00, min.avgNF:0xce->0xd2(dB), RCalCount:0x155, min.RRssi:0xa00(-96.00)[0m
+[0;32mI (896) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (906) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (906) wifi:enable tsf[0m
+[0;32mI (906) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (916) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (916) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (926) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (936) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (936) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (946) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (956) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (966) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (976) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (976) wifi:(opr)bss color disabled:1[0m
+[0;32mI (986) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (996) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1006) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1006) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1016) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1026) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1026) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1036) wifi:state: init -> auth (b0)[0m
+[0;32mI (1046) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1056) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1056) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1056) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1066) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1066) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1076) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1086) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1096) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1106) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1106) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1116) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1126) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1136) wifi:state: assoc -> run (10)[0m
+[0;32mI (1136) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1146) wifi:(trc)phytype:CBW20-LGI, snr:37, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1156) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:37, ampduState:wait operational[0m
+[0;32mI (1166) wifi:ifidx:0, rssi:-60, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1176) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1186) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1186) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1196) wifi:security: WPA2-PSK, phy: ax, rssi: -60, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1206) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1206) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1216) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1226) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1236) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1246) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1256) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1266) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1276) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1286) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1296) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1306) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1696) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4316) esp_netif_handlers: sta ip: 192.168.1.6, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4316) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4316) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.6[0m
+[0;32mI (4326) WIFI_CONNECT: ===============================================[0m
+[0;33mW (4626) esp-tls-mbedtls: skip_common_name=true: hostname matching and SNI disabled. This disables ALL server-name authentication (CN/SAN/SNI), not just CN. Only intended for loopback / debug clients.[0m
+[0;32mI (5046) MQTT_MOD: SUCCESS! ESP32 is connected to the BROKER[0m
+[0;32mI (6206) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (26036) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (31686) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (33866) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (47916) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (49446) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (59646) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (63126) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (67616) MQTT_MOD: Published state to cloud: DENIED[0m
+[0;32mI (69766) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (74816) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (83146) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (92296) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (114776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (120376) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (122456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (128056) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (129436) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (135086) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (148016) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (162766) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (168896) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (174496) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (175076) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (203176) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (209606) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (238206) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (240586) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (265236) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (270266) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (297766) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (299196) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (304796) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (305426) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (314726) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (316406) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (322006) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (322686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (328286) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (329116) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (338566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (342346) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (353096) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (358776) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (379926) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (387456) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (419106) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (430686) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (453136) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (455416) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (476676) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (487906) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (493506) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (500746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (506346) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (528876) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (534476) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (538206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (554406) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (554846) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (579996) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (582326) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (587926) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (596756) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (602356) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (608136) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (617286) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (619966) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (625566) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (626296) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (631896) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (649126) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (654776) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (658206) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (674506) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (700286) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x7c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=23100h (143616) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00033128 vaddr=40800000 size=04ef0h ( 20208) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b3c3ch (736316) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ebc64 vaddr=40804ef0 size=14694h ( 83604) load[0m
+[0;32mI (291) esp_image: segment 4: paddr=00100300 vaddr=40819590 size=03630h ( 13872) load[0m
+[0;32mI (300) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (300) boot: Disabling RNG early entropy source...[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;33mW (320) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (327) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (327) cpu_start: Application information:[0m
+[0;32mI (330) cpu_start: Project name:     smart_lock[0m
+[0;32mI (335) cpu_start: App version:      82f9893-dirty[0m
+[0;32mI (341) cpu_start: Compile time:     Oct  1 2026 19:27:36[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  9de0d58d4...[0m
+[0;32mI (352) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (359) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (364) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (368) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (373) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (380) heap_init: At 40822480 len 0005A190 (360 KiB): RAM[0m
+[0;32mI (386) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (393) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (400) spi_flash: detected chip: generic[0m
+[0;32mI (404) spi_flash: flash io: dio[0m
+[0;33mW (407) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (421) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (431) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (438) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (445) coexist: coex firmware version: 8561505[0m
+[0;32mI (451) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (456) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (566) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (566) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (576) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (586) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (596) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (606) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (616) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (646) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (656) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (666) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (676) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (696) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (696) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (706) wifi:wifi driver task: 4082b818, prio:23, stack:6656, core=0[0m
+[0;32mI (706) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (706) wifi:wifi certification version: v7.0[0m
+[0;32mI (706) wifi:config NVS flash: enabled[0m
+[0;32mI (716) wifi:config nano formating: disabled[0m
+[0;32mI (716) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (726) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (726) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (736) wifi:Init management short buffer num: 32[0m
+[0;32mI (736) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (736) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (746) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (746) wifi:Init static rx buffer num: 10[0m
+[0;32mI (756) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (756) wifi_init: rx ba win: 6[0m
+[0;32mI (756) wifi_init: tcpip mbox: 32[0m
+[0;32mI (766) wifi_init: udp mbox: 6[0m
+[0;32mI (766) wifi_init: tcp mbox: 6[0m
+[0;32mI (776) wifi_init: tcp tx win: 5760[0m
+[0;32mI (776) wifi_init: tcp rx win: 5760[0m
+[0;32mI (776) wifi_init: tcp mss: 1440[0m
+[0;32mI (786) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (786) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (796) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (876) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (876) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (886) wifi:(agc)0x600a7128:0xd21319fe, min.avgNF:0xce->0xd2(dB), RCalCount:0x131, min.RRssi:0x9fe(-96.12)[0m
+[0;32mI (896) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (906) wifi:mode : sta (e8:f6:0a:f8:bb:dc)[0m
+[0;32mI (906) wifi:enable tsf[0m
+[0;32mI (906) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (916) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (916) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (926) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (936) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (936) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (946) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (956) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (966) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (976) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (976) wifi:(opr)bss color disabled:1[0m
+[0;32mI (986) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (996) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1006) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1006) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1016) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1026) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1[0m
+[0;32mI (1026) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1036) wifi:state: init -> auth (b0)[0m
+[0;32mI (1046) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1056) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1056) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1056) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1066) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1076) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1076) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1086) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1096) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1106) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1106) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1116) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1126) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1136) wifi:state: assoc -> run (10)[0m
+[0;32mI (1136) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1146) wifi:(trc)phytype:CBW20-LGI, snr:39, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1156) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:39, ampduState:wait operational[0m
+[0;32mI (1166) wifi:ifidx:0, rssi:-58, nf:-97, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1176) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1186) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1186) wifi:connected with So 14, aid = 9, channel 4, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1196) wifi:security: WPA2-PSK, phy: ax, rssi: -58, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1206) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1206) wifi:pm start, type:1, aid:0x9, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1216) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1226) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1236) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1246) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1256) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1266) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1276) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1286) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1296) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1306) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (4316) esp_netif_handlers: sta ip: 192.168.1.6, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4316) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4316) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.6[0m
+[0;32mI (4326) WIFI_CONNECT: ===============================================[0m
+[0;33mW (4636) esp-tls-mbedtls: skip_common_name=true: hostname matching and SNI disabled. This disables ALL server-name authentication (CN/SAN/SNI), not just CN. Only intended for loopback / debug clients.[0m
+[0;32mI (5016) MQTT_MOD: SUCCESS! ESP32 is connected to the BROKER[0m
+[0;32mI (7316) MQTT_MOD: Published state to cloud: LOCKED[0m
+[0;32mI (8746) MQTT_MOD: Published state to cloud: ENTERING_PIN[0m
+[0;32mI (22496) MQTT_MOD: Published state to cloud: UNLOCKED[0m

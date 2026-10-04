@@ -4,6 +4,5 @@
 
 void handle_init(void);
 bool handle_is_pressed(void);
-void handle_wait_for_release(void);
 
 #endif
