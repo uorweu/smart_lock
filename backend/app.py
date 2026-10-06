@@ -4,7 +4,7 @@ import threading
 from flask import Flask, request, jsonify, render_template_string, session, redirect
 import paho.mqtt.client as mqtt
 
-MQTT_BROKER = "192.168.1.8" 
+MQTT_BROKER = "192.168.1.23" 
 MQTT_PORT = 8883
 
 CA_CERTS = "/home/norman/certs/ca.crt"
@@ -49,12 +49,26 @@ mqtt_client.username_pw_set("python_backend", "backend123")
 mqtt_client.on_connect = on_connect
 mqtt_client.on_message = on_message
 
+def on_disconnect(client, userdata, rc):
+    print(f"[MQTT] Disconnected from broker (rc={rc}). Will keep retrying...")
+
+mqtt_client.on_disconnect = on_disconnect
+mqtt_client.reconnect_delay_set(min_delay=1, max_delay=30)
+
 def start_mqtt():
-    try:
-        mqtt_client.connect(MQTT_BROKER, MQTT_PORT, 60)
-        mqtt_client.loop_forever()
-    except Exception as e:
-        print(f"[MQTT] Connection Error: {e}. Check IP Address and Cert Path!")
+    # connect_async + loop_start keeps retrying in the background, even if the
+    # broker is down when the backend starts (connect() + loop_forever would give up).
+    mqtt_client.connect_async(MQTT_BROKER, MQTT_PORT, 60)
+    mqtt_client.loop_start()
+
+def publish_command(payload):
+    """Publish to the lock; returns (ok, error_message)."""
+    if not mqtt_client.is_connected():
+        return False, f"MQTT broker {MQTT_BROKER}:{MQTT_PORT} is not connected. Is Mosquitto running?"
+    info = mqtt_client.publish("smart_lock/command", payload, qos=1)
+    if info.rc != mqtt.MQTT_ERR_SUCCESS:
+        return False, f"Publish failed: {mqtt.error_string(info.rc)}"
+    return True, None
 
 # --- 3. WEB USER INTERFACE (HTML) ---
 LOGIN_HTML = """
@@ -211,7 +225,9 @@ def change_pin():
     # Hash the pin using SHA-256 just like the ESP32 does
     new_hash = hashlib.sha256(pin.encode('utf-8')).hexdigest()
     # Send the hash to the ESP32 (NEVER send the plaintext PIN!)
-    mqtt_client.publish("smart_lock/command", f"UPDATE_HASH:{new_hash}")
+    ok, err = publish_command(f"UPDATE_HASH:{new_hash}")
+    if not ok:
+        return jsonify({"status": f"FAILED: {err}"}), 503
     return jsonify({"status": "Success! The new password hash was transmitted securely over TLS."})
 
 
@@ -219,13 +235,17 @@ def change_pin():
 def send_command():
     if not session.get('logged_in'): return jsonify({"status": "Unauthorized!"}), 401
     cmd = request.json.get('command')
+    if cmd not in ("UNLOCK", "LOCK", "RESET"):
+        return jsonify({"status": f"Unknown command '{cmd}'"}), 400
     # Publish the command to Mosquitto over TLS!
-    mqtt_client.publish("smart_lock/command", cmd)
+    ok, err = publish_command(cmd)
+    if not ok:
+        return jsonify({"status": f"FAILED: {err}"}), 503
     return jsonify({"status": f"Command '{cmd}' successfully transmitted over TLS."})
 
 if __name__ == '__main__':
     init_db()
-    # Start MQTT Listener in the background
-    threading.Thread(target=start_mqtt, daemon=True).start()
+    # Start MQTT client in the background (loop_start spawns its own thread and auto-reconnects)
+    start_mqtt()
     # Start Web Server
     app.run(host='0.0.0.0', port=5000, debug=False)

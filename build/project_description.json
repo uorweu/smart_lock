@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "smart_lock",
-    "project_version":    "82f9893-dirty",
+    "project_version":    "5cd2071-dirty",
     "project_path":       "/home/norman/esp_projects/smart_lock",
     "idf_path":           "/home/norman/esp-idf",
     "build_dir":          "/home/norman/esp_projects/smart_lock/build",

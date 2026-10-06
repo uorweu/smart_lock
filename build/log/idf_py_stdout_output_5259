@@ -1,0 +1,488 @@
+�000ec210 vaddr=40804bb0 size=149d4h ( 8�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x18ec
+load:0x4086c410,len:0xe84
+load:0x4086e610,len:0x2f2c
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.8-1-gf6b7184658b-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2026 19:50:23[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=420b8020 size=23440h (144448) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00033468 vaddr=40800000 size=04bb0h ( 19376) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=b41e8h (737768) map[0m
+[0;32mI (272) esp_image: segment 3: paddr=000ec210 vaddr=40804bb0 size=149d4h ( 84436) load[0m
+[0;32mI (296) esp_image: segment 4: paddr=00100bec vaddr=40819590 size=03658h ( 13912) load[0m
+[0;32mI (311) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (316) boot: Disabling RNG early entropy source...[0m
+[0;32mI (322) cpu_start: Unicore app[0m
+[0;33mW (331) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (343) cpu_start: Pro cpu start user code[0m
+[0;32mI (343) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (348) cpu_start: Application information:[0m
+[0;32mI (348) cpu_start: Project name:     smart_lock[0m
+[0;32mI (351) cpu_start: App version:      5cd2071-dirty[0m
+[0;32mI (357) cpu_start: Compile time:     Oct  4 2026 20:26:10[0m
+[0;32mI (363) cpu_start: ELF file SHA256:  3e9cf2f9c...[0m
+[0;32mI (368) cpu_start: ESP-IDF:          v5.2.8-1-gf6b7184658b-dirty[0m
+[0;32mI (375) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (380) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 408224B0 len 0005A160 (360 KiB): RAM[0m
+[0;32mI (402) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (409) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (416) spi_flash: detected chip: generic[0m
+[0;32mI (420) spi_flash: flash io: dio[0m
+[0;33mW (423) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (437) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (448) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (454) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (461) coexist: coex firmware version: 8561505[0m
+[0;32mI (467) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (472) main_task: Started on CPU0[0m
+[0;32mI (472) main_task: Calling app_main()[0m
+Starting Smart Lock...
+[0;32mI (552) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (552) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (562) gpio: GPIO[20]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (572) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (582) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (592) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (602) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (602) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (612) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (622) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (632) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (642) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (652) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (662) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (682) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (682) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (702) wifi:wifi driver task: 4082b760, prio:23, stack:6656, core=0[0m
+[0;32mI (702) wifi:wifi firmware version: bb1aa1d[0m
+[0;32mI (702) wifi:wifi certification version: v7.0[0m
+[0;32mI (702) wifi:config NVS flash: enabled[0m
+[0;32mI (702) wifi:config nano formating: disabled[0m
+[0;32mI (712) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N[0m
+[0;32mI (712) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (722) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (722) wifi:Init management short buffer num: 32[0m
+[0;32mI (722) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (732) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (732) wifi:Init static rx buffer size: 1700[0m
+[0;32mI (742) wifi:Init static rx buffer num: 10[0m
+[0;32mI (742) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (742) wifi_init: rx ba win: 6[0m
+[0;32mI (752) wifi_init: tcpip mbox: 32[0m
+[0;32mI (752) wifi_init: udp mbox: 6[0m
+[0;32mI (762) wifi_init: tcp mbox: 6[0m
+[0;32mI (762) wifi_init: tcp tx win: 5760[0m
+[0;32mI (762) wifi_init: tcp rx win: 5760[0m
+[0;32mI (772) wifi_init: tcp mss: 1440[0m
+[0;32mI (772) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (782) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (782) phy_init: phy_version 345,552b044,Jul 14 2026,10:37:00[0m
+[0;33mW (872) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (872) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (882) wifi:(agc)0x600a7128:0xd21c7a00, min.avgNF:0xce->0xd2(dB), RCalCount:0x1c7, min.RRssi:0xa00(-96.00)[0m
+[0;32mI (892) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (892) wifi:mode : sta (e8:f6:0a:fc:11:c8)[0m
+[0;32mI (902) wifi:enable tsf[0m
+[0;32mI (902) WIFI_CONNECT: Wi-Fi started. Attempting to connect to So 14...[0m
+[0;32mI (912) WIFI_CONNECT: Wi-Fi initialization finished. Driver started.[0m
+[0;32mI (912) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (922) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (932) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (932) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (942) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (952) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (952) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (962) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (972) wifi:(opr)bss color disabled:1[0m
+[0;32mI (972) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (992) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (992) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1002) wifi:(spr)len:2, ctrl:0x3, PSR Disallowed:1, Non-SRG OBSS PD SR Disallowed:1[0m
+[0;32mI (1012) wifi:(spr)len:2, ctrl:0x3, Non-SRG Offset Present:0, SRG Info Present:0[0m
+[0;32mI (1022) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1[0m
+[0;32mI (1022) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1032) wifi:state: init -> auth (b0)[0m
+[0;32mI (1042) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1052) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (1052) wifi:(mac)omc_ul_mu_data_disable_rx:1[0m
+[0;32mI (1052) wifi:(phy)ppe_thresholds_present:1, nominal_packet_padding:0[0m
+[0;32mI (1052) wifi:(phy)dcm tx(constellation:2, nss:0), dcm rx(constellation:2, nss:0)[0m
+[0;32mI (1062) wifi:(phy)rx_mcs_map:0xfffa, tx_mcs_map:0xfffa, stbc_tx:1, bfmer(su:1, mu:1), ldpc:1, max_rate:172[0m
+[0;32mI (1072) wifi:(phy)nsts:2, ru_index_bitmap:0x1(242:1, 484:0, 996:0, 2*996:0)[0m
+[0;32mI (1082) wifi:(phy)threshold_bits:12, nsts_num:2, ru_num:1, he_cap->len:25, ppe_threshold_len:3(6,11,4)[0m
+[0;32mI (1092) wifi:(ppe)RU242, NSTS0, PPE16:0, PPE8:7, nominal_packet_padding:2[0m
+[0;32mI (1092) wifi:(opr)bss color disabled:1[0m
+[0;32mI (1102) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (1112) wifi:(opr)len:7, Default PE Duration:4, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:0[0m
+[0;32mI (1122) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (1132) wifi:state: assoc -> run (10)[0m
+[0;32mI (1132) wifi:(he)ppe_thresholds_present:1, nominal_packet_padding(rx:0, cfg:2)[0m
+[0;32mI (1142) wifi:(trc)phytype:CBW20-LGI, snr:50, maxRate:172, highestRateIdx:1[0m
+[0;32mI (1142) wifi:(trc)rate(L-MCS7, schedIdx:1), ampdu(rate:L-MCS7, schedIdx(1, stop:8)), snr:50, ampduState:wait operational[0m
+[0;32mI (1152) wifi:ifidx:0, rssi:-46, nf:-96, phytype(0x2, CBW20-LGI), phymode(0x5, 11ax), max_rate:1720, he:1[0m
+[0;32mI (1162) wifi:max ampdu length exponent:3(65535 bytes), mmss:4(2 us)[0m
+[0;32mI (1182) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (1182) wifi:connected with So 14, aid = 10, channel 7, BW20, bssid = 48:d6:82:13:54:f0[0m
+[0;32mI (1192) wifi:security: WPA2-PSK, phy: ax, rssi: -46, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (1202) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1202) wifi:pm start, type:1, aid:0xa, trans-BSSID:48:d6:82:13:54:f0, BSSID[5]:0xf0, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (1212) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1222) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1232) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1242) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1252) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (1262) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100f054, TALO:0x1382d648, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1272) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1282) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1292) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (1302) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;33mW (2752) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;32mI (4312) esp_netif_handlers: sta ip: 192.168.1.16, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4312) WIFI_CONNECT: ===============================================[0m
+[0;32mI (4312) WIFI_CONNECT: SUCCESS! Got IP Address: 192.168.1.16[0m
+[0;32mI (4322) WIFI_CONNECT: ===============================================[0m
+[0;33mW (8702) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (14042) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (14342) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (14342) esp-tls: Failed to open new connection[0m
+[0;31mE (14342) transport_base: Failed to open a new connection[0m
+[0;31mE (14342) mqtt_client: Error transport connect[0m
+[0;32mI (14352) MQTT_MOD: A network error occurred[0m
+[0;32mI (14352) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (23162) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (34372) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (34372) esp-tls: Failed to open new connection[0m
+[0;31mE (34372) transport_base: Failed to open a new connection[0m
+[0;31mE (34372) mqtt_client: Error transport connect[0m
+[0;32mI (34382) MQTT_MOD: A network error occurred[0m
+[0;32mI (34382) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (39752) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (45702) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (45842) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (54402) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (54402) esp-tls: Failed to open new connection[0m
+[0;31mE (54402) transport_base: Failed to open a new connection[0m
+[0;31mE (54402) mqtt_client: Error transport connect[0m
+[0;32mI (54412) MQTT_MOD: A network error occurred[0m
+[0;32mI (54412) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (57392) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (63382) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (69332) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (74432) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (74432) esp-tls: Failed to open new connection[0m
+[0;31mE (74432) transport_base: Failed to open a new connection[0m
+[0;31mE (74432) mqtt_client: Error transport connect[0m
+[0;32mI (74442) MQTT_MOD: A network error occurred[0m
+[0;32mI (74442) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (76042) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (81992) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (85882) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (91882) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (94462) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (94462) esp-tls: Failed to open new connection[0m
+[0;31mE (94462) transport_base: Failed to open a new connection[0m
+[0;31mE (94462) mqtt_client: Error transport connect[0m
+[0;32mI (94472) MQTT_MOD: A network error occurred[0m
+[0;32mI (94472) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (114492) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (114492) esp-tls: Failed to open new connection[0m
+[0;31mE (114492) transport_base: Failed to open a new connection[0m
+[0;31mE (114492) mqtt_client: Error transport connect[0m
+[0;32mI (114502) MQTT_MOD: A network error occurred[0m
+[0;32mI (114502) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (117522) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (127672) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (134522) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (134522) esp-tls: Failed to open new connection[0m
+[0;31mE (134522) transport_base: Failed to open a new connection[0m
+[0;31mE (134522) mqtt_client: Error transport connect[0m
+[0;32mI (134532) MQTT_MOD: A network error occurred[0m
+[0;32mI (134532) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (142432) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (154552) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (154552) esp-tls: Failed to open new connection[0m
+[0;31mE (154552) transport_base: Failed to open a new connection[0m
+[0;31mE (154552) mqtt_client: Error transport connect[0m
+[0;32mI (154562) MQTT_MOD: A network error occurred[0m
+[0;32mI (154562) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (155732) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (162172) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (168122) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (174582) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (174582) esp-tls: Failed to open new connection[0m
+[0;31mE (174582) transport_base: Failed to open a new connection[0m
+[0;31mE (174582) mqtt_client: Error transport connect[0m
+[0;32mI (174592) MQTT_MOD: A network error occurred[0m
+[0;32mI (174592) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (174812) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (192012) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (194612) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (194612) esp-tls: Failed to open new connection[0m
+[0;31mE (194612) transport_base: Failed to open a new connection[0m
+[0;31mE (194612) mqtt_client: Error transport connect[0m
+[0;32mI (194622) MQTT_MOD: A network error occurred[0m
+[0;32mI (194622) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (199972) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (205922) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (214642) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (214642) esp-tls: Failed to open new connection[0m
+[0;31mE (214642) transport_base: Failed to open a new connection[0m
+[0;31mE (214642) mqtt_client: Error transport connect[0m
+[0;32mI (214652) MQTT_MOD: A network error occurred[0m
+[0;32mI (214652) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (234672) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (234672) esp-tls: Failed to open new connection[0m
+[0;31mE (234672) transport_base: Failed to open a new connection[0m
+[0;31mE (234672) mqtt_client: Error transport connect[0m
+[0;32mI (234682) MQTT_MOD: A network error occurred[0m
+[0;32mI (234682) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (254702) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (254702) esp-tls: Failed to open new connection[0m
+[0;31mE (254702) transport_base: Failed to open a new connection[0m
+[0;31mE (254702) mqtt_client: Error transport connect[0m
+[0;32mI (254712) MQTT_MOD: A network error occurred[0m
+[0;32mI (254712) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (257182) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (263132) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (265522) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (274732) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (274732) esp-tls: Failed to open new connection[0m
+[0;31mE (274732) transport_base: Failed to open a new connection[0m
+[0;31mE (274732) mqtt_client: Error transport connect[0m
+[0;32mI (274742) MQTT_MOD: A network error occurred[0m
+[0;32mI (274742) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (275672) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (291562) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (294762) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (294762) esp-tls: Failed to open new connection[0m
+[0;31mE (294762) transport_base: Failed to open a new connection[0m
+[0;31mE (294762) mqtt_client: Error transport connect[0m
+[0;32mI (294772) MQTT_MOD: A network error occurred[0m
+[0;32mI (294772) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (297482) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (297922) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (313222) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (314792) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (314792) esp-tls: Failed to open new connection[0m
+[0;31mE (314792) transport_base: Failed to open a new connection[0m
+[0;31mE (314792) mqtt_client: Error transport connect[0m
+[0;32mI (314802) MQTT_MOD: A network error occurred[0m
+[0;32mI (314802) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (334822) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (334822) esp-tls: Failed to open new connection[0m
+[0;31mE (334822) transport_base: Failed to open a new connection[0m
+[0;31mE (334822) mqtt_client: Error transport connect[0m
+[0;32mI (334832) MQTT_MOD: A network error occurred[0m
+[0;32mI (334832) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (354852) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (354852) esp-tls: Failed to open new connection[0m
+[0;31mE (354852) transport_base: Failed to open a new connection[0m
+[0;31mE (354852) mqtt_client: Error transport connect[0m
+[0;32mI (354862) MQTT_MOD: A network error occurred[0m
+[0;32mI (354862) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (374882) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (374882) esp-tls: Failed to open new connection[0m
+[0;31mE (374882) transport_base: Failed to open a new connection[0m
+[0;31mE (374882) mqtt_client: Error transport connect[0m
+[0;32mI (374892) MQTT_MOD: A network error occurred[0m
+[0;32mI (374892) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (384692) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (390642) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (394912) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (394912) esp-tls: Failed to open new connection[0m
+[0;31mE (394912) transport_base: Failed to open a new connection[0m
+[0;31mE (394912) mqtt_client: Error transport connect[0m
+[0;32mI (394922) MQTT_MOD: A network error occurred[0m
+[0;32mI (394922) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (414942) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (414942) esp-tls: Failed to open new connection[0m
+[0;31mE (414942) transport_base: Failed to open a new connection[0m
+[0;31mE (414942) mqtt_client: Error transport connect[0m
+[0;32mI (414952) MQTT_MOD: A network error occurred[0m
+[0;32mI (414952) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (434972) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (434972) esp-tls: Failed to open new connection[0m
+[0;31mE (434972) transport_base: Failed to open a new connection[0m
+[0;31mE (434972) mqtt_client: Error transport connect[0m
+[0;32mI (434982) MQTT_MOD: A network error occurred[0m
+[0;32mI (434982) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (455002) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (455002) esp-tls: Failed to open new connection[0m
+[0;31mE (455002) transport_base: Failed to open a new connection[0m
+[0;31mE (455002) mqtt_client: Error transport connect[0m
+[0;32mI (455012) MQTT_MOD: A network error occurred[0m
+[0;32mI (455012) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (456512) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (462462) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (475032) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (475032) esp-tls: Failed to open new connection[0m
+[0;31mE (475032) transport_base: Failed to open a new connection[0m
+[0;31mE (475032) mqtt_client: Error transport connect[0m
+[0;32mI (475042) MQTT_MOD: A network error occurred[0m
+[0;32mI (475042) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (495062) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (495062) esp-tls: Failed to open new connection[0m
+[0;31mE (495062) transport_base: Failed to open a new connection[0m
+[0;31mE (495062) mqtt_client: Error transport connect[0m
+[0;32mI (495072) MQTT_MOD: A network error occurred[0m
+[0;32mI (495072) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (511572) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (515092) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (515092) esp-tls: Failed to open new connection[0m
+[0;31mE (515092) transport_base: Failed to open a new connection[0m
+[0;31mE (515092) mqtt_client: Error transport connect[0m
+[0;32mI (515102) MQTT_MOD: A network error occurred[0m
+[0;32mI (515102) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (517522) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (535122) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (535122) esp-tls: Failed to open new connection[0m
+[0;31mE (535122) transport_base: Failed to open a new connection[0m
+[0;31mE (535122) mqtt_client: Error transport connect[0m
+[0;32mI (535132) MQTT_MOD: A network error occurred[0m
+[0;32mI (535132) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (555152) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (555152) esp-tls: Failed to open new connection[0m
+[0;31mE (555152) transport_base: Failed to open a new connection[0m
+[0;31mE (555152) mqtt_client: Error transport connect[0m
+[0;32mI (555162) MQTT_MOD: A network error occurred[0m
+[0;32mI (555162) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (563282) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (569232) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (575182) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (575182) esp-tls: Failed to open new connection[0m
+[0;31mE (575182) transport_base: Failed to open a new connection[0m
+[0;31mE (575182) mqtt_client: Error transport connect[0m
+[0;32mI (575192) MQTT_MOD: A network error occurred[0m
+[0;32mI (575192) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (580142) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (586042) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (588182) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (594182) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (595212) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (595212) esp-tls: Failed to open new connection[0m
+[0;31mE (595212) transport_base: Failed to open a new connection[0m
+[0;31mE (595212) mqtt_client: Error transport connect[0m
+[0;32mI (595222) MQTT_MOD: A network error occurred[0m
+[0;32mI (595222) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (615242) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (615242) esp-tls: Failed to open new connection[0m
+[0;31mE (615242) transport_base: Failed to open a new connection[0m
+[0;31mE (615242) mqtt_client: Error transport connect[0m
+[0;32mI (615252) MQTT_MOD: A network error occurred[0m
+[0;32mI (615252) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (617122) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (623072) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (635272) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (635272) esp-tls: Failed to open new connection[0m
+[0;31mE (635272) transport_base: Failed to open a new connection[0m
+[0;31mE (635272) mqtt_client: Error transport connect[0m
+[0;32mI (635282) MQTT_MOD: A network error occurred[0m
+[0;32mI (635282) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (643582) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (649532) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (649722) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (655302) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (655302) esp-tls: Failed to open new connection[0m
+[0;31mE (655302) transport_base: Failed to open a new connection[0m
+[0;31mE (655302) mqtt_client: Error transport connect[0m
+[0;32mI (655312) MQTT_MOD: A network error occurred[0m
+[0;32mI (655312) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (655672) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (671262) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (675332) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (675332) esp-tls: Failed to open new connection[0m
+[0;31mE (675332) transport_base: Failed to open a new connection[0m
+[0;31mE (675332) mqtt_client: Error transport connect[0m
+[0;32mI (675342) MQTT_MOD: A network error occurred[0m
+[0;32mI (675342) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (677212) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (687402) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (693352) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (694242) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (695362) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (695362) esp-tls: Failed to open new connection[0m
+[0;31mE (695362) transport_base: Failed to open a new connection[0m
+[0;31mE (695362) mqtt_client: Error transport connect[0m
+[0;32mI (695372) MQTT_MOD: A network error occurred[0m
+[0;32mI (695372) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (704792) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (715392) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (715392) esp-tls: Failed to open new connection[0m
+[0;31mE (715392) transport_base: Failed to open a new connection[0m
+[0;31mE (715392) mqtt_client: Error transport connect[0m
+[0;32mI (715402) MQTT_MOD: A network error occurred[0m
+[0;32mI (715402) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (730802) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (735422) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (735422) esp-tls: Failed to open new connection[0m
+[0;31mE (735422) transport_base: Failed to open a new connection[0m
+[0;31mE (735422) mqtt_client: Error transport connect[0m
+[0;32mI (735432) MQTT_MOD: A network error occurred[0m
+[0;32mI (735432) MQTT_MOD: We disconnected from the BROKER[0m
+[0;31mE (955752) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (955752) esp-tls: Failed to open new connection[0m
+[0;31mE (955752) transport_base: Failed to open a new connection[0m
+[0;31mE (955752) mqtt_client: Error transport connect[0m
+[0;32mI (955762) MQTT_MOD: A network error occurred[0m
+[0;32mI (955762) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (962472) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (968372) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (975782) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (975782) esp-tls: Failed to open new connection[0m
+[0;31mE (975782) transport_base: Failed to open a new connection[0m
+[0;31mE (975782) mqtt_client: Error transport connect[0m
+[0;32mI (975792) MQTT_MOD: A network error occurred[0m
+[0;32mI (975792) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (990812) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (995812) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (995812) esp-tls: Failed to open new connection[0m
+[0;31mE (995812) transport_base: Failed to open a new connection[0m
+[0;31mE (995812) mqtt_client: Error transport connect[0m
+[0;32mI (995822) MQTT_MOD: A network error occurred[0m
+[0;32mI (995822) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (1005682) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (1008822) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (1014772) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (1015842) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (1015842) esp-tls: Failed to open new connection[0m
+[0;31mE (1015842) transport_base: Failed to open a new connection[0m
+[0;31mE (1015842) mqtt_client: Error transport connect[0m
+[0;32mI (1015852) MQTT_MOD: A network error occurred[0m
+[0;32mI (1015852) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (1033612) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (1035872) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (1035872) esp-tls: Failed to open new connection[0m
+[0;31mE (1035872) transport_base: Failed to open a new connection[0m
+[0;31mE (1035872) mqtt_client: Error transport connect[0m
+[0;32mI (1035882) MQTT_MOD: A network error occurred[0m
+[0;32mI (1035882) MQTT_MOD: We disconnected from the BROKER[0m
+[0;33mW (1044312) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (1047502) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;33mW (1053452) MQTT_MOD: MQTT not fully connected yet, skipping publish to avoid freezing main loop![0m
+[0;31mE (1055902) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (1055902) esp-tls: Failed to open new connection[0m
+[0;31mE (1055902) transport_base: Failed to open a new connection[0m
+[0;31mE (1055902) mqtt_client: Error transport connect[0m
+[0;32mI (1055912) MQTT_MOD: A network error occurred[0m
+[0;32mI (1055912) MQTT_MOD: We disconnected from the BROKER[0m

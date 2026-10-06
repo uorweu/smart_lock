@@ -1,5 +1,6 @@
 #include "mqtt.h"
 #include "mqtt_client.h"
+#include "dev_button.h"
 #include "esp_log.h"
 #include <string.h>
 
@@ -32,7 +33,7 @@ const char *hivemq_certificate =
 
 void mqtt_init(void){
   esp_mqtt_client_config_t mqtt_cfg = {
-    .broker.address.uri = "mqtts://192.168.1.8:8883",
+    .broker.address.uri = "mqtts://192.168.1.23:8883",
     .credentials.username = "lock_hardware",
     .credentials.authentication.password = "lock123",
     .broker.verification.certificate = hivemq_certificate,
@@ -50,6 +51,12 @@ void mqtt_init(void){
 }
 
 #include "state_machine.h"
+
+/* MQTT topic/data buffers are NOT NUL-terminated, so compare length + bytes exactly. */
+static bool mqtt_field_equals(const char *field, int field_len, const char *expected) {
+  size_t n = strlen(expected);
+  return field != NULL && field_len == (int)n && memcmp(field, expected, n) == 0;
+}
 
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data) {
   esp_mqtt_event_handle_t event = event_data;
@@ -71,20 +78,20 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
       ESP_LOGI(TAG, "Received message on topic: %.*s", event->topic_len, event->topic);
       ESP_LOGI(TAG, "Message data: %.*s", event->data_len, event->data);
       
-      if (strncmp(event->topic, "smart_lock/command", event->topic_len) == 0) {
-          if (strncmp(event->data, "UNLOCK", event->data_len) == 0) {
+      if (mqtt_field_equals(event->topic, event->topic_len, "smart_lock/command")) {
+          if (mqtt_field_equals(event->data, event->data_len, "UNLOCK")) {
               ESP_LOGI(TAG, "REMOTE UNLOCK AUTHORIZED! Opening door...");
               state_machine_process_event(EVENT_INSIDE_HANDLE); 
           } 
-          else if (strncmp(event->data, "LOCK", event->data_len) == 0) {
+          else if (mqtt_field_equals(event->data, event->data_len, "LOCK")) {
               ESP_LOGI(TAG, "REMOTE LOCK AUTHORIZED! Forcing system to sleep...");
-              state_machine_process_event(EVENT_TIMEOUT); 
+              dev_override_flag = true; 
           }
-          else if (strncmp(event->data, "RESET", event->data_len) == 0) {
+          else if (mqtt_field_equals(event->data, event->data_len, "RESET")) {
               ESP_LOGI(TAG, "REMOTE RESET AUTHORIZED! Clearing alarms and lockouts...");
-              state_machine_process_event(EVENT_DEV_OVERRIDE); 
+              dev_override_flag = true; 
           }
-          else if (strncmp(event->data, "UPDATE_HASH:", 12) == 0 && event->data_len == 12 + 64) {
+          else if (event->data_len == 12 + 64 && strncmp(event->data, "UPDATE_HASH:", 12) == 0) {
               ESP_LOGI(TAG, "RECEIVED NEW PASSWORD HASH FROM CLOUD!");
               uint8_t new_hash[32];
               const char* hex_str = event->data + 12;
@@ -102,9 +109,25 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 }
 
 void mqtt_start(void){
-  if (client != NULL){
-    esp_mqtt_client_start(client);
-    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
+  static bool started = false;
+  if (client == NULL){
+    ESP_LOGE(TAG, "mqtt_start() called before mqtt_init(); ignoring");
+    return;
+  }
+  if (started){
+    /* Called again on Wi-Fi reconnect (GOT_IP). The ESP-IDF MQTT client already
+     * auto-reconnects, so don't start it twice or register the handler twice. */
+    ESP_LOGI(TAG, "MQTT client already started; it will reconnect automatically");
+    return;
+  }
+  /* Register BEFORE starting so the first MQTT_EVENT_CONNECTED (which subscribes
+   * to smart_lock/command) can never be missed. */
+  esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
+  if (esp_mqtt_client_start(client) == ESP_OK){
+    started = true;
+  } else {
+    ESP_LOGE(TAG, "esp_mqtt_client_start failed");
+    esp_mqtt_client_unregister_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler);
   }
 }
 
